@@ -17,13 +17,13 @@
 const _0xC1 = {
   "Light Green":         { B: ["B","B"], D: ["d","d"] },
   "Dark Green":          { B: ["B","B"], D: ["D","d"] },
-  "DD Green":            { B: ["B","B"], D: ["D","D"] },
+  "Olive Green":            { B: ["B","B"], D: ["D","D"] },
   "Sky Blue":            { B: ["b","b"], D: ["d","d"] },
   "Cobalt":              { B: ["b","b"], D: ["D","d"] },
   "Mauve":               { B: ["b","b"], D: ["D","D"] },
   "Light Green / Blue":  { B: ["B","b"], D: ["d","d"] },
   "Dark Green / Blue":   { B: ["B","b"], D: ["D","d"] },
-  "DD Green / Blue":     { B: ["B","b"], D: ["D","D"] }
+  "Olive Green / Blue":  { B: ["B","b"], D: ["D","D"] }
 };
 
 function _0xC2(Bg, Dg) {
@@ -32,7 +32,7 @@ function _0xC2(Bg, Dg) {
     if (Dg === "Dd") return "Cobalt";
     return "Mauve";
   }
-  const g = Dg === "dd" ? "Light Green" : Dg === "Dd" ? "Dark Green" : "DD Green";
+  const g = Dg === "dd" ? "Light Green" : Dg === "Dd" ? "Dark Green" : "Olive Green";
   return Bg === "Bb" ? g + " / Blue" : g;
 }
 
@@ -44,7 +44,7 @@ const _0xC9 = [
   { id: "Lacewing", label: "Lacewing", type: "SL" },
   { id: "Slate", label: "Slate", type: "SL" },
   { id: "TexasClearbody", label: "Texas Clearbody", type: "SL" },
-  { id: "RecessivePied", label: "Recessive Pied (Dan)", type: "AR" },
+  { id: "RecessivePied", label: "Recessive Pied", type: "AR" },
   { id: "Fallow", label: "Fallow", type: "AR" },
   { id: "Clearwing", label: "Clearwing", type: "AR" },
   { id: "Greywing", label: "Greywing", type: "AR" },
@@ -52,14 +52,14 @@ const _0xC9 = [
   { id: "BlackFace", label: "Black Face", type: "AR" },
   { id: "Blackwing", label: "Blackwing", type: "AR" },
   { id: "Saddleback", label: "Saddleback", type: "AR" },
-  { id: "Anthracite", label: "Anthracite", type: "AR" },
+  { id: "Anthracite", label: "Anthracite", type: "AD" },
   { id: "Grey", label: "Grey Factor", type: "AD" },
   { id: "Violet", label: "Violet Factor", type: "AD" },
   { id: "YellowFace", label: "Yellow Face", type: "AD" },
   { id: "Goldenface", label: "Goldenface", type: "AD" },
   { id: "Spangle", label: "Spangle", type: "AD" },
-  { id: "DominantPied", label: "Dominant Pied (Aus)", type: "AD" },
-  { id: "DutchPied", label: "Dutch Pied (Dut)", type: "AD" },
+  { id: "DominantPied", label: "Dominant Pied", type: "AD" },
+  { id: "DutchPied", label: "Dutch Pied", type: "AD" },
   { id: "Darkwing", label: "Darkwing", type: "AD" },
   { id: "DominantClearbody", label: "Dominant Clearbody (Easley)", type: "AD" },
   { id: "Crest", label: "Crest", type: "AD" }
@@ -155,23 +155,23 @@ function _0xA7(baseRes, arMuts, adMuts) {
     const ad = [...c.ad];
     const gI = ad.findIndex(a => a.label === "Grey Factor");
     if (gI >= 0) {
-      ad.splice(gI, 1);
+      const greyFactor = ad[gI]; ad.splice(gI, 1);
       if (base === "Sky Blue") base = "Grey";
       else if (base === "Cobalt") base = "Dark Grey";
       else if (base === "Mauve") base = "Mauve Grey";
       else if (base === "Light Green") base = "Grey Green";
       else if (base === "Dark Green") base = "Dark Grey Green";
-      else if (base === "DD Green") base = "DD Grey Green";
+      else if (base === "Olive Green") base = "Olive Grey Green";
       else if (base === "Light Green / Blue") base = "Grey Green / Blue";
       else if (base === "Dark Green / Blue") base = "Dark Grey Green / Blue";
-      else if (base === "DD Green / Blue") base = "DD Grey Green / Blue";
+      else if (base === "Olive Green / Blue") base = "Olive Grey Green / Blue";
       else base = "Grey " + base;
+      if (greyFactor.factor === "DF") base = "DF " + base;
     }
     const vI = ad.findIndex(a => a.label === "Violet Factor");
     if (vI >= 0) {
       const v = ad[vI]; ad.splice(vI, 1);
-      if (base === "Cobalt") base = "Visual Violet";
-      else base = "Violet " + base;
+      base = "Violet " + base;
       if (v.factor === "DF") base = "DF " + base;
     }
     const yI = ad.findIndex(a => a.label === "Yellow Face");
@@ -180,8 +180,8 @@ function _0xA7(baseRes, arMuts, adMuts) {
       base = "Yellow Face " + base;
       if (yf.factor === "DF") base = "DF " + base;
     }
-    const dpI = ad.findIndex(a => a.label === "Dutch Pied (Dut)");
-    const rpVisIdx = vis.indexOf("Recessive Pied (Dan)");
+    const dpI = ad.findIndex(a => a.label === "Dutch Pied");
+    const rpVisIdx = vis.indexOf("Recessive Pied");
     let isDEC = false;
     if (dpI >= 0 && rpVisIdx >= 0) {
       isDEC = true;
@@ -224,19 +224,19 @@ function _0xA8(arr) { return arr.slice().sort((a, b) => b.pct - a.pct); }
 function _0xINO(nm) {
   if (nm.startsWith("Mauve Grey")) nm = nm.replace("Mauve Grey", "Mauve Grey Albino");
   else if (nm.startsWith("Dark Grey Green")) nm = nm.replace("Dark Grey Green", "Dark Grey Lutino");
-  else if (nm.startsWith("DD Grey Green")) nm = nm.replace("DD Grey Green", "DD Grey Lutino");
+  else if (nm.startsWith("Olive Grey Green")) nm = nm.replace("Olive Grey Green", "Olive Grey Lutino");
   else if (nm.startsWith("Grey Green")) nm = nm.replace("Grey Green", "Grey Lutino");
   else if (nm.startsWith("Dark Grey")) nm = nm.replace("Dark Grey", "Dark Grey Albino");
   else if (nm.startsWith("Grey ")) nm = nm.replace("Grey ", "Grey Albino ");
   else if (nm.startsWith("Grey")) nm = nm.replace("Grey", "Grey Albino");
-  else if (nm.includes("Visual Violet")) nm = nm.replace("Visual Violet", "Visual Violet Albino");
+  // (Visual Violet rename removed — Cobalt now uniformly "Violet Cobalt", handled by generic "Violet " prefix below)
   else if (nm.startsWith("Violet ")) nm = nm.replace("Violet ", "Violet Albino ");
   else if (nm.includes("Sky Blue")) nm = nm.replace("Sky Blue", "Albino");
   else if (nm.includes("Cobalt")) nm = nm.replace("Cobalt", "Cobalt Albino");
   else if (nm.includes("Mauve")) nm = nm.replace("Mauve", "Mauve Albino");
   else if (nm.includes("Light Green")) nm = nm.replace("Light Green", "Lutino");
   else if (nm.includes("Dark Green")) nm = nm.replace("Dark Green", "Dark Lutino");
-  else if (nm.includes("DD Green")) nm = nm.replace("DD Green", "DD Lutino");
+  else if (nm.includes("Olive Green")) nm = nm.replace("Olive Green", "Olive Lutino");
   else nm = "Ino " + nm;
   return nm;
 }
@@ -345,13 +345,27 @@ function renderList(arr) {
 function renderSSR(p1p, p1t, p2p, p2t, results) {
   const p1Label = labelize(p1p, p1t);
   const p2Label = labelize(p2p, p2t);
-  let h = `<section id="ssr-pairing-results" aria-label="Predicted offspring (server-rendered)" style="background:rgba(76,161,84,0.06);border:1px solid rgba(76,161,84,0.25);border-radius:16px;padding:24px 26px;margin:28px auto;max-width:860px;font-family:'DM Sans',sans-serif;color:#e6e6e6;">`;
+  // Self-contained styles so the section is mobile-safe regardless of host CSS state
+  let h = `<style>
+    #ssr-pairing-results{box-sizing:border-box;background:rgba(76,161,84,0.06);border:1px solid rgba(76,161,84,0.25);border-radius:16px;padding:24px 26px;margin:28px auto;max-width:860px;font-family:'DM Sans',sans-serif;color:#e6e6e6;}
+    #ssr-pairing-results h2{font-size:22px;font-weight:700;margin-bottom:6px;color:#fff;letter-spacing:-0.01em;word-wrap:break-word;overflow-wrap:break-word;}
+    #ssr-pairing-results .ssr-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+    @media(max-width:560px){
+      #ssr-pairing-results{padding:18px 16px;margin:18px auto;border-radius:12px;}
+      #ssr-pairing-results h2{font-size:18px;}
+      #ssr-pairing-results .ssr-cols{grid-template-columns:1fr;gap:8px;}
+    }
+    @media(max-width:380px){
+      #ssr-pairing-results h2{font-size:16px;}
+    }
+  </style>`;
+  h += `<section id="ssr-pairing-results" aria-label="Predicted offspring (server-rendered)">`;
   h += `<p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#4ca154;font-weight:700;margin-bottom:10px;">Pairing Prediction</p>`;
-  h += `<h2 style="font-size:22px;font-weight:700;margin-bottom:6px;color:#fff;letter-spacing:-0.01em;">${escapeHtml(p1Label)} ♂ × ${escapeHtml(p2Label)} ♀</h2>`;
+  h += `<h2>${escapeHtml(p1Label)} ♂ × ${escapeHtml(p2Label)} ♀</h2>`;
   h += `<p style="font-size:13px;color:#a8a8a8;margin-bottom:18px;">Pre-computed offspring predictions for this pairing. Open the interactive calculator below to adjust.</p>`;
   if (results.slMut) {
     h += `<h3 style="font-size:14px;font-weight:700;margin:14px 0 8px;color:#fff;">Sex-linked offspring (${escapeHtml(results.slMut.label)})</h3>`;
-    h += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">`;
+    h += `<div class="ssr-cols">`;
     h += `<div><p style="font-family:'DM Mono',monospace;font-size:11px;color:#a8a8a8;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">♂ Cocks</p>${renderList(results.slMut.maleOffspring)}</div>`;
     h += `<div><p style="font-family:'DM Mono',monospace;font-size:11px;color:#a8a8a8;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">♀ Hens</p>${renderList(results.slMut.femaleOffspring)}</div>`;
     h += `</div>`;
@@ -379,14 +393,32 @@ export default async (request, context) => {
   const hasPairing = url.searchParams.has("m") || url.searchParams.has("f");
   if (!hasPairing) return; // no params → no SSR needed
 
+  // Backward-compat: rename old base names from before the Olive Green migration.
+  const BASE_ALIAS = {
+    "DD Green": "Olive Green",
+    "DD Green / Blue": "Olive Green / Blue",
+    "Visual Violet": "Violet SF",
+    "DF Visual Violet": "Violet DF"
+  };
+  const aliasBase = v => BASE_ALIAS[v] || v;
+
+  // Base shortcuts — keep in sync with index.html _0xShortcut.
+  const SHORTCUT = {
+    "Grey Green SF": { base: "Light Green", mut: { id: "Grey",   status: "SF" } },
+    "Grey Green DF": { base: "Light Green", mut: { id: "Grey",   status: "DF" } },
+    "Grey SF":       { base: "Sky Blue",    mut: { id: "Grey",   status: "SF" } },
+    "Grey DF":       { base: "Sky Blue",    mut: { id: "Grey",   status: "DF" } },
+    "Violet SF":     { base: "Cobalt",      mut: { id: "Violet", status: "SF" } },
+    "Violet DF":     { base: "Cobalt",      mut: { id: "Violet", status: "DF" } }
+  };
+  const resolveBase = (name) => SHORTCUT[name] ? { base: SHORTCUT[name].base, autoMut: SHORTCUT[name].mut } : { base: name, autoMut: null };
+
   // Parse params
-  const p1p = url.searchParams.get("m") || "";
-  const p2p = url.searchParams.get("f") || "";
+  const p1pRaw = aliasBase(url.searchParams.get("m") || "");
+  const p2pRaw = aliasBase(url.searchParams.get("f") || "");
   // Opaline status — absent param means NORMAL (no Opaline), matching site URL semantics
   const p1Op = url.searchParams.get("mo") || "normal";
   const p2Op = url.searchParams.get("fo") || "normal";
-  // Reject invalid base colors — pass through to JS instead of rendering wrong data
-  if (!_0xC1[p1p] || !_0xC1[p2p]) return;
   const parseTraits = (str) => (str || "").split(",").filter(Boolean).map(s => {
     const [id, status] = s.split(":");
     return { id, status: status || "visual" };
@@ -397,6 +429,15 @@ export default async (request, context) => {
   if (p1Op && p1Op !== "normal" && !p1t.find(t => t.id === "Opaline")) p1t.push({ id: "Opaline", status: p1Op });
   if (p2Op && p2Op !== "normal" && !p2t.find(t => t.id === "Opaline")) p2t.push({ id: "Opaline", status: p2Op });
 
+  // Expand shortcuts → real base + auto-injected mutation
+  const mr = resolveBase(p1pRaw), fr = resolveBase(p2pRaw);
+  const p1p = mr.base, p2p = fr.base;
+  if (mr.autoMut) p1t = [...p1t, mr.autoMut];
+  if (fr.autoMut) p2t = [...p2t, fr.autoMut];
+
+  // Reject invalid base colors (after shortcut expansion) — pass through to JS
+  if (!_0xC1[p1p] || !_0xC1[p2p]) return;
+
   // Run engine
   let results;
   try { results = _0xB1(p1p, p1t, p2p, p2t); }
@@ -404,21 +445,30 @@ export default async (request, context) => {
 
   if (!results) return; // invalid pairing → no SSR injection
 
+  // For SSR display labels, use the original shortcut names (e.g. "Violet SF")
+  // instead of the expanded base so the title/h2 match what the user picked.
+  const p1pDisplay = SHORTCUT[p1pRaw] ? p1pRaw : p1p;
+  const p2pDisplay = SHORTCUT[p2pRaw] ? p2pRaw : p2p;
+  // Hide the auto-injected mutation from the displayed trait list (it's already
+  // baked into the shortcut name).
+  const p1tDisplay = mr.autoMut ? p1t.filter(t => t !== mr.autoMut) : p1t;
+  const p2tDisplay = fr.autoMut ? p2t.filter(t => t !== fr.autoMut) : p2t;
+
   // Fetch the original HTML
   const response = await context.next();
   let html = await response.text();
 
-  // Inject the rendered HTML into the SSR slot
-  const ssrHtml = renderSSR(p1p, p1t, p2p, p2t, results);
+  // Inject the rendered HTML into the SSR slot (use display labels so shortcuts read naturally)
+  const ssrHtml = renderSSR(p1pDisplay, p1tDisplay, p2pDisplay, p2tDisplay, results);
   html = html.replace("<!--SSR_RESULTS_SLOT-->", ssrHtml);
 
   // Update <title> + meta description so search snippets reflect this pairing
-  const p1Label = labelize(p1p, p1t);
-  const p2Label = labelize(p2p, p2t);
+  const p1Label = labelize(p1pDisplay, p1tDisplay);
+  const p2Label = labelize(p2pDisplay, p2tDisplay);
   const newTitle = `${p1Label} × ${p2Label} — Budgerigar Pairing Predictions | KinBird Aviary`;
   html = html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(newTitle)}</title>`);
 
-  const newDesc = `Predicted offspring for ${p1Label} ♂ × ${p2Label} ♀ budgerigar pairing. Free Budgerigar Genetics Calculator by KinBird Aviary.`;
+  const newDesc = `Predicted offspring for ${p1Label} ♂ × ${p2Label} ♀ budgerigar pairing. Budgerigar Genetics Calculator by KinBird Aviary.`;
   html = html.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${escapeHtml(newDesc)}"/>`);
   html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/?>/i, `<meta property="og:title" content="${escapeHtml(newTitle)}"/>`);
   html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/i, `<meta property="og:description" content="${escapeHtml(newDesc)}"/>`);
