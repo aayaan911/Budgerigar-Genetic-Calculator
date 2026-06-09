@@ -59,9 +59,7 @@ const _0xC9 = [
   { id: "Goldenface", label: "Goldenface", type: "AD" },
   { id: "Spangle", label: "Spangle", type: "AD" },
   { id: "DominantPied", label: "Dominant Pied", type: "AD" },
-  { id: "DutchPied", label: "Dutch Pied", type: "AD" },
-  { id: "Darkwing", label: "Darkwing", type: "AD" },
-  { id: "DominantClearbody", label: "Dominant Clearbody (Easley)", type: "AD" },
+  { id: "DominantClearbody", label: "Easley Clearbody", type: "AD" },
   { id: "Crest", label: "Crest", type: "AD" }
 ];
 
@@ -180,14 +178,8 @@ function _0xA7(baseRes, arMuts, adMuts) {
       base = "Yellow Face " + base;
       if (yf.factor === "DF") base = "DF " + base;
     }
-    const dpI = ad.findIndex(a => a.label === "Dutch Pied");
-    const rpVisIdx = vis.indexOf("Recessive Pied");
+    // DEC detection disabled — Dutch Pied removed from mutation list per expert feedback
     let isDEC = false;
-    if (dpI >= 0 && rpVisIdx >= 0) {
-      isDEC = true;
-      ad.splice(dpI, 1);
-      vis.splice(rpVisIdx, 1);
-    }
     const crI = ad.findIndex(a => a.label === "Crest");
     if (crI >= 0) {
       const cr = ad[crI]; ad.splice(crI, 1);
@@ -222,23 +214,93 @@ function _0xA7(baseRes, arMuts, adMuts) {
 function _0xA8(arr) { return arr.slice().sort((a, b) => b.pct - a.pct); }
 
 function _0xINO(nm) {
-  if (nm.startsWith("Mauve Grey")) nm = nm.replace("Mauve Grey", "Mauve Grey Albino");
-  else if (nm.startsWith("Dark Grey Green")) nm = nm.replace("Dark Grey Green", "Dark Grey Lutino");
-  else if (nm.startsWith("Olive Grey Green")) nm = nm.replace("Olive Grey Green", "Olive Grey Lutino");
-  else if (nm.startsWith("Grey Green")) nm = nm.replace("Grey Green", "Grey Lutino");
-  else if (nm.startsWith("Dark Grey")) nm = nm.replace("Dark Grey", "Dark Grey Albino");
-  else if (nm.startsWith("Grey ")) nm = nm.replace("Grey ", "Grey Albino ");
-  else if (nm.startsWith("Grey")) nm = nm.replace("Grey", "Grey Albino");
-  // (Visual Violet rename removed — Cobalt now uniformly "Violet Cobalt", handled by generic "Violet " prefix below)
-  else if (nm.startsWith("Violet ")) nm = nm.replace("Violet ", "Violet Albino ");
-  else if (nm.includes("Sky Blue")) nm = nm.replace("Sky Blue", "Albino");
-  else if (nm.includes("Cobalt")) nm = nm.replace("Cobalt", "Cobalt Albino");
-  else if (nm.includes("Mauve")) nm = nm.replace("Mauve", "Mauve Albino");
-  else if (nm.includes("Light Green")) nm = nm.replace("Light Green", "Lutino");
-  else if (nm.includes("Dark Green")) nm = nm.replace("Dark Green", "Dark Lutino");
-  else if (nm.includes("Olive Green")) nm = nm.replace("Olive Green", "Olive Lutino");
+  if (nm.startsWith("Mauve Grey")) nm = nm.replace("Mauve Grey", "Mauve Grey Ino (Mauve Grey Albino)");
+  else if (nm.startsWith("Dark Grey Green")) nm = nm.replace("Dark Grey Green", "Dark Grey Green Ino (Dark Grey Lutino)");
+  else if (nm.startsWith("Olive Grey Green")) nm = nm.replace("Olive Grey Green", "Olive Grey Green Ino (Olive Grey Lutino)");
+  else if (nm.startsWith("Grey Green")) nm = nm.replace("Grey Green", "Grey Green Ino (Grey Lutino)");
+  else if (nm.startsWith("Dark Grey")) nm = nm.replace("Dark Grey", "Dark Grey Ino (Dark Grey Albino)");
+  else if (nm.startsWith("Grey ")) nm = nm.replace("Grey ", "Grey Ino (Grey Albino) ");
+  else if (nm.startsWith("Grey")) nm = nm.replace("Grey", "Grey Ino (Grey Albino)");
+  else if (nm.startsWith("Violet ")) nm = nm.replace("Violet ", "Violet Ino (Violet Albino) ");
+  else if (nm.includes("Sky Blue")) nm = nm.replace("Sky Blue", "Sky Blue Ino (Albino)");
+  else if (nm.includes("Cobalt")) nm = nm.replace("Cobalt", "Cobalt Ino (Cobalt Albino)");
+  else if (nm.includes("Mauve")) nm = nm.replace("Mauve", "Mauve Ino (Mauve Albino)");
+  else if (nm.includes("Light Green")) nm = nm.replace("Light Green", "Light Green Ino (Lutino)");
+  else if (nm.includes("Dark Green")) nm = nm.replace("Dark Green", "Dark Green Ino (Dark Lutino)");
+  else if (nm.includes("Olive Green")) nm = nm.replace("Olive Green", "Olive Green Ino (Olive Lutino)");
   else nm = "Ino " + nm;
   return nm;
+}
+
+// ─── DIL-LOCUS allelic series (Clearwing/Greywing/Dilute) — sync with index.html ───
+const _0xDilIds = new Set(['Clearwing','Greywing','Dilute']);
+function _0xDilExtract(traits){
+  let cw=null,gw=null,d=null;
+  for(const t of(traits||[])){
+    if(t.id==='Clearwing')cw=t.status;
+    else if(t.id==='Greywing')gw=t.status;
+    else if(t.id==='Dilute')d=t.status;
+  }
+  if(!cw&&!gw&&!d)return null;
+  const visuals=[],splits=[];
+  if(cw==='visual')visuals.push('cw');else if(cw==='split'||cw==='possibleSplit')splits.push('cw');
+  if(gw==='visual')visuals.push('gw');else if(gw==='split'||gw==='possibleSplit')splits.push('gw');
+  if(d==='visual')visuals.push('d');else if(d==='split'||d==='possibleSplit')splits.push('d');
+  if(visuals.length===0&&splits.length===0)return['+','+'];
+  if(visuals.length===0&&splits.length===1)return[splits[0],'+'];
+  if(visuals.length===0&&splits.length>=2)return[splits[0],splits[1]];
+  if(visuals.length===1&&splits.length===0)return[visuals[0],visuals[0]];
+  if(visuals.length===1&&splits.length>=1)return[visuals[0],splits[0]];
+  if(visuals.length>=2)return[visuals[0],visuals[1]];
+  return['+','+'];
+}
+function _0xDilCross(p1,p2){
+  const out=[];
+  for(const a1 of p1)for(const a2 of p2){
+    const rank={'cw':0,'gw':1,'d':2,'+':3};
+    const sorted=[a1,a2].sort((x,y)=>rank[x]-rank[y]);
+    out.push({alleles:sorted.join('/'),pct:25});
+  }
+  const merged={};
+  for(const o of out)merged[o.alleles]=(merged[o.alleles]||0)+o.pct;
+  const M={
+    'cw/cw':{visible:'Clearwing',splits:[]},
+    'cw/gw':{visible:'Fullbody Greywing',splits:[]},
+    'cw/d':{visible:'Clearwing',splits:['Dilute']},
+    'cw/+':{visible:null,splits:['Clearwing']},
+    'gw/gw':{visible:'Greywing',splits:[]},
+    'gw/d':{visible:'Greywing',splits:['Dilute']},
+    'gw/+':{visible:null,splits:['Greywing']},
+    'd/d':{visible:'Dilute',splits:[]},
+    'd/+':{visible:null,splits:['Dilute']},
+    '+/+':{visible:null,splits:[]}
+  };
+  const final=[];
+  for(const[k,pct]of Object.entries(merged)){
+    const p=M[k]||{visible:null,splits:[]};
+    final.push({visible:p.visible,splits:p.splits,pct});
+  }
+  return final;
+}
+function _0xDilApply(pool,outcomes){
+  const next=[];
+  for(const c of pool){
+    for(const d of outcomes){
+      let nm=c.name;
+      if(d.visible){
+        const sp=nm.indexOf(' / '),dp=nm.indexOf(' // ');
+        const cp=sp>-1?sp:dp>-1?dp:-1;
+        const before=cp>-1?nm.slice(0,cp):nm;
+        const after=cp>-1?nm.slice(cp):'';
+        nm=before+' '+d.visible+after;
+      }
+      if(d.splits&&d.splits.length)nm+=' / '+d.splits.join(' / ');
+      next.push({name:nm.trim().replace(/\s+/g,' '),pct:c.pct*d.pct/100});
+    }
+  }
+  const merged={};
+  for(const r of next)merged[r.name]=(merged[r.name]||0)+r.pct;
+  return Object.entries(merged).map(([name,pct])=>({name,pct})).sort((a,b)=>b.pct-a.pct);
 }
 
 function _0xB1(p1p, p1t, p2p, p2t) {
@@ -255,12 +317,19 @@ function _0xB1(p1p, p1t, p2p, p2t) {
   for (const t of (p2t || [])) _0xD2(t.id, "f", t.status);
   const arMuts = [], adMuts = [], slMuts = [];
   for (const [id, { m, f }] of Object.entries(mt)) {
+    if (_0xDilIds.has(id)) continue; // dil-locus handled separately
     const mut = _0xC9.find(x => x.id === id); if (!mut) continue;
     if (mut.type === "AR") arMuts.push({ label: mut.label, offspring: _0xA4(m, f) });
     else if (mut.type === "AD") adMuts.push({ label: mut.label, offspring: _0xA6(m, f) });
     else if (mut.type === "SL") slMuts.push({ label: mut.label, m, f });
   }
-  const combined = _0xA7(_0xD7, arMuts, adMuts);
+  let combined = _0xA7(_0xD7, arMuts, adMuts);
+  // Apply dil-locus allelic series
+  const p1Dil=_0xDilExtract(p1t), p2Dil=_0xDilExtract(p2t);
+  if(p1Dil||p2Dil){
+    const dilOutcomes=_0xDilCross(p1Dil||['+','+'], p2Dil||['+','+']);
+    combined=_0xDilApply(combined,dilOutcomes);
+  }
   let _0xD9 = null;
   if (slMuts.length > 0) {
     let pool = combined.map(b => ({ name: b.name, pct: b.pct, sex: null }));
