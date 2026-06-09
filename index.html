@@ -64,7 +64,7 @@
   "publisher":{"@type":"Organization","name":"KinBird Aviary","url":"https://budgerigargenetics.com/"},
   "featureList":[
     "Predicts offspring mutations for budgerigars",
-    "Supports 26+ mutations including Opaline, Cinnamon, Ino, Lacewing, Spangle, Recessive Pied, Dominant Pied, Dutch Pied, Dark Factor, Grey, Violet, Yellow Face, Goldenface, Clearwing, Greywing, Dilute, Fallow, Saddleback, Anthracite, Black Face, Blackwing, Slate, Texas Clearbody, Easley Clearbody (Dominant Clearbody), Crest, Darkwing — plus Dark-Eyed Clear emergent phenotype",
+    "Supports 23+ mutations including Opaline, Cinnamon, Ino, Lacewing, Spangle, Recessive Pied, Dominant Pied, Dark Factor, Grey, Violet, Yellow Face, Goldenface, Clearwing, Greywing, Dilute, Fallow, Saddleback, Anthracite, Black Face, Blackwing, Slate, Texas Clearbody, Easley Clearbody, Crest — with co-dominant dil-locus modelling (Clearwing/Greywing/Dilute)",
     "Handles sex-linked recessive, autosomal recessive, and autosomal incompletely dominant inheritance",
     "Shows split carriers with exact percentages",
     "Compare two pairings side-by-side",
@@ -90,8 +90,8 @@
     {"@type":"Question","name":"What is Spangle and how does single factor vs double factor look in budgies?","acceptedAnswer":{"@type":"Answer","text":"Spangle is an autosomal incompletely dominant mutation. Single Factor (SF) Spangle birds show reverse wing markings — clear feathers with dark edges instead of dark feathers with light edges. Double Factor (DF) Spangle birds are nearly all yellow (on green base) or nearly all white (on blue base), often confused with Lutino or Albino but with normal dark eyes. Two SF Spangle parents can produce 25% DF Spangle offspring."}},
     {"@type":"Question","name":"What is Lacewing and how is it inherited in budgerigars?","acceptedAnswer":{"@type":"Answer","text":"Lacewing is sex-linked recessive. It is the result of a crossover between the Cinnamon and Ino genes on the Z chromosome, first identified in a UK lutino strain in 1948 by R.J. Watts. The phenotype is a pale yellow body (Yellow Lacewing on green base) or white body (White Lacewing on blue base) with brown wing markings and red eyes. Inte Onsman of MUTAVI Research confirmed in published findings that Lacewing is the recombination product of Cinnamon and Ino on the same Z chromosome, not a separate allele. Cocks can be split for Lacewing; hens cannot — they are either visual or normal."}},
     {"@type":"Question","name":"Is the Crest mutation lethal in budgies? What happens in DF Crest pairings?","acceptedAnswer":{"@type":"Answer","text":"Yes, Crest is an autosomal incompletely dominant mutation with a lethal effect in the double factor. Per peer-reviewed MUTAVI research by Inte Onsman, the Crest factor has a completely dominant lethal effect with 48% penetrance, with the lethal crisis setting in on approximately day 12 of incubation. Pairing Crest × Crest produces a 1:2:1 ratio: 25% normal, 50% SF Crested, 25% DF (lethal embryos). The calculator flags DF Crest offspring as Lethal so breeders see why ~25% of fertile eggs may fail to hatch in Crest × Crest pairings. The three Crest variants are Tufted (mild), Half-circular (medium), and Full-circular (strongest)."}},
-    {"@type":"Question","name":"What is Dominant Clearbody (Easley) and how is it different from Texas Clearbody?","acceptedAnswer":{"@type":"Answer","text":"Dominant Clearbody, also called Easley Clearbody, is autosomal incompletely dominant and originated in California in 1992 with American breeder Steve Easley. The body lightens to a clear yellow (green base) or near-white (blue base) while the head and wing markings retain dark melanin pattern. The distinction from Texas Clearbody is the inheritance mode: Texas Clearbody is sex-linked recessive (different gene, on the Z chromosome), while Easley Clearbody is autosomal incompletely dominant (different gene, autosomal, with visible SF and DF forms). Both reduce body melanin while preserving wing pattern, but the pairing predictions are entirely different and breeders should never confuse them."}},
-    {"@type":"Question","name":"What is a Dark-Eyed Clear (DEC) budgie and how do I breed one?","acceptedAnswer":{"@type":"Answer","text":"Dark-Eyed Clear (DEC) is not a separate gene. It is an emergent phenotype that appears when a budgerigar carries both visible Recessive Pied AND one or more factors of Dutch Pied (Continental Clearflight Pied). The bird is pure yellow (green base) or pure white (blue base) body with normal dark eyes, distinguishable from Lutino or Albino by the absence of red eyes. The calculator automatically detects this combination and labels the offspring as Dark-Eyed Clear Yellow or Dark-Eyed Clear White. The cleanest breeding route is pairing a visible Recessive Pied bird with a Dutch Pied SF or DF carrier, expecting approximately 25% DEC chicks per clutch on average."}}
+    {"@type":"Question","name":"What is Easley Clearbody and how is it different from Texas Clearbody?","acceptedAnswer":{"@type":"Answer","text":"Easley Clearbody is autosomal incompletely dominant and originated in California in 1992 with American breeder Steve Easley. The body lightens to a clear yellow (green base) or near-white (blue base) while the head and wing markings retain dark melanin pattern. The distinction from Texas Clearbody is the inheritance mode: Texas Clearbody is sex-linked recessive (different gene, on the Z chromosome), while Easley Clearbody is autosomal incompletely dominant (different gene, autosomal, with visible SF and DF forms). Both reduce body melanin while preserving wing pattern, but the pairing predictions are entirely different and breeders should never confuse them."}},
+    {"@type":"Question","name":"How does the calculator model the Clearwing Greywing Dilute dil-locus?","acceptedAnswer":{"@type":"Answer","text":"Clearwing, Greywing, and Dilute are alleles of the same gene (the dil locus), not three independent genes. The calculator uses proper allelic series modelling with dominance ordering: Clearwing is dominant over Dilute, Greywing is dominant over Dilute, and Clearwing co-dominates with Greywing to produce the hetero-allelic Fullbody Greywing phenotype. Pairing visual Clearwing with visual Dilute gives 100% visual Clearwing offspring split for Dilute. Pairing two visual Dilutes always gives 100% visual Dilute because Dilute cannot hide Clearwing on the same locus. This matches Wikipedia and Terry Martin 2002 inheritance models."}}
   ]
 }
 </script>
@@ -1206,7 +1206,7 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
         </div>
         <p class="fcard-position">Research Coordinator · MUTAVI Research &amp; Advice Group</p>
         <p class="fcard-country">🇧🇪 Belgium / 🇳🇱 Netherlands</p>
-        <p class="fcard-bio">Author of the foundational peer-reviewed papers on the budgerigar Crest mutation (autosomal subvital factor, completely dominant lethal with 48% penetrance, lethal crisis day 12 of incubation), the Lacewing mutation (confirmed as a Cinnamon × Ino crossover product on the Z chromosome, not a separate gene), and Dark-Eyed Clear (DEC) phenotype mechanics. The calculator's Crest, Lacewing, and DEC logic is implemented directly from Onsman's MUTAVI Research published findings.</p>
+        <p class="fcard-bio">Author of the foundational peer-reviewed papers on the budgerigar Crest mutation (autosomal subvital factor, completely dominant lethal with 48% penetrance, lethal crisis day 12 of incubation), and the Lacewing mutation (confirmed as a Cinnamon × Ino crossover product on the Z chromosome, not a separate gene). The calculator's Crest lethality flag and Lacewing inheritance model are implemented directly from Onsman's MUTAVI Research published findings.</p>
         <a href="https://www.mutavi.info/" target="_blank" rel="noopener noreferrer" class="fcard-cta">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           MUTAVI Research
@@ -1269,7 +1269,7 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
       </div>
       <div class="seo-block">
         <h3>Sex-Linked Genetics Explained</h3>
-        <p>In budgerigars, Ino, Opaline, Cinnamon, and Slate are sex-linked recessive (SL) — they behave differently depending on whether the carrier is a cock or hen. Hens cannot be splits — they either show the mutation visually or don't carry it at all. Cocks can carry the gene without showing it. This calculator handles sex-linked inheritance automatically, showing cocks and hens in separate columns.</p>
+        <p>In budgerigars, Ino, Opaline, Cinnamon, Slate, Texas Clearbody, and Lacewing are sex-linked recessive (SL) — they behave differently depending on whether the carrier is a cock or hen. Hens cannot be splits — they either show the mutation visually or don't carry it at all. Cocks can carry the gene without showing it. This calculator handles sex-linked inheritance automatically, showing cocks and hens in separate columns.</p>
       </div>
       <div class="seo-block">
         <h3>Dark Factor Inheritance</h3>
@@ -1285,7 +1285,7 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
       </div>
       <div class="seo-block">
         <h3>Mutation Coverage &amp; Scientific Basis</h3>
-        <p>This calculator covers 26+ documented budgerigar mutations — base colour (Green/Blue), Dark Factor, Grey Factor, Violet Factor, sex-linked Ino / Opaline / Cinnamon / Slate / Texas Clearbody / Lacewing, autosomal recessive Recessive Pied / Fallow / Clearwing / Greywing / Dilute / Black Face / Blackwing / Saddleback, and autosomal incompletely dominant Spangle / Dominant Pied / Dutch Pied / Yellow Face / Goldenface / Grey / Violet / Darkwing / Anthracite / Dominant Clearbody (Easley) / Crest. The emergent Dark-Eyed Clear phenotype is automatically detected when a bird carries visible Recessive Pied with a Dutch Pied factor. The engine maps directly to inheritance models published in <em>A Guide to Colour Mutations and Genetics in Parrots</em> (Dr. Terry Martin, 2002), <em>World of Budgerigars</em> (Cyril H. Rogers), and the peer-reviewed Crest, Lacewing, and DEC research papers of Inte Onsman at MUTAVI Research (Belgium / Netherlands).</p>
+        <p>This calculator covers 23+ documented budgerigar mutations — base colour (Green/Blue), Dark Factor, Grey Factor, Violet Factor, sex-linked Ino / Opaline / Cinnamon / Slate / Texas Clearbody / Lacewing, autosomal recessive Recessive Pied / Fallow / Black Face / Blackwing / Saddleback, the dil-locus allelic series Clearwing / Greywing / Dilute (with proper co-dominance modelling — Clearwing × Greywing → Fullbody Greywing, Clearwing dominant over Dilute), and autosomal incompletely dominant Spangle / Dominant Pied / Yellow Face / Goldenface / Grey / Violet / Anthracite / Easley Clearbody / Crest. The engine maps directly to inheritance models published in <em>A Guide to Colour Mutations and Genetics in Parrots</em> (Dr. Terry Martin, 2002), <em>World of Budgerigars</em> (Cyril H. Rogers), and the peer-reviewed Crest and Lacewing research papers of Inte Onsman at MUTAVI Research (Belgium / Netherlands).</p>
       </div>
     </div>
 
@@ -1315,14 +1315,12 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
       <span class="seo-mut-tag" role="listitem">Black Face</span>
       <span class="seo-mut-tag" role="listitem">Blackwing</span>
       <span class="seo-mut-tag" role="listitem">Saddleback</span>
-      <span class="seo-mut-tag" role="listitem">Anthracite</span>
+      <span class="seo-mut-tag" role="listitem">Anthracite (SF/DF)</span>
       <span class="seo-mut-tag" role="listitem">Lacewing (SL)</span>
       <span class="seo-mut-tag" role="listitem">Goldenface</span>
-      <span class="seo-mut-tag" role="listitem">Darkwing</span>
-      <span class="seo-mut-tag" role="listitem">Dutch Pied</span>
-      <span class="seo-mut-tag" role="listitem">Dominant Clearbody (Easley)</span>
-      <span class="seo-mut-tag" role="listitem">Crest</span>
-      <span class="seo-mut-tag" role="listitem">Dark-Eyed Clear (emergent)</span>
+      <span class="seo-mut-tag" role="listitem">Easley Clearbody</span>
+      <span class="seo-mut-tag" role="listitem">Crest (lethal DF)</span>
+      <span class="seo-mut-tag" role="listitem">Fullbody Greywing (Cw × Gw)</span>
     </div>
 
     <p class="seo-eyebrow" style="margin-bottom:14px;">Trusted by Breeders In</p>
@@ -1370,7 +1368,7 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
       </div>
       <div class="seo-faq-item">
         <h3>What is the difference between Recessive Pied and Dominant Pied in budgies?</h3>
-        <p>They are two completely separate genes with different inheritance modes. Recessive Pied (also called Danish Pied or Harlequin) is autosomal recessive — both parents must carry it for chicks to show it visually. It typically produces large irregular yellow or white patches over the body. Dominant Pied (also called Banded Pied or Australian Pied) is autosomal incompletely dominant — a single factor (SF) bird shows a clean band of pied across the chest, while a double factor (DF) bird shows much more pied area. The two pied types can be combined in the same bird and the result is sometimes called "Double Pied" or "Dark-eyed Clear" depending on whether Ino is also involved. Read the full <a href="/guides/dominant-pied.html" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Dominant Pied + DEC Genetics Guide →</a></p>
+        <p>They are two completely separate genes with different inheritance modes. Recessive Pied (also called Danish Pied or Harlequin) is autosomal recessive — both parents must carry it for chicks to show it visually. It typically produces large irregular yellow or white patches over the body. Dominant Pied (also called Banded Pied or Australian Pied) is autosomal incompletely dominant — a single factor (SF) bird shows a clean band of pied across the chest, while a double factor (DF) bird shows much more pied area. The calculator handles both gene types correctly and shows split (carrier) percentages for the recessive form.</p>
       </div>
       <div class="seo-faq-item">
         <h3>What is Lacewing and how is it inherited in budgerigars?</h3>
@@ -1381,12 +1379,12 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
         <p>Yes — Crest is an autosomal incompletely dominant mutation with a lethal effect in the double factor (DF). Per peer-reviewed research by <a href="https://www.mutavi.info/index.php?art=crested" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Inte Onsman (MUTAVI Research)</a>, the Crest factor has a completely dominant lethal effect with 48% penetrance, with the lethal crisis setting in on approximately the 12th day of incubation. Pairing Crest × Crest produces a 1:2:1 ratio (25% normal, 50% SF Crested, 25% DF — lethal embryos). The calculator flags DF Crest offspring as "(Lethal)" so breeders see exactly why ~25% of fertile eggs may not hatch in a Crest×Crest pairing. The three Crest phenotype variants are Tufted (mild), Half-circular (medium), and Full-circular (strongest).</p>
       </div>
       <div class="seo-faq-item">
-        <h3>What is Dominant Clearbody (Easley) and how is it different from Texas Clearbody?</h3>
-        <p>Dominant Clearbody — also called Easley Clearbody — is autosomal incompletely dominant. It originated in California in 1992 with American breeder Steve Easley. The body colour lightens to a clear yellow (green base) or near-white (blue base) while the head and wing markings retain their dark melanin pattern. The distinction from Texas Clearbody is the inheritance mode: Texas Clearbody is <strong>sex-linked recessive</strong> (different gene, on the Z chromosome), while Easley Clearbody is <strong>autosomal incompletely dominant</strong> (different gene, autosomal, with visible SF and DF forms). Both reduce body melanin while preserving wing pattern, but breeders should never confuse them — the pairing predictions are entirely different.</p>
+        <h3>What is Easley Clearbody and how is it different from Texas Clearbody?</h3>
+        <p>Easley Clearbody is autosomal incompletely dominant. It originated in California in 1992 with American breeder Steve Easley. The body colour lightens to a clear yellow (green base) or near-white (blue base) while the head and wing markings retain their dark melanin pattern. The distinction from Texas Clearbody is the inheritance mode: Texas Clearbody is <strong>sex-linked recessive</strong> (different gene, on the Z chromosome), while Easley Clearbody is <strong>autosomal incompletely dominant</strong> (different gene, autosomal, with visible SF and DF forms). Both reduce body melanin while preserving wing pattern, but breeders should never confuse them — the pairing predictions are entirely different.</p>
       </div>
       <div class="seo-faq-item">
-        <h3>What is a Dark-Eyed Clear (DEC) budgie and how do I breed one?</h3>
-        <p>Dark-Eyed Clear (DEC) is not a separate gene — it is an emergent phenotype that appears when a budgerigar carries both visible Recessive Pied AND one or more factors of Dutch Pied (Continental Clearflight Pied). The bird appears as a pure yellow (green base) or pure white (blue base) body with normal dark eyes — distinguishable from Lutino/Albino because the eyes are not red. The calculator automatically detects this combination and labels the offspring as "Dark-Eyed Clear Yellow" or "Dark-Eyed Clear White." Per <a href="https://www.mutavi.info/index.php?art=blackeye" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Inte Onsman's MUTAVI research on Dark-Eyed Clears</a>, the cleanest route is pairing a visible Recessive Pied bird with a Dutch Pied SF or DF carrier — expect ~25% DEC chicks per clutch on average.</p>
+        <h3>How does the calculator handle Clearwing × Dilute pairings?</h3>
+        <p>Clearwing, Greywing, and Dilute are alleles of the same dil locus (single gene with multiple alleles) — not three independent genes. The calculator uses proper allelic series modelling per Wikipedia and breeder consensus: <strong>Clearwing is dominant over Dilute</strong>, so pairing a visual Clearwing × visual Dilute gives 100% Clearwing offspring (split for Dilute). <strong>Clearwing × Greywing produces the hetero-allelic "Fullbody Greywing" phenotype</strong>. A visual Dilute can never hide a Clearwing allele — they're on the same locus. Pairing two visual Dilutes always gives 100% visual Dilute offspring (zero Clearwing possible).</p>
       </div>
       <div class="seo-faq-item">
         <h3>Why is Ino sex-linked in budgies but autosomal in lovebirds?</h3>
@@ -1458,8 +1456,8 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
         </a>
         <a href="/guides/dominant-pied.html" style="background:#141414;border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:18px;text-decoration:none;color:#e6e6e6;display:block;">
           <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#4ca154;font-weight:700;margin-bottom:6px;">Autosomal Incomplete Dominant</p>
-          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:-0.01em;">Dominant Pied + DEC →</h3>
-          <p style="font-size:13px;color:#a8a8a8;margin:0;">Banded vs Dutch Pied · the Dark-Eyed Clear combo formula.</p>
+          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:-0.01em;">Dominant Pied →</h3>
+          <p style="font-size:13px;color:#a8a8a8;margin:0;">Banded Pied vs Recessive Pied — the two pied gene systems explained.</p>
         </a>
         <a href="/guides/dark-factor.html" style="background:#141414;border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:18px;text-decoration:none;color:#e6e6e6;display:block;">
           <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#4ca154;font-weight:700;margin-bottom:6px;">Autosomal Incomplete Dominant</p>
@@ -1477,7 +1475,7 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
       <div class="seo-grid">
         <div class="seo-block">
           <h3>🇦🇺 Martin, T. (2002)</h3>
-          <p><a href="https://archive.org/details/a-guide-to-colour-mutations-genetics-in-parrots-terry-martin" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);"><em>A Guide to Colour Mutations and Genetics in Parrots.</em></a> ABK Publications, Tweed Heads NSW, Australia. ISBN 978-0-9577024-7-9. The standard global reference for psittacine colour genetics — 700+ photographs, 80+ species, with comprehensive coverage of every documented budgerigar mutation including standardised international nomenclature. The calculator's allele models — including the dominant series (Dark Factor, Grey, Violet, Yellow Face, Goldenface, Spangle, Dominant Pied, Dutch Pied, Darkwing, Anthracite, Dominant Clearbody, Crest), the sex-linked series (Cinnamon, Opaline, Ino, Slate, Texas Clearbody, Lacewing), and the autosomal recessive series (Recessive Pied, Fallow, Clearwing, Greywing, Dilute, Black Face, Blackwing, Saddleback) — map directly to Martin's published inheritance tables. <a href="https://catalogue.nla.gov.au/Record/1978207" target="_blank" rel="noopener noreferrer" style="color:#a8a8a8;text-decoration:none;border-bottom:1px solid rgba(168,168,168,0.3);font-size:12px;">[National Library of Australia ↗]</a></p>
+          <p><a href="https://archive.org/details/a-guide-to-colour-mutations-genetics-in-parrots-terry-martin" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);"><em>A Guide to Colour Mutations and Genetics in Parrots.</em></a> ABK Publications, Tweed Heads NSW, Australia. ISBN 978-0-9577024-7-9. The standard global reference for psittacine colour genetics — 700+ photographs, 80+ species, with comprehensive coverage of every documented budgerigar mutation including standardised international nomenclature. The calculator's allele models — including the autosomal incompletely dominant series (Dark Factor, Grey, Violet, Yellow Face, Goldenface, Spangle, Dominant Pied, Anthracite, Easley Clearbody, Crest), the sex-linked series (Cinnamon, Opaline, Ino, Slate, Texas Clearbody, Lacewing), the autosomal recessive series (Recessive Pied, Fallow, Black Face, Blackwing, Saddleback), and the dil-locus allelic series (Clearwing / Greywing / Dilute) — map directly to Martin's published inheritance tables. <a href="https://catalogue.nla.gov.au/Record/1978207" target="_blank" rel="noopener noreferrer" style="color:#a8a8a8;text-decoration:none;border-bottom:1px solid rgba(168,168,168,0.3);font-size:12px;">[National Library of Australia ↗]</a></p>
         </div>
         <div class="seo-block">
           <h3>🇬🇧 Rogers, C. H. (revised by Blake, J.)</h3>
@@ -1492,8 +1490,8 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
           <p><a href="https://www.mutavi.info/index.php?art=lacewing" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);"><em>The Lacewing: An Enigma in Budgerigar Breeding</em></a> · Inte Onsman, MUTAVI Research &amp; Advice Group. Investigates Lacewing inheritance from the 1946 lutino strain origin onwards, including the 1976 unexpected event in offspring of a normal split-lacewing cock. Concludes Lacewing is the recombination product of Cinnamon and Ino on the Z chromosome rather than a separate gene — confirmed by 2007 follow-up work on sex-chromosome crossing-over in male budgerigars.</p>
         </div>
         <div class="seo-block">
-          <h3>🇧🇪 Onsman, I. — MUTAVI Research</h3>
-          <p><a href="https://www.mutavi.info/index.php?art=blackeye" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);"><em>Dark-Eyed Clears</em></a> · Inte Onsman, MUTAVI Research &amp; Advice Group. Documents the Dark-Eyed Clear (DEC) phenotype as an emergent combinatorial expression of Recessive Pied + Dutch Pied (Continental Clearflight Pied) rather than a distinct gene. The calculator's automatic DEC detection (visible Recessive Pied + any Dutch Pied factor → renamed as "Dark-Eyed Clear Yellow" / "Dark-Eyed Clear White") implements Onsman's published rules directly.</p>
+          <h3>📚 Wikipedia: Budgerigar Colour Genetics</h3>
+          <p><a href="https://en.wikipedia.org/wiki/Budgerigar_colour_genetics" target="_blank" rel="noopener noreferrer" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Wikipedia: Budgerigar Colour Genetics</a> · Comprehensive, community-maintained reference documenting all primary budgerigar mutations, their allele symbols, inheritance types, and historical origins. Particularly authoritative on the dil-locus allelic series (Clearwing/Greywing/Dilute co-dominance) and the standardised inheritance type classifications (A-I-D, A-Co-D, S-L-R) used by international breeder communities.</p>
         </div>
         <div class="seo-block">
           <h3>🇧🇪 Onsman, I. — MUTAVI Research</h3>
@@ -1737,14 +1735,8 @@ function _0xA7(baseRes,arMuts,adMuts){
       if(cr.factor==="DF")base="DF Crest (Lethal) "+base;
       else base="Crested "+base;
     }
-    // Dominant Clearbody (Easley) — keep short label in name
-    const dcI=ad.findIndex(a=>a.label==="Dominant Clearbody (Easley)");
-    if(dcI>=0){
-      const dc=ad[dcI];ad.splice(dcI,1);
-      const pre=dc.factor==="DF"?"DF Easley Clearbody ":"Easley Clearbody ";
-      base=pre+base;
-    }
-    // Remaining AD modifiers: Spangle, Dominant Pied, Dutch Pied, Darkwing
+    // (Easley Clearbody handled by generic AD prefix loop — was special-cased before label rename)
+    // Remaining AD modifiers: Spangle, Dominant Pied
     for(const a of ad){
       const pre=a.factor==="DF"?"DF ":"";
       base=pre+a.label+" "+base;
