@@ -59,6 +59,7 @@ const _0xC9 = [
   { id: "Goldenface", label: "Goldenface", type: "AD" },
   { id: "Spangle", label: "Spangle", type: "AD" },
   { id: "DominantPied", label: "Dominant Pied", type: "AD" },
+  { id: "ClearflightPied", label: "Clearflight Pied", type: "AD" },
   { id: "DominantClearbody", label: "Easley Clearbody", type: "AD" },
   { id: "Crest", label: "Crest", type: "AD" }
 ];
@@ -178,8 +179,16 @@ function _0xA7(baseRes, arMuts, adMuts) {
       base = "Yellow Face " + base;
       if (yf.factor === "DF") base = "DF " + base;
     }
-    // DEC detection disabled — Dutch Pied removed from mutation list per expert feedback
-    let isDEC = false;
+    // Dark-Eyed Clear (DEC) — emergent: Clearflight Pied (SF or DF) + VISIBLE Recessive Pied
+    const cfI = ad.findIndex(a => a.label === "Clearflight Pied");
+    const rpVisIdx = vis.indexOf("Recessive Pied");
+    let isDEC = false, decFactor = null;
+    if (cfI >= 0 && rpVisIdx >= 0) {
+      isDEC = true;
+      decFactor = ad[cfI].factor;
+      ad.splice(cfI, 1);
+      vis.splice(rpVisIdx, 1);
+    }
     const crI = ad.findIndex(a => a.label === "Crest");
     if (crI >= 0) {
       const cr = ad[crI]; ad.splice(crI, 1);
@@ -197,8 +206,7 @@ function _0xA7(baseRes, arMuts, adMuts) {
       base = pre + a.label + " " + base;
     }
     if (isDEC) {
-      const isGreen = base.includes("Green");
-      base = (isGreen ? "Dark-Eyed Clear Yellow " : "Dark-Eyed Clear White ") + base;
+      base = "Dark-Eyed Clear (" + decFactor + ")";
     }
     let name = base;
     if (vis.length) name += " " + vis.join(" ");
@@ -303,6 +311,70 @@ function _0xDilApply(pool,outcomes){
   return Object.entries(merged).map(([name,pct])=>({name,pct})).sort((a,b)=>b.pct-a.pct);
 }
 
+// ─── INO-LOCUS allelic series (Ino + Texas Clearbody on Z chromosome) ───
+const _0xInoIds = new Set(['Ino', 'TexasClearbody']);
+function _0xInoCock(traits) {
+  let tcb = null, ino = null;
+  for (const t of (traits || [])) {
+    if (t.id === 'TexasClearbody') tcb = t.status;
+    else if (t.id === 'Ino') ino = t.status;
+  }
+  if (!tcb && !ino) return ['+', '+'];
+  const visuals = [], splits = [];
+  if (tcb === 'visual') visuals.push('tcb'); else if (tcb === 'split' || tcb === 'possibleSplit') splits.push('tcb');
+  if (ino === 'visual') visuals.push('ino'); else if (ino === 'split' || ino === 'possibleSplit') splits.push('ino');
+  if (visuals.length === 0 && splits.length === 0) return ['+', '+'];
+  if (visuals.length === 0 && splits.length === 1) return [splits[0], '+'];
+  if (visuals.length === 0 && splits.length >= 2) return [splits[0], splits[1]];
+  if (visuals.length === 1 && splits.length === 0) return [visuals[0], visuals[0]];
+  if (visuals.length === 1 && splits.length >= 1) return [visuals[0], splits[0]];
+  if (visuals.length >= 2) return [visuals[0], visuals[1]];
+  return ['+', '+'];
+}
+function _0xInoHen(traits) {
+  let tcb = null, ino = null;
+  for (const t of (traits || [])) {
+    if (t.id === 'TexasClearbody') tcb = t.status;
+    else if (t.id === 'Ino') ino = t.status;
+  }
+  if (tcb === 'visual') return 'tcb';
+  if (ino === 'visual') return 'ino';
+  return '+';
+}
+function _0xInoCockPheno(a1, a2) {
+  const rank = {'+': 0, 'tcb': 1, 'ino': 2};
+  const [first, second] = [a1, a2].sort((x, y) => rank[x] - rank[y]);
+  const k = first + '/' + second;
+  if (k === '+/+') return {visible: null, splits: []};
+  if (k === '+/tcb') return {visible: null, splits: ['Texas Clearbody']};
+  if (k === '+/ino') return {visible: null, splits: ['Ino']};
+  if (k === 'tcb/tcb') return {visible: 'Texas Clearbody', splits: []};
+  if (k === 'tcb/ino') return {visible: 'Texas Clearbody', splits: ['Ino']};
+  if (k === 'ino/ino') return {visible: 'Ino', splits: []};
+  return {visible: null, splits: []};
+}
+function _0xInoHenPheno(a) {
+  if (a === 'tcb') return {visible: 'Texas Clearbody', splits: []};
+  if (a === 'ino') return {visible: 'Ino', splits: []};
+  return {visible: null, splits: []};
+}
+function _0xInoName(base, pheno) {
+  if (!pheno.visible && (!pheno.splits || !pheno.splits.length)) return base;
+  let nm = base;
+  if (pheno.visible) {
+    if (pheno.visible === 'Ino') nm = _0xINO(nm);
+    else {
+      const sp = nm.indexOf(' / '), dp = nm.indexOf(' // ');
+      const cp = sp > -1 ? sp : dp > -1 ? dp : -1;
+      const before = cp > -1 ? nm.slice(0, cp) : nm;
+      const after = cp > -1 ? nm.slice(cp) : '';
+      nm = pheno.visible + ' ' + before + after;
+    }
+  }
+  if (pheno.splits && pheno.splits.length) nm += ' / ' + pheno.splits.join(' / ');
+  return nm.trim().replace(/\s+/g, ' ');
+}
+
 function _0xB1(p1p, p1t, p2p, p2t) {
   if (!p1p || !p2p) return null;
   const _0xD8 = _0xA1(p1p, p2p), _0xD7 = _0xA2(_0xD8);
@@ -317,7 +389,8 @@ function _0xB1(p1p, p1t, p2p, p2t) {
   for (const t of (p2t || [])) _0xD2(t.id, "f", t.status);
   const arMuts = [], adMuts = [], slMuts = [];
   for (const [id, { m, f }] of Object.entries(mt)) {
-    if (_0xDilIds.has(id)) continue; // dil-locus handled separately
+    if (_0xDilIds.has(id)) continue;
+    if (_0xInoIds.has(id)) continue;
     const mut = _0xC9.find(x => x.id === id); if (!mut) continue;
     if (mut.type === "AR") arMuts.push({ label: mut.label, offspring: _0xA4(m, f) });
     else if (mut.type === "AD") adMuts.push({ label: mut.label, offspring: _0xA6(m, f) });
@@ -330,9 +403,26 @@ function _0xB1(p1p, p1t, p2p, p2t) {
     const dilOutcomes=_0xDilCross(p1Dil||['+','+'], p2Dil||['+','+']);
     combined=_0xDilApply(combined,dilOutcomes);
   }
+  // Apply ino-locus allelic series FIRST if involved (creates sex-separated pool)
+  const cockInoAlleles = _0xInoCock(p1t);
+  const henInoAllele = _0xInoHen(p2t);
+  const inoLocusInvolved = cockInoAlleles[0] !== '+' || cockInoAlleles[1] !== '+' || henInoAllele !== '+';
+  let inoLocusPool = null;
+  if (inoLocusInvolved) {
+    inoLocusPool = [];
+    for (const c of combined) {
+      for (const cockZ of cockInoAlleles) {
+        const malePheno = _0xInoCockPheno(cockZ, henInoAllele);
+        inoLocusPool.push({ name: _0xInoName(c.name, malePheno), pct: c.pct * 0.25, sex: 'male' });
+        const femPheno = _0xInoHenPheno(cockZ);
+        inoLocusPool.push({ name: _0xInoName(c.name, femPheno), pct: c.pct * 0.25, sex: 'female' });
+      }
+    }
+  }
+
   let _0xD9 = null;
-  if (slMuts.length > 0) {
-    let pool = combined.map(b => ({ name: b.name, pct: b.pct, sex: null }));
+  if (slMuts.length > 0 || inoLocusInvolved) {
+    let pool = inoLocusPool || combined.map(b => ({ name: b.name, pct: b.pct, sex: null }));
     for (const sl of slMuts) {
       const raw = _0xA5(sl.m, sl.f);
       const next = [];
@@ -365,10 +455,16 @@ function _0xB1(p1p, p1t, p2p, p2t) {
       pool = next;
     }
     const mrg = arr => { const mg = []; for (const r of arr) { const ex = mg.find(x => x.name === r.name); if (ex) ex.pct += r.pct; else mg.push({ ...r }); } return mg.sort((a, b) => b.pct - a.pct); };
-    const isComb = slMuts.every(sl => sl.m === "visual" && sl.f === "visual");
+    const isComb = slMuts.every(sl => sl.m === "visual" && sl.f === "visual") && !inoLocusInvolved;
     const mFinal = _0xA8(mrg(pool.filter(r => r.sex === "male")));
     const fFinal = _0xA8(mrg(pool.filter(r => r.sex === "female")));
-    _0xD9 = { label: slMuts.map(sl => sl.label).join(" + "), combined: isComb, maleOffspring: mFinal, femaleOffspring: fFinal };
+    const labelParts = slMuts.map(sl => sl.label);
+    if (inoLocusInvolved) {
+      const allTraits = [...(p1t || []), ...(p2t || [])];
+      if (allTraits.some(t => t.id === 'TexasClearbody')) labelParts.push('Texas Clearbody');
+      if (allTraits.some(t => t.id === 'Ino')) labelParts.push('Ino');
+    }
+    _0xD9 = { label: labelParts.join(" + ") || "Sex-Linked", combined: isComb, maleOffspring: mFinal, femaleOffspring: fFinal };
   }
   return { combined: _0xA8(combined), slMut: _0xD9, adMut: null };
 }
