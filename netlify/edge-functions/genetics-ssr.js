@@ -9,8 +9,8 @@
 //
 // Engine ported verbatim from index.html. KEEP IN SYNC when
 // engine changes. Source of truth = index.html.
-//   ENGINE VERSION: v2.0 (2026-06-01 — includes Lacewing,
-//   Crest lethal flag, Dominant Clearbody, DEC detection).
+//   ENGINE VERSION: v2.2 (2026-06-11 — 23 mutations, Ino-locus
+//   allelic series, dil-locus co-dominance, DEC via Clearflight Pied).
 // ============================================================
 
 // ----- Base colour locus map -----
@@ -60,8 +60,7 @@ const _0xC9 = [
   { id: "Spangle", label: "Spangle", type: "AD" },
   { id: "DominantPied", label: "Dominant Pied", type: "AD" },
   { id: "ClearflightPied", label: "Clearflight Pied", type: "AD" },
-  { id: "DominantClearbody", label: "Easley Clearbody", type: "AD" },
-  { id: "Crest", label: "Crest", type: "AD" }
+  { id: "DominantClearbody", label: "Easley Clearbody", type: "AD" }
 ];
 
 // ----- Pure engine functions (verbatim from index.html) -----
@@ -165,19 +164,17 @@ function _0xA7(baseRes, arMuts, adMuts) {
       else if (base === "Dark Green / Blue") base = "Dark Grey Green / Blue";
       else if (base === "Olive Green / Blue") base = "Olive Grey Green / Blue";
       else base = "Grey " + base;
-      if (greyFactor.factor === "DF") base = "DF " + base;
+      base = base + " " + greyFactor.factor;
     }
     const vI = ad.findIndex(a => a.label === "Violet Factor");
     if (vI >= 0) {
       const v = ad[vI]; ad.splice(vI, 1);
-      base = "Violet " + base;
-      if (v.factor === "DF") base = "DF " + base;
+      base = "Violet " + v.factor + " " + base;
     }
     const yI = ad.findIndex(a => a.label === "Yellow Face");
     if (yI >= 0) {
       const yf = ad[yI]; ad.splice(yI, 1);
-      base = "Yellow Face " + base;
-      if (yf.factor === "DF") base = "DF " + base;
+      base = "Yellow Face " + yf.factor + " " + base;
     }
     // Dark-Eyed Clear (DEC) — emergent: Clearflight Pied (SF or DF) + VISIBLE Recessive Pied
     const cfI = ad.findIndex(a => a.label === "Clearflight Pied");
@@ -189,21 +186,9 @@ function _0xA7(baseRes, arMuts, adMuts) {
       ad.splice(cfI, 1);
       vis.splice(rpVisIdx, 1);
     }
-    const crI = ad.findIndex(a => a.label === "Crest");
-    if (crI >= 0) {
-      const cr = ad[crI]; ad.splice(crI, 1);
-      if (cr.factor === "DF") base = "DF Crest (Lethal) " + base;
-      else base = "Crested " + base;
-    }
-    const dcI = ad.findIndex(a => a.label === "Dominant Clearbody (Easley)");
-    if (dcI >= 0) {
-      const dc = ad[dcI]; ad.splice(dcI, 1);
-      const pre = dc.factor === "DF" ? "DF Easley Clearbody " : "Easley Clearbody ";
-      base = pre + base;
-    }
+    // Remaining AD modifiers — explicit "[Mutation] [SF/DF] [Base]" format
     for (const a of ad) {
-      const pre = a.factor === "DF" ? "DF " : "";
-      base = pre + a.label + " " + base;
+      base = a.label + " " + a.factor + " " + base;
     }
     if (isDEC) {
       base = "Dark-Eyed Clear (" + decFactor + ")";
