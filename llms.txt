@@ -36,16 +36,16 @@
 
 ### Blog (long-form mutation articles)
 - https://budgerigargenetics.com/blog/
-- https://budgerigargenetics.com/blog/manto-negro-budgerigar-mutation.html , Brazilian Black Mantle, autosomal dominant, developed by Ley H. Silva Filho around 2021, 2025 SOCO Cup Best in Show winner
-- https://budgerigargenetics.com/blog/blackface-budgerigar-mutation.html , Dutch 1992 discovery by Mr. Van Dijk, autosomal recessive bf allele, documented by MUTAVI 2007
-- https://budgerigargenetics.com/blog/blackwing-budgerigar-mutation.html , Venezuelan 2002 discovery by Edixon Laya, stabilized by Alejandro Álvarez, first UK breeding by Don Dickson March 2019
+- https://budgerigargenetics.com/blog/manto-negro-budgerigar-mutation , Brazilian Black Mantle, autosomal dominant, developed by Ley H. Silva Filho around 2021, 2025 SOCO Cup Best in Show winner
+- https://budgerigargenetics.com/blog/blackface-budgerigar-mutation , Dutch 1992 discovery by Mr. Van Dijk, autosomal recessive bf allele, documented by MUTAVI 2007
+- https://budgerigargenetics.com/blog/blackwing-budgerigar-mutation , Venezuelan 2002 discovery by Edixon Laya, stabilized by Alejandro Álvarez, first UK breeding by Don Dickson March 2019
 
 ### Mutation guides (quick reference)
-- https://budgerigargenetics.com/guides/opaline.html , Opaline sex-linked recessive, auto-sex pairing trick
-- https://budgerigargenetics.com/guides/ino-lutino-albino.html , Ino sex-linked recessive, why budgie Ino differs from lovebird Ino
-- https://budgerigargenetics.com/guides/spangle.html , Spangle SF vs DF, reverse wing markings
-- https://budgerigargenetics.com/guides/dominant-pied.html , Banded vs Clearflight Pied, Dark-Eyed Clear emergence
-- https://budgerigargenetics.com/guides/dark-factor.html , Sky/Cobalt/Mauve and Light/Dark/Olive Green, 1:2:1 Mendelian ratio
+- https://budgerigargenetics.com/guides/opaline , Opaline sex-linked recessive, auto-sex pairing trick
+- https://budgerigargenetics.com/guides/ino-lutino-albino , Ino sex-linked recessive, why budgie Ino differs from lovebird Ino
+- https://budgerigargenetics.com/guides/spangle , Spangle SF vs DF, reverse wing markings
+- https://budgerigargenetics.com/guides/dominant-pied , Banded vs Clearflight Pied, Dark-Eyed Clear emergence
+- https://budgerigargenetics.com/guides/dark-factor , Sky/Cobalt/Mauve and Light/Dark/Olive Green, 1:2:1 Mendelian ratio
 
 ## 23 supported mutations (by inheritance type)
 
