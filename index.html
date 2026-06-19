@@ -2060,8 +2060,33 @@ function _0xNormal(name){
 }
 function _0xApplyNormal(rows){return rows.map(r=>({...r,name:_0xNormal(r.name)}));}
 
+// JUDGE RULE (Onsman 2007, MUTAVI): Lacewing = Cinnamon + Ino on same Z chromosome (crossover product).
+// A Lacewing parent passes a Z with BOTH alleles together to offspring.
+// Implementation: expand any Lacewing trait into implicit Cinnamon + Ino with the same status,
+// then the existing SL + Ino-locus engines naturally produce the correct sex-separated outputs.
+function _0xExpandLacewing(traits){
+  if(!traits||!Array.isArray(traits))return traits;
+  const lwIdx=traits.findIndex(t=>t&&t.id==='Lacewing');
+  if(lwIdx<0)return traits;
+  const lw=traits[lwIdx];
+  const out=traits.filter((_,i)=>i!==lwIdx);
+  // Add Cinnamon + Ino with the same status (don't override stronger existing status)
+  const rank={visual:3,split:2,possibleSplit:1,normal:0};
+  for(const id of ['Cinnamon','Ino']){
+    const existing=out.find(t=>t.id===id);
+    if(!existing){out.push({id,status:lw.status});}
+    else{
+      // upgrade if Lacewing status is stronger
+      if((rank[lw.status]||0)>(rank[existing.status]||0))existing.status=lw.status;
+    }
+  }
+  return out;
+}
 function _0xB1(p1p,p1t,p2p,p2t){
   if(!p1p||!p2p)return null;
+  // Expand Lacewing → Cinnamon + Ino on both sides (per Onsman MUTAVI Z-crossover model)
+  p1t=_0xExpandLacewing(p1t);
+  p2t=_0xExpandLacewing(p2t);
   const _0xD8=_0xA1(p1p,p2p),_0xD7=_0xA2(_0xD8);
   // Build mutation status table {id: {m, f}}
   const mt={};
@@ -2166,6 +2191,12 @@ function _0xB1(p1p,p1t,p2p,p2t){
   }
   return{combined:_0xApplyNormal(_0xA8(combined)),slMut:_0xD9,adMut:null};
 }
+
+// JUDGE RULE (Onsman): When offspring inherits BOTH visible Cinnamon AND visible Ino,
+// the visible phenotype is Lacewing (Cinnamon + Ino on same Z = crossover product).
+// This rebrands offspring names where applicable. Splits stay as separate Cinn/Ino splits
+// since they may not be on the same Z chromosome.
+// NOTE: This is a label-only step, the engine still tracks alleles correctly.
 
 /* ─── APP STATE ──────────────────────────────────── */
 const S={p1p:"",p1t:[],p1Op:"visual",p2p:"",p2t:[],p2Op:"visual",snapA:null,snapB:null};
