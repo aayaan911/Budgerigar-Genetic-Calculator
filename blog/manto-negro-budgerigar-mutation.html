@@ -120,6 +120,19 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 /* Open Calculator: normal until hover (was always-green) */
 .brand-nav a.brand-cta{background:transparent !important;color:var(--text-2) !important;font-weight:600 !important;border:1px solid var(--border) !important;}
 .brand-nav a.brand-cta:hover{background:var(--accent) !important;color:#fff !important;border-color:var(--accent) !important;}
+
+/* === v4.5: Unified author byline (no border, name normal color, green on hover) === */
+.byline{display:flex;align-items:center;gap:14px;padding:16px 18px;margin:0 0 28px;border:1px solid var(--border);border-radius:12px;background:var(--bg-card);box-sizing:border-box;}
+.byline-img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--border);}
+.byline-info{flex:1;min-width:0;}
+.byline-name-row{margin:0;font-size:14px;font-weight:600;color:var(--text);line-height:1.3;}
+.byline-name{color:var(--text) !important;text-decoration:none !important;border:none !important;border-bottom:1px solid transparent !important;transition:color 0.18s,border-color 0.18s;}
+.byline-name:hover{color:var(--accent) !important;border-bottom-color:var(--accent) !important;}
+.byline-role{margin:3px 0 0;font-size:11.5px;color:var(--text-3);line-height:1.3;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.08em;}
+.byline-follow{font-size:12px;color:var(--text-2) !important;text-decoration:none !important;border:1px solid var(--border) !important;background:transparent;padding:8px 16px;border-radius:8px;font-weight:600;white-space:nowrap;flex-shrink:0;transition:background 0.18s,color 0.18s,border-color 0.18s;display:inline-flex;align-items:center;gap:6px;}
+.byline-follow:hover{background:var(--accent) !important;color:#fff !important;border-color:var(--accent) !important;}
+.byline-follow svg{width:12px;height:12px;}
+@media(max-width:520px){.byline{padding:14px;gap:10px;flex-wrap:wrap;}.byline-follow{margin-left:auto;}}
 </style>
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YDV3HV3XD"></script>
@@ -164,15 +177,16 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 
 <h1>Manto Negro Budgerigar Mutation, Brazilian Black Mantle Complete Guide</h1>
 <p class="lead">A Brazilian breeder named Ley H. Silva Filho. A small flock around 2021. A new pattern of melanin distribution that nobody had seen before. A Best in Show win at the 2025 SOCO Cup. And a mutation that breaks the recessive black mutation tradition by being fully dominant. Here is the complete picture of the Manto Negro budgerigar mutation, what it actually looks like, how it inherits, and why it might be the most important new budgie mutation of the decade.</p>
-<div class="meta"><span>Published: June 19, 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 12 min read</span><span>🇧🇷 Brazilian origin</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/></svg> Autosomal dominant</span><div class="byline" style="display:flex;align-items:center;gap:12px;padding:14px 0;margin:0 0 28px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);width:100%;box-sizing:border-box;">
-<img src="/avatar-ayaan.png" alt="Ayaan Shohan" style="width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-<div style="flex:1;min-width:0;">
-<p style="margin:0;font-size:14px;font-weight:600;color:var(--text);line-height:1.3;">Written by <a href="https://www.facebook.com/kinbird.aviary/" target="_blank" rel="author noopener noreferrer" style="color:var(--accent);border-bottom:1px solid rgba(76,161,84,0.35);text-decoration:none;">Ayaan Shohan</a></p>
-<p style="margin:2px 0 0;font-size:12px;color:var(--text-3);line-height:1.3;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.08em;">Founder, KinBird Aviary · Bangladesh</p>
+<div class="meta"><span>Published: June 19, 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 12 min read</span><span>🇧🇷 Brazilian origin</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/></svg> Autosomal dominant</span><div class="byline">
+<img class="byline-img" src="/avatar-ayaan.png" alt="Ayaan Shohan"/>
+<div class="byline-info">
+<p class="byline-name-row">Written by <a class="byline-name" href="https://www.facebook.com/kinbird.aviary/" target="_blank" rel="author noopener noreferrer">Ayaan Shohan</a></p>
+<p class="byline-role">Founder, KinBird Aviary · Bangladesh</p>
 </div>
-<a href="https://www.facebook.com/kinbird.aviary/" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--accent);text-decoration:none;border:1px solid rgba(76,161,84,0.35);padding:8px 14px;border-radius:8px;font-weight:600;white-space:nowrap;flex-shrink:0;">Follow</a>
-</div>
-
+<a class="byline-follow" href="https://www.facebook.com/kinbird.aviary/" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.3v6.9A10 10 0 0 0 22 12z"/></svg>
+Follow
+</a>
 </div>
 
 <div class="tldr">
