@@ -62,7 +62,7 @@ h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.02em;margin-
 .lead{font-size:17px;color:var(--text-2);margin-bottom:42px;max-width:680px;}
 .section-h{font-size:14px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--text-3);margin:48px 0 16px;font-weight:700;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:24px;}
-.card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;display:block;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;}
 .card:hover{border-color:rgba(76,161,84,0.45);transform:translateY(-2px);box-shadow:0 4px 18px rgba(0,0,0,0.05);}
 .card-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
 .card-eyebrow svg{width:11px;height:11px;}
@@ -70,7 +70,7 @@ h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.02em;margin-
 .card p{font-size:14px;color:var(--text-2);margin:0 0 14px;}
 .card-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.1em;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
 .card-meta svg{width:11px;height:11px;}
-.read-btn{display:inline-block;margin-top:14px;padding:9px 14px;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;border:1px solid rgba(76,161,84,0.35);border-radius:8px;transition:background 0.2s,border-color 0.2s;}
+.read-btn{display:inline-block;align-self:flex-start;margin-top:auto;padding:9px 14px;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;border:1px solid rgba(76,161,84,0.35);border-radius:8px;transition:background 0.2s,border-color 0.2s;}
 .card:hover .read-btn{background:var(--accent);color:#fff;border-color:var(--accent);}
 .cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;text-decoration:none;}
 .cta:hover{background:var(--accent-dark);}
@@ -161,7 +161,7 @@ Blog
 <h2>Dominant Pied (Banded &amp; Clearflight)</h2>
 <p>Two separate pied genes, the Dark Eyed Clear emergence, and how to plan pairings for show class pied lines.</p>
 <div class="card-meta"><span>🇦🇺 + 🇳🇱 origins</span><span>8 min read</span></div>
-<span class="read-btn">Read guide →</span>
+<span class="read-btn">Read article →</span>
 </a>
 
 <a class="card" href="/guides/spangle">
@@ -169,7 +169,7 @@ Blog
 <h2>Spangle (SF &amp; DF)</h2>
 <p>Reverse wing markings, the Mendelian 1:2:1 ratio, and why DF Spangle birds are often confused with Lutino or Albino.</p>
 <div class="card-meta"><span>🇦🇺 Australia</span><span>7 min read</span></div>
-<span class="read-btn">Read guide →</span>
+<span class="read-btn">Read article →</span>
 </a>
 
 <a class="card" href="/guides/dark-factor">
@@ -177,7 +177,7 @@ Blog
 <h2>Dark Factor (Sky, Cobalt, Mauve)</h2>
 <p>The cleanest Mendelian 1:2:1 example in budgerigar genetics. Light Green to Olive, Sky Blue to Mauve, by simple gene dosage.</p>
 <div class="card-meta"><span>🌍 Universal</span><span>7 min read</span></div>
-<span class="read-btn">Read guide →</span>
+<span class="read-btn">Read article →</span>
 </a>
 
 <a class="card" href="/guides/opaline">
@@ -185,7 +185,7 @@ Blog
 <h2>Opaline Genetics</h2>
 <p>Body colour extends onto wings, clearer wing markings, plus the auto-sex pairing trick that lets you identify chick sex at hatch by colour alone.</p>
 <div class="card-meta"><span>🇦🇺 Australia 1933</span><span>6 min read</span></div>
-<span class="read-btn">Read guide →</span>
+<span class="read-btn">Read article →</span>
 </a>
 
 <a class="card" href="/guides/ino-lutino-albino">
@@ -193,7 +193,7 @@ Blog
 <h2>Ino, Lutino &amp; Albino</h2>
 <p>Full melanin removal producing yellow Lutino on green base or white Albino on blue base. Why budgie Ino works completely differently from lovebird Ino.</p>
 <div class="card-meta"><span>🌍 Global</span><span>6 min read</span></div>
-<span class="read-btn">Read guide →</span>
+<span class="read-btn">Read article →</span>
 </a>
 
 </div>
