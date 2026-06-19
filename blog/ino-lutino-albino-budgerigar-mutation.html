@@ -97,6 +97,16 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 .brand-link,.brand-link:hover{border-bottom:none !important;text-decoration:none !important;}
 .brand-nav a,.brand-nav a:hover{border-bottom:none !important;}
 .theme-toggle,.theme-toggle:hover{border-bottom:none !important;}
+
+/* === v4.4: logo no border + Open Calculator transparent until hover === */
+.brand-link,.brand-link:hover,.brand-link:focus,.brand-link:visited{border-bottom:none !important;border:none !important;text-decoration:none !important;outline:none !important;box-shadow:none !important;}
+.brand-link *{border-bottom:none !important;}
+.brand-icon{border:none !important;outline:none !important;}
+.brand-nav a,.brand-nav a:hover,.brand-nav a:visited{border-bottom:none !important;text-decoration:none !important;}
+.theme-toggle,.theme-toggle:hover,.theme-toggle:focus{border-bottom:none !important;}
+/* Open Calculator: normal until hover (was always-green) */
+.brand-nav a.brand-cta{background:transparent !important;color:var(--text-2) !important;font-weight:600 !important;border:1px solid var(--border) !important;}
+.brand-nav a.brand-cta:hover{background:var(--accent) !important;color:#fff !important;border-color:var(--accent) !important;}
 </style>
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YDV3HV3XD"></script>
