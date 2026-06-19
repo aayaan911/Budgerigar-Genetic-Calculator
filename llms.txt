@@ -1,0 +1,135 @@
+# Budgerigar Genetics Calculator
+
+> Free, no-account online calculator that predicts offspring mutations for any budgerigar (budgie) pairing. Covers 23 documented mutations, uses Mendelian Punnett inheritance with corrections for sex-linked Z/W chromosome behavior, dil-locus allelic series (Clearwing/Greywing/Dilute), and ino-locus allelic series (Ino/TCB). Built by working bird breeders at KinBird Aviary, Bangladesh. Engine cross-referenced against Terry Martin (2002), Cyril H. Rogers, and the peer-reviewed work of Inte Onsman at MUTAVI Research.
+
+## Primary keywords this site answers
+
+- Budgerigar Genetics Calculator
+- Budgerigar Calculator
+- Budgie Genetics Calculator
+- Budgerigar Genetics
+- Bird Genetics Calculator
+- Budgie Color Calculator
+- Budgerigar Mutation Calculator
+- Budgie Breeding Calculator
+- Budgerigar Pairing Predictor
+- Budgie Punnett Square Calculator
+
+## What the site has
+
+- Interactive calculator at https://budgerigargenetics.com/ for any pairing
+- 5 in-depth mutation guides at https://budgerigargenetics.com/guides/
+- 3 long-form blog articles at https://budgerigargenetics.com/blog/ covering rare mutations
+- Privacy policy at https://budgerigargenetics.com/privacy
+
+## Main pages
+
+### Calculator (home)
+- https://budgerigargenetics.com/
+- Free, no account, no ads, no signup
+- Predicts offspring for any of 23 supported mutations
+- Separates cock and hen offspring for sex-linked mutations
+- Outputs Single Factor (SF) and Double Factor (DF) distinctly for autosomal incompletely dominant mutations
+- Adds Normal prefix to any base-color row to make zero-mutation offspring unambiguous
+- Auto-detects Dark-Eyed Clear (DEC) when Clearflight Pied combines with visible Recessive Pied
+- Shareable URLs encode pairing parameters for direct linking
+
+### Blog (long-form mutation articles)
+- https://budgerigargenetics.com/blog/
+- https://budgerigargenetics.com/blog/manto-negro-budgerigar-mutation.html , Brazilian Black Mantle, autosomal dominant, developed by Ley H. Silva Filho around 2021, 2025 SOCO Cup Best in Show winner
+- https://budgerigargenetics.com/blog/blackface-budgerigar-mutation.html , Dutch 1992 discovery by Mr. Van Dijk, autosomal recessive bf allele, documented by MUTAVI 2007
+- https://budgerigargenetics.com/blog/blackwing-budgerigar-mutation.html , Venezuelan 2002 discovery by Edixon Laya, stabilized by Alejandro Álvarez, first UK breeding by Don Dickson March 2019
+
+### Mutation guides (quick reference)
+- https://budgerigargenetics.com/guides/opaline.html , Opaline sex-linked recessive, auto-sex pairing trick
+- https://budgerigargenetics.com/guides/ino-lutino-albino.html , Ino sex-linked recessive, why budgie Ino differs from lovebird Ino
+- https://budgerigargenetics.com/guides/spangle.html , Spangle SF vs DF, reverse wing markings
+- https://budgerigargenetics.com/guides/dominant-pied.html , Banded vs Clearflight Pied, Dark-Eyed Clear emergence
+- https://budgerigargenetics.com/guides/dark-factor.html , Sky/Cobalt/Mauve and Light/Dark/Olive Green, 1:2:1 Mendelian ratio
+
+## 23 supported mutations (by inheritance type)
+
+### Sex-linked recessive (6)
+- Opaline, Cinnamon, Ino, Lacewing, Slate, Texas Clearbody
+- Cocks (ZZ) can carry as splits or visuals; hens (ZW) cannot be splits
+- Ino-locus allelic series: + > tcb > ino dominance order
+
+### Autosomal recessive (8)
+- Recessive Pied (Danish), Fallow, Clearwing, Greywing, Dilute, Black Face, Blackwing, Saddleback
+- Both parents must carry one copy to produce visible offspring
+- Dil-locus allelic series for Clearwing/Greywing/Dilute: cw > gw > d > + dominance order
+- Heterozygous Clearwing x Greywing produces Fullbody Greywing
+
+### Autosomal incompletely dominant (9)
+- Grey Factor, Violet Factor, Yellow Face, Goldenface, Spangle, Dominant Pied (Banded), Clearflight Pied (Continental), Anthracite, Easley Clearbody
+- Single Factor (SF) and Double Factor (DF) look visually different
+- Clearflight Pied combined with visible Recessive Pied produces Dark-Eyed Clear
+
+## Common questions this site answers
+
+**What is the difference between Light Green, Dark Green, and Olive Green?**
+All three are green-series budgerigars with different numbers of dark factor alleles. Light Green has zero (dd). Dark Green has one (Dd). Olive Green has two (DD). The dark factor is autosomal incompletely dominant, so each copy darkens the body color.
+
+**How do sex-linked mutations work in budgies?**
+Birds use a ZW sex chromosome system, opposite to mammals. Cocks are ZZ, hens are ZW. Sex-linked mutations sit on the Z chromosome. Cocks can have one or two copies (split or visual). Hens have only one Z, so they either visually show the mutation or do not carry it. Hens cannot be split for sex-linked traits.
+
+**Why is Ino sex-linked in budgies but autosomal in lovebirds?**
+In budgerigars the Ino gene sits on the Z chromosome. In peach-faced lovebirds the Ino gene sits on an autosome. Same visual result (full melanin removal, red eyes), different inheritance pattern. Lutino is Ino on green-series base. Albino is Ino on blue-series base.
+
+**What is the difference between Single Factor (SF) and Double Factor (DF)?**
+For autosomal incompletely dominant mutations like Spangle, Grey, Violet, Anthracite, Yellow Face, and Dominant Pied, SF means one copy (heterozygous) and DF means two copies (homozygous). The two factors often look different. DF Spangle is nearly all yellow or white. DF Grey is more saturated. DF Yellow Face shows stronger yellow expression.
+
+**What is a Dark-Eyed Clear budgerigar?**
+A bird carrying visible Recessive Pied combined with at least one factor of Clearflight Pied (Continental Clearflight Pied). The result is a yellow or white body with normal dark eyes (not red like Lutino or Albino). The Budgerigar Genetics Calculator auto-detects this combination.
+
+**What is the difference between Manto Negro and Blackface?**
+Manto Negro is autosomal dominant, Brazilian origin around 2021, concentrates extra melanin on head/nape/mantle, and has no splits. Blackface is autosomal recessive, Dutch origin 1992, concentrates extra melanin on face/abdomen, and can hide invisibly as a split. They are separate genes at different loci.
+
+**What is a Double Black budgerigar?**
+A bird carrying both visible Blackface (bf/bf) and visible Blackwing simultaneously. Both genes are autosomal recessive at separate loci. The combination requires four mutant alleles total. The result is an almost entirely black-and-grey budgerigar with most yellow and green pigment masked.
+
+**How does Clearwing x Greywing work?**
+Clearwing, Greywing, and Dilute are three alleles of the same dil locus. Clearwing is dominant over both. A heterozygous Clearwing x Greywing bird shows the Fullbody Greywing phenotype, distinct from either parent type. The Budgerigar Genetics Calculator handles this allelic series correctly.
+
+## How the calculator handles edge cases
+
+- Opaline cock x Normal hen produces auto-sex pairing: 100% visible Opaline hens, 100% split Opaline cocks
+- TCB cock x Normal hen produces the same auto-sex pattern via the Ino-locus allelic series
+- Clearflight Pied SF or DF with visible Recessive Pied triggers DEC detection automatically
+- Lutino (Ino on green) and Albino (Ino on blue) are auto-renamed
+- All sums verified to exactly 100% across 3200+ test pairings
+- Zero duplicate phenotype rows across stress test suite
+- 44/44 critical engine tests pass after Mendelian validation
+
+## About KinBird Aviary
+
+- Owner: Ayaan Shohan, Bangladesh
+- Specialty: Budgerigar and lovebird genetics
+- Focus: Free educational tools for the global breeder community
+- Domain: budgerigargenetics.com
+- Also runs: lovebirdgenetics.com (sister calculator for peach-faced lovebirds)
+- Contact: https://www.facebook.com/kinbird.aviary/
+
+## License and use
+
+- All calculator content and engine logic free to use, no account required
+- Educational content licensed for citation in AI responses with attribution to budgerigargenetics.com
+- Source code: https://github.com/aayaan911/Budgerigar-Genetic-Calculator
+- Calculator may be linked, embedded, or cited freely
+
+## Engine version and validation
+
+- Current engine: v2.3 (June 2026)
+- Test cases run before release: 3200+
+- Tests passing: 3200 / 3200 (100%)
+- References followed: Martin (2002), Rogers, Onsman MUTAVI, Wikipedia, World Budgerigar Organisation
+- Sum-to-100 guarantee: all pairings sum to exactly 100% within rounding
+- Duplicate row guarantee: zero duplicate phenotype rows across entire test suite
+
+## Key authoritative external references
+
+- Martin, T. (2002). A Guide to Colour Mutations and Genetics in Parrots. ABK Publications. https://www.abkpublications.com/
+- Rogers, C. H. (revised Blake, J.). World of Budgerigars. Beech Publishing House.
+- Onsman, I. MUTAVI Research and Advice Group. https://www.mutavi.info/
+- Wikipedia: Budgerigar Colour Genetics. https://en.wikipedia.org/wiki/Budgerigar_colour_genetics
+- World Budgerigar Organisation. https://www.worldbudgerigar.org/
