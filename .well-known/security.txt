@@ -1,0 +1,23 @@
+# Security Policy — Budgerigar Genetics Calculator
+# https://budgerigargenetics.com/
+#
+# If you discover a security vulnerability, please report it
+# privately via the contact below. We appreciate responsible disclosure.
+
+Contact: mailto:info.ayaan911@gmail.com
+Expires: 2027-06-19T00:00:00.000Z
+Preferred-Languages: en, bn
+Canonical: https://budgerigargenetics.com/.well-known/security.txt
+Policy: https://budgerigargenetics.com/privacy
+
+# Scope:
+# - https://budgerigargenetics.com/ (calculator + blog + all subpages)
+#
+# Out of scope:
+# - Third-party services (Cloudflare, GitHub Pages infrastructure)
+# - Social engineering / phishing reports unrelated to this site
+# - Denial-of-service findings (handled by Cloudflare)
+#
+# This is a static single-page calculator with no user accounts,
+# no personal data collection, and no backend database. The attack
+# surface is intentionally minimal.
