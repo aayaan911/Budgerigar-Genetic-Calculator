@@ -3,6 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
 
+  <!-- Home / Calculator -->
   <url>
     <loc>https://budgerigargenetics.com/</loc>
     <lastmod>2026-06-19</lastmod>
@@ -15,6 +16,7 @@
     </image:image>
   </url>
 
+  <!-- Blog Hub -->
   <url>
     <loc>https://budgerigargenetics.com/blog/</loc>
     <lastmod>2026-06-19</lastmod>
@@ -22,6 +24,7 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Blog Articles -->
   <url>
     <loc>https://budgerigargenetics.com/blog/manto-negro-budgerigar-mutation.html</loc>
     <lastmod>2026-06-19</lastmod>
@@ -43,13 +46,7 @@
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://budgerigargenetics.com/blog/colors-varieties-mutations-budgerigar.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
+  <!-- Mutation Guides -->
   <url>
     <loc>https://budgerigargenetics.com/guides/</loc>
     <lastmod>2026-06-19</lastmod>
@@ -92,6 +89,7 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- Privacy -->
   <url>
     <loc>https://budgerigargenetics.com/privacy</loc>
     <lastmod>2026-06-19</lastmod>
