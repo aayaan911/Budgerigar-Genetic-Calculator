@@ -148,7 +148,9 @@ Each green-series base can be paired with `/Blue` for green birds split for blue
 | Mutation | URL ID | Notes |
 |---|---|---|
 | Recessive Pied | `RecessivePied` | Also called Danish Recessive Pied. Origin: Denmark 1932 |
-| Fallow | `Fallow` | Autosomal recessive. Pale body, brown wing markings, red eyes. Multiple Fallow variants exist (German Fallow, English Fallow, Scottish Fallow) |
+| German Fallow | `GermanFallow` | Autosomal recessive `pf-d`. Origin: Germany 1929 (Schrapel). Red eyes WITH white iris ring (distinct from English). Brownish-bronze body. Most common Fallow worldwide |
+| English Fallow | `EnglishFallow` | Autosomal recessive `pf-e`. Origin: England 1937. Solid red eyes (barely discernible iris). Paler body than German. Also called Pale Fallow (Onsman) or Dun Fallow |
+| Scottish Fallow | `ScottishFallow` | Autosomal recessive `pf-s`. Origin: Scotland 1947 (W. Bryce). Pink iris (distinct from German/English red eyes). Lightest body suffusion. Rarest variant |
 | Black Face | `BlackFace` | Autosomal recessive `bf` allele. Origin: Netherlands 1992 (Mr. Van Dijk). Documented by Inte Onsman (MUTAVI 2007). Black mask + abdominal striping. One half of the famous Double Black combination |
 | Blackwing | `Blackwing` | Autosomal recessive. Origin: Venezuela 2002 (Edixon Laya), stabilized by Alejandro Álvarez. First UK breeding: Don Dickson, March 2019. Thick black wing markings |
 | Saddleback | `Saddleback` | Autosomal recessive. Origin: Australia. Distinctive saddleback marking pattern |
@@ -419,6 +421,184 @@ https://budgerigargenetics.com/?m=Sky%20Blue&mt=Goldenface%3ASF&f=Light%20Green
 DF Goldenface Cobalt × Sky Blue:
 https://budgerigargenetics.com/?m=Cobalt&mt=Goldenface%3ADF&f=Sky%20Blue
 
+### JSD Jahir 58-Pairing Cw/Gw/Dilute/FBG Verification Reference
+
+The single most comprehensive dil-locus allelic series verification ever published for budgerigars. Authored by MD. Jahirul Islam (JSD Jahir), Official Mutation Authority at the Budgerigar Society of Bangladesh for four consecutive National Budgerigar Exhibitions (Mutation Consultant 2022 + 2023, Mutation Advisor 2024, Mutation Coordinator 2025). Engine matches his expected results on 56 of 58 pairings perfectly. On pairings #16 (Cw/Dilute × Normal/Dilute) and #44 (Gw/Dilute × Gw/Dilute) the engine follows strict Mendelian inheritance, demonstrating that his original PDF has two small typos. All 58 pairings below use Light Green base, no Opaline, no other mutations — pure dil-locus expression.
+
+Pairing 1 — Clearwing × Clearwing → 100% Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Avisual
+
+Pairing 2 — Clearwing × Dilute → 100% Clearwing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Avisual
+
+Pairing 3 — Clearwing × Greywing → 100% Fullbody Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Avisual
+
+Pairing 4 — Clearwing × Normal → 100% Normal split Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal
+
+Pairing 5 — Clearwing × Fullbody Greywing → 50% Clearwing, 50% Fullbody Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 6 — Clearwing × Clearwing split Dilute → 50% Clearwing, 50% Clearwing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CDilute%3Asplit
+
+Pairing 7 — Clearwing × Normal split Clearwing → 50% Clearwing, 50% Normal split Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Asplit
+
+Pairing 8 — Clearwing × Normal split Dilute → 50% Clearwing split Dilute, 50% Normal split Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 9 — Clearwing × Normal split Greywing → 50% Fullbody Greywing, 50% Normal split Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 10 — Clearwing split Dilute × Dilute → 50% Clearwing split Dilute, 50% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Avisual
+
+Pairing 11 — Clearwing split Dilute × Greywing → 50% Fullbody Greywing, 50% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Avisual
+
+Pairing 12 — Clearwing split Dilute × Clearwing split Dilute → 25% Clearwing, 50% Clearwing split Dilute, 25% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CDilute%3Asplit
+
+Pairing 13 — Clearwing split Dilute × Greywing split Dilute → 25% Fullbody Greywing, 25% Clearwing split Dilute, 25% Greywing split Dilute, 25% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Avisual%2CDilute%3Asplit
+
+Pairing 14 — Clearwing split Dilute × Normal → 50% Normal split Clearwing, 50% Normal split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal
+
+Pairing 15 — Clearwing split Dilute × Fullbody Greywing → 25% Clearwing, 25% Clearwing split Dilute, 25% Fullbody Greywing, 25% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 16 — Clearwing split Dilute × Normal split Dilute → 25% Clearwing split Dilute, 25% Normal split Clearwing, 25% Dilute, 25% Normal split Dilute. Note: Jahir's PDF lists "25% Cw" here but this is mathematically impossible — Cw/d × +/d cannot produce homozygous Cw/Cw. The engine correctly returns the 25% Dilute (d/d) outcome:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 17 — Clearwing split Dilute × Normal split Greywing → 25% Fullbody Greywing, 25% Normal split Clearwing, 25% Greywing split Dilute, 25% Normal split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 18 — Clearwing split Dilute × Normal split Clearwing → 25% Clearwing, 25% Normal split Clearwing, 25% Clearwing split Dilute, 25% Normal split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Asplit
+
+Pairing 19 — Fullbody Greywing × Fullbody Greywing → 25% Clearwing, 50% Fullbody Greywing, 25% Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CGreywing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 20 — Fullbody Greywing × Dilute → 50% Clearwing split Dilute, 50% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CGreywing%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Avisual
+
+Pairing 21 — Fullbody Greywing × Greywing split Dilute → 25% Fullbody Greywing, 25% Greywing, 25% Clearwing split Dilute, 25% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CGreywing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Avisual%2CDilute%3Asplit
+
+Pairing 22 — Fullbody Greywing × Normal → 50% Normal split Clearwing, 50% Normal split Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CGreywing%3Avisual&f=Light+Green&fo=normal
+
+Pairing 23 — Normal split Clearwing × Normal split Clearwing → 25% Normal, 50% Normal split Clearwing, 25% Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Asplit
+
+Pairing 24 — Normal split Clearwing × Dilute → 50% Normal split Dilute, 50% Clearwing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Avisual
+
+Pairing 25 — Normal split Clearwing × Normal split Dilute → 25% Normal, 25% Normal split Clearwing, 25% Normal split Dilute, 25% Clearwing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 26 — Normal split Clearwing × Normal split Greywing → 25% Normal, 25% Normal split Clearwing, 25% Normal split Greywing, 25% Fullbody Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 27 — Normal split Clearwing × Fullbody Greywing → 25% Normal split Clearwing, 25% Clearwing, 25% Normal split Greywing, 25% Fullbody Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 28 — Dilute × Greywing → 100% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Avisual
+
+Pairing 29 — Dilute × Dilute → 100% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Avisual
+
+Pairing 30 — Dilute × Normal → 100% Normal split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Avisual&f=Light+Green&fo=normal
+
+Pairing 31 — Dilute × Greywing split Dilute → 50% Greywing split Dilute, 50% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Avisual%2CDilute%3Asplit
+
+Pairing 32 — Dilute × Normal split Greywing → 50% Normal split Dilute, 50% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 33 — Dilute × Normal split Dilute → 50% Normal split Dilute, 50% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 34 — Greywing × Greywing → 100% Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Avisual
+
+Pairing 35 — Greywing × Fullbody Greywing → 50% Fullbody Greywing, 50% Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 36 — Greywing × Normal → 100% Normal split Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal
+
+Pairing 37 — Greywing × Greywing split Dilute → 50% Greywing, 50% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Avisual%2CDilute%3Asplit
+
+Pairing 38 — Greywing × Normal split Clearwing → 50% Normal split Greywing, 50% Fullbody Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Asplit
+
+Pairing 39 — Greywing × Normal split Greywing → 50% Normal split Greywing, 50% Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 40 — Greywing × Normal split Dilute → 50% Normal split Greywing, 50% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 41 — Greywing split Dilute × Normal → 50% Normal split Greywing, 50% Normal split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal
+
+Pairing 42 — Greywing split Dilute × Clearwing → 50% Fullbody Greywing, 50% Clearwing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual
+
+Pairing 43 — Greywing split Dilute × Fullbody Greywing → 25% Fullbody Greywing, 25% Clearwing split Dilute, 25% Greywing, 25% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 44 — Greywing split Dilute × Greywing split Dilute → 25% Greywing, 50% Greywing split Dilute, 25% Dilute. Note: Jahir's PDF lists only "50% Gw, 50% Gw/Dilute" but the textbook Mendelian 1:2:1 ratio gives three outcomes including the 25% homozygous Dilute. The engine correctly returns the full 1:2:1:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Avisual%2CDilute%3Asplit
+
+Pairing 45 — Greywing split Dilute × Normal split Dilute → 25% Normal split Greywing, 25% Normal split Dilute, 25% Greywing split Dilute, 25% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 46 — Greywing split Dilute × Normal split Greywing → 25% Normal split Greywing, 25% Normal split Dilute, 25% Greywing, 25% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 47 — Greywing split Dilute × Normal split Clearwing → 25% Normal split Greywing, 25% Normal split Dilute, 25% Fullbody Greywing, 25% Clearwing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Asplit
+
+Pairing 48 — Greywing split Dilute × Fullbody Greywing (same as #43):
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 49 — Fullbody Greywing × Normal split Greywing → 25% Normal split Clearwing, 25% Fullbody Greywing, 25% Normal split Greywing, 25% Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CGreywing%3Avisual&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 50 — Fullbody Greywing × Normal split Dilute → 25% Normal split Clearwing, 25% Clearwing split Dilute, 25% Normal split Greywing, 25% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CGreywing%3Avisual&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 51 — Normal × Normal → 100% Normal:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&f=Light+Green&fo=normal
+
+Pairing 52 — Normal × Normal split Clearwing → 50% Normal, 50% Normal split Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&f=Light+Green&fo=normal&ft=Clearwing%3Asplit
+
+Pairing 53 — Normal × Normal split Dilute → 50% Normal, 50% Normal split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 54 — Normal split Clearwing × Normal → 50% Normal, 50% Normal split Clearwing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal
+
+Pairing 55 — Normal split Clearwing × Fullbody Greywing → 25% Normal split Clearwing, 25% Clearwing, 25% Normal split Greywing, 25% Fullbody Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
+
+Pairing 56 — Normal split Greywing × Normal split Greywing → 25% Normal, 50% Normal split Greywing, 25% Greywing:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Asplit
+
+Pairing 57 — Normal split Greywing × Normal split Dilute → 25% Normal, 25% Normal split Greywing, 25% Normal split Dilute, 25% Greywing split Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
+Pairing 58 — Normal split Dilute × Normal split Dilute → 25% Normal, 50% Normal split Dilute, 25% Dilute:
+https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Dilute%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Asplit
+
 ### Clearwing, Greywing, Dilute (dil-locus allelic series)
 
 Visible Clearwing × Visible Greywing → 100% Fullbody Greywing (the hetero-allelic phenotype):
@@ -512,16 +692,25 @@ https://budgerigargenetics.com/?m=Light%20Green&mt=DominantClearbody%3ADF&f=Ligh
 SF Easley × SF Easley:
 https://budgerigargenetics.com/?m=Light%20Green&mt=DominantClearbody%3ASF&f=Light%20Green&ft=DominantClearbody%3ASF
 
-### Fallow
+### Fallow (3 canonical variants per Wikipedia + Onsman MUTAVI + Terry Martin 2002)
 
-Visible Fallow × Normal:
-https://budgerigargenetics.com/?m=Light%20Green&mt=Fallow%3Avisual&f=Light%20Green
+Visible German Fallow × Normal:
+https://budgerigargenetics.com/?m=Light%20Green&mt=GermanFallow%3Avisual&f=Light%20Green
 
-Visible Fallow × Visible Fallow:
-https://budgerigargenetics.com/?m=Light%20Green&mt=Fallow%3Avisual&f=Light%20Green&ft=Fallow%3Avisual
+Visible English Fallow × Normal:
+https://budgerigargenetics.com/?m=Light%20Green&mt=EnglishFallow%3Avisual&f=Light%20Green
 
-Split Fallow × Visible Fallow:
-https://budgerigargenetics.com/?m=Light%20Green&mt=Fallow%3Asplit&f=Light%20Green&ft=Fallow%3Avisual
+Visible Scottish Fallow × Normal:
+https://budgerigargenetics.com/?m=Light%20Green&mt=ScottishFallow%3Avisual&f=Light%20Green
+
+Visible German Fallow × Visible German Fallow:
+https://budgerigargenetics.com/?m=Light%20Green&mt=GermanFallow%3Avisual&f=Light%20Green&ft=GermanFallow%3Avisual
+
+Split German Fallow × Visible German Fallow:
+https://budgerigargenetics.com/?m=Light%20Green&mt=GermanFallow%3Asplit&f=Light%20Green&ft=GermanFallow%3Avisual
+
+Visible Scottish Fallow × Visible Scottish Fallow (rarest variant):
+https://budgerigargenetics.com/?m=Light%20Green&mt=ScottishFallow%3Avisual&f=Light%20Green&ft=ScottishFallow%3Avisual
 
 ### Slate (rare sex-linked)
 
@@ -732,6 +921,7 @@ A: The engine implements published inheritance models from Dr. Terry Martin (200
 
 **Contributing breeders:**
 
+- MD. Jahirul Islam aka JSD Jahir (Bangladesh) — Official Mutation Authority at the Budgerigar Society of Bangladesh (BSB) for four consecutive National Budgerigar Exhibitions: Mutation Consultant at the 9th (2022) and 10th (2023) Colour Budgerigar Exhibition, Mutation Advisor at the 11th (2024), Mutation Coordinator at the 12th (2025). Authored the 58-pairing Cw/Gw/Dilute/FBG verification reference that audited every branch of the engine's dil-locus inheritance, catching 4 dominance bugs that were live-fixed within hours and prompting the canonical 3-type Fallow naming overhaul (German, English, Scottish).
 - Rashdan Ahmed (Bangladesh) — Pioneer of budgerigar genetics in Bangladesh, author of the nation's first comprehensive book on budgerigar genetics
 - Arifin Sumon (Bangladesh) — Mutation expert with years of validated clutch outcomes
 
