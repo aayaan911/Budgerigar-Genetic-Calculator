@@ -99,6 +99,17 @@ th{background:rgba(76,161,84,0.08);color:var(--text);font-weight:600;font-size:1
 .foot{text-align:center;margin-top:48px;font-size:12px;color:var(--text-3);}
 .foot a{color:var(--text-3);border-bottom:none;}
 @media(max-width:480px){.wrap{padding:24px 16px 60px;}h1{font-size:26px;}h2{font-size:20px;}h3{font-size:16px;}.lead{font-size:15px;}table{font-size:12px;display:block;overflow-x:auto;white-space:nowrap;}th,td{padding:7px 9px;}.box{padding:16px 18px;}.tldr{padding:14px 18px;}.meta{gap:10px;}.brand-name{font-size:14px;}.brand-sub{font-size:10px;letter-spacing:0.01em;}}
+
+/* Theme toggle button (matches home page) */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text-2);cursor:pointer;transition:background 0.2s,color 0.2s,border-color 0.2s;padding:0;flex-shrink:0;}
+.theme-toggle:hover{background:var(--bg-card);color:var(--text);border-color:var(--text-3);}
+.theme-toggle svg{width:18px;height:18px;display:block;}
+/* Data-theme overrides (manual toggle overrides system preference) */
+html[data-theme="light"]{color-scheme:light;}
+html[data-theme="dark"]{color-scheme:dark;}
+
+html[data-theme="light"]:root,html[data-theme="light"]{--bg:#f7f6f3;--bg-card:#ffffff;--text:#1a1a1a;--text-2:#555;--text-3:#8a8a8a;--border:rgba(0,0,0,0.08);}
+html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141414;--text:#e6e6e6;--text-2:#a8a8a8;--text-3:#666;--border:rgba(255,255,255,0.07);}
 </style>
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YDV3HV3XD"></script>
@@ -129,6 +140,9 @@ th{background:rgba(76,161,84,0.08);color:var(--text);font-weight:600;font-size:1
 </div>
 </a>
 <nav class="brand-nav">
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+<svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
 <a href="/blog/">Blog</a>
 <a class="brand-cta" href="/">Open Calculator</a>
 </nav>
@@ -348,5 +362,19 @@ th{background:rgba(76,161,84,0.08);color:var(--text);font-weight:600;font-size:1
 
 <p class="foot">© 2026 KinBird Aviary · Written by Ayaan Shohan, Bangladesh · <a href="https://www.facebook.com/kinbird.aviary/">Facebook</a> · <a href="/blog/">More articles</a> · <a href="/">Calculator home</a></p>
 </main>
+<script>
+(function(){
+var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+var html=document.documentElement,btn=document.getElementById('theme-toggle');
+if(!btn)return;
+var icon=document.getElementById('theme-icon');
+function apply(t){html.setAttribute('data-theme',t);if(icon){icon.outerHTML=(t==='dark'?SUN:MOON).replace('<svg ','<svg id="theme-icon" ');}btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');}
+var stored;try{stored=localStorage.getItem('bg-theme');}catch(e){}
+if(!stored){stored=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+apply(stored);
+btn.addEventListener('click',function(){var cur=html.getAttribute('data-theme')||'light';var next=cur==='dark'?'light':'dark';try{localStorage.setItem('bg-theme',next);}catch(e){}apply(next);});
+})();
+</script>
 </body>
 </html>
