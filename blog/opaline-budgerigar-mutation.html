@@ -170,6 +170,18 @@ html,body{line-height:1.65 !important;}
   .brand-sub{display:none !important;}
   .brand-name{font-size:14px !important;}
 }
+
+/* === v6.4: Light-mode fix — override hardcoded #fff colors on body text === */
+.wrap h1,.wrap h2,.wrap h3{color:var(--text) !important;}
+.wrap strong{color:var(--text) !important;}
+.wrap th{color:var(--text) !important;}
+/* Body links — ensure good contrast in both modes */
+.wrap p a,.wrap li a{color:var(--accent) !important;border-bottom:1px solid rgba(76,161,84,0.4) !important;}
+.wrap p a:hover,.wrap li a:hover{border-bottom-color:var(--accent) !important;background:rgba(76,161,84,0.06);}
+@media (prefers-color-scheme:light){
+  .wrap p a,.wrap li a{color:#3d8a44 !important;}
+}
+html[data-theme="light"] .wrap p a,html[data-theme="light"] .wrap li a{color:#3d8a44 !important;}
 </style>
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YDV3HV3XD"></script>
