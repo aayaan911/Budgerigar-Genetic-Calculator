@@ -364,7 +364,8 @@ body{
   color:var(--text-1);
   margin-bottom:12px;
 }
-.hero-title .ht-green{color:var(--accent);}
+.hero-title .ht-green{color:var(--accent);display:block;}
+/* The space before the span is preserved in the HTML so copy-paste and Google read "Budgerigar Genetics Calculator" as one phrase, while display:block creates the visual line break for breeders to scan quickly. */
 .hero-desc{
   font-size:15px;
   color:var(--text-2);

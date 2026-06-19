@@ -4,125 +4,186 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <script>
-/* Canonical-URL enforcement */
 (function(){var h=location.hostname;if(h&&h!=='budgerigargenetics.com'&&h!=='www.budgerigargenetics.com'&&h!=='localhost'&&!/^127\./.test(h)&&!/^192\.168\./.test(h)&&!/^10\./.test(h)){location.replace('https://budgerigargenetics.com'+location.pathname+location.search+location.hash);}})();
 </script>
-<title>Budgerigar Genetics Blog, Mutation Articles &amp; Breeding Guides | KinBird Aviary</title>
-<meta name="description" content="Long-form budgerigar genetics articles. Deep dives on Blackface, Blackwing, Manto Negro, and rare budgie mutations. Inheritance, breeding strategy, and pairing predictions from KinBird Aviary."/>
-<meta name="keywords" content="budgerigar genetics blog, budgie mutation articles, blackface budgie, blackwing budgie, manto negro budgie, brazilian black budgerigar, rare budgie mutations, budgie breeding guide"/>
+<title>Budgerigar Genetics Blog, Mutation Guides &amp; Breeding Articles | KinBird Aviary</title>
+<meta name="description" content="Every Budgerigar Genetics Calculator guide and long form mutation article in one place. Opaline, Ino, Spangle, Dominant Pied, Dark Factor, Blackface, Blackwing, Manto Negro. Free, deeply researched, no signup."/>
+<meta name="keywords" content="budgerigar genetics blog, budgie mutation guides, budgerigar mutations, blackface budgie, blackwing budgie, manto negro, opaline budgie, spangle budgie, dark factor budgie, dominant pied, ino budgie genetics"/>
 <meta name="author" content="Ayaan Shohan, KinBird Aviary"/>
 <link rel="canonical" href="https://budgerigargenetics.com/blog/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)"/>
+<meta name="theme-color" content="#f5f4f1" media="(prefers-color-scheme: light)"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://budgerigargenetics.com/blog/"/>
 <meta property="og:title" content="Budgerigar Genetics Blog | KinBird Aviary"/>
-<meta property="og:description" content="Long-form articles on rare budgerigar mutations: Blackface, Blackwing, Manto Negro, and more."/>
+<meta property="og:description" content="Every guide and long form mutation article in one place. Free, deeply researched, no signup."/>
 <meta property="og:image" content="https://budgerigargenetics.com/og-image.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Blog","name":"Budgerigar Genetics Blog","description":"Long-form articles on rare budgerigar mutations and breeding genetics by KinBird Aviary.","url":"https://budgerigargenetics.com/blog/","publisher":{"@type":"Organization","name":"KinBird Aviary","url":"https://budgerigargenetics.com/"},"inLanguage":"en"}
+{"@context":"https://schema.org","@type":"Blog","name":"Budgerigar Genetics Blog","description":"Long form articles and guides on budgerigar genetics and rare mutations.","url":"https://budgerigargenetics.com/blog/","publisher":{"@type":"Organization","name":"KinBird Aviary","url":"https://budgerigargenetics.com/"},"inLanguage":"en"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budgerigargenetics.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://budgerigargenetics.com/blog/"}]}
 </script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}:root{--bg:#0a0a0a;--bg-card:#141414;--text:#e6e6e6;--text-2:#a8a8a8;--text-3:#555;--accent:#4ca154;--border:rgba(255,255,255,0.07);--font:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
-html,body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#f7f6f3;--bg-card:#ffffff;--text:#1a1a1a;--text-2:#555;--text-3:#8a8a8a;
+  --accent:#4ca154;--accent-dark:#3d8a44;--border:rgba(0,0,0,0.08);
+  --font:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--text:#e6e6e6;--text-2:#a8a8a8;--text-3:#666;
+    --accent:#4ca154;--accent-dark:#3d8a44;--border:rgba(255,255,255,0.07);
+  }
+}
+html,body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;}
+.brand-bar{border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:50;}
+.brand-inner{max-width:920px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+.brand-link{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);}
+.brand-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(76,161,84,0.12);}
+.brand-name{font-weight:800;font-size:15px;letter-spacing:-0.01em;line-height:1.1;}
+.brand-sub{font-size:11px;color:var(--text-3);font-family:var(--mono);text-transform:uppercase;letter-spacing:0.08em;}
+.brand-nav{display:flex;gap:6px;align-items:center;}
+.brand-nav a{text-decoration:none;color:var(--text-2);font-size:13.5px;font-weight:500;padding:7px 12px;border-radius:8px;}
+.brand-nav a:hover{color:var(--text);background:var(--border);}
+.brand-nav a.brand-cta{background:var(--accent);color:#fff;font-weight:600;}
+.brand-nav a.brand-cta:hover{background:var(--accent-dark);}
 .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px;}
-.crumbs{font-size:13px;color:var(--text-3);margin-bottom:24px;}
+.crumbs{font-size:13px;color:var(--text-3);margin-bottom:24px;display:flex;align-items:center;gap:6px;}
 .crumbs a{color:var(--text-2);text-decoration:none;}
 .crumbs a:hover{color:var(--accent);}
-h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;color:#fff;line-height:1.1;}
+.crumbs svg{width:12px;height:12px;}
+h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;color:var(--text);line-height:1.1;}
 .lead{font-size:17px;color:var(--text-2);margin-bottom:42px;max-width:680px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:60px;}
-.card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s;display:block;}
-.card:hover{border-color:rgba(76,161,84,0.45);transform:translateY(-2px);}
-.card-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;}
-.card h2{font-size:19px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.01em;line-height:1.3;}
-.card p{font-size:14px;color:var(--text-2);margin:0 0 14px;}
-.card-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.1em;display:flex;gap:14px;flex-wrap:wrap;}
 .section-h{font-size:14px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--text-3);margin:48px 0 16px;font-weight:700;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:24px;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;display:block;}
+.card:hover{border-color:rgba(76,161,84,0.45);transform:translateY(-2px);box-shadow:0 4px 18px rgba(0,0,0,0.05);}
+.card-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.card-eyebrow svg{width:11px;height:11px;}
+.card h2{font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em;line-height:1.3;}
+.card p{font-size:14px;color:var(--text-2);margin:0 0 14px;}
+.card-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.1em;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.card-meta svg{width:11px;height:11px;}
 .cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;text-decoration:none;}
-.cta:hover{background:#3d8a44;}
+.cta:hover{background:var(--accent-dark);}
+.cta svg{width:14px;height:14px;}
+.calc-card{background:linear-gradient(135deg,rgba(76,161,84,0.10),rgba(76,161,84,0.04));border:1px solid rgba(76,161,84,0.25);border-radius:16px;padding:32px;margin-top:36px;text-align:center;}
+.calc-card-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;}
+.calc-card h2{font-size:24px;font-weight:700;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em;}
+.calc-card p{font-size:15px;color:var(--text-2);margin-bottom:22px;max-width:520px;margin-left:auto;margin-right:auto;}
 .foot{text-align:center;margin-top:60px;font-size:12px;color:var(--text-3);}
 .foot a{color:var(--text-3);text-decoration:none;}
-@media(max-width:480px){.wrap{padding:24px 16px 60px;}h1{font-size:26px;}.lead{font-size:15px;margin-bottom:32px;}.grid{grid-template-columns:1fr;gap:14px;}.card{padding:20px;}.cta{font-size:14px;padding:12px 20px;}}
+.foot a:hover{color:var(--text-2);}
+@media(max-width:480px){.wrap{padding:24px 16px 60px;}h1{font-size:26px;}.lead{font-size:15px;margin-bottom:32px;}.grid{grid-template-columns:1fr;gap:14px;}.card{padding:20px;}.cta{font-size:14px;padding:12px 20px;}.calc-card{padding:24px;}.calc-card h2{font-size:20px;}.brand-name{font-size:14px;}.brand-sub{font-size:10px;}}
 </style>
 </head>
 <body>
-<main class="wrap">
-<nav class="crumbs"><a href="/">Home</a> · Blog</nav>
 
-<h1>Budgerigar Genetics Blog</h1>
-<p class="lead">Long form articles on rare budgerigar mutations, breeding strategy, and the genetics behind every pairing. Written by working breeders, grounded in published research from Terry Martin, Cyril H. Rogers, and Inte Onsman's MUTAVI papers. No filler.</p>
+<header class="brand-bar">
+<div class="brand-inner">
+<a class="brand-link" href="/">
+<span class="brand-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ca154" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8h.01"/><path d="M3 7.5C3 4.46 5.46 2 8.5 2h7C18.54 2 21 4.46 21 7.5v9c0 3.04-2.46 5.5-5.5 5.5h-7C5.46 22 3 19.54 3 16.5v-9z"/><path d="M8 16c.6-1.5 2-2 4-2s3.4.5 4 2"/></svg></span>
+<div>
+<div class="brand-name">Budgerigar Genetics</div>
+<div class="brand-sub">by KinBird Aviary</div>
+</div>
+</a>
+<nav class="brand-nav">
+<a href="/blog/">Blog</a>
+<a class="brand-cta" href="/">Open Calculator</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<nav class="crumbs">
+<a href="/">Home</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+Blog
+</nav>
+
+<h1>Budgerigar Genetics Blog &amp; Mutation Guides</h1>
+<p class="lead">Long form articles and quick reference guides on budgerigar genetics, rare mutations, and breeding strategy. Written by working breeders and validated by WBO certified judges. No filler, no signup, all free.</p>
 
 <p class="section-h">Featured Mutation Articles</p>
 <div class="grid">
 
 <a class="card" href="/blog/manto-negro-budgerigar-mutation.html">
-<p class="card-eyebrow">Autosomal Dominant · Brazil 2021</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Newest mutation · Brazil 2021</p>
 <h2>Manto Negro (Brazilian Black Mantle) Budgerigar Mutation</h2>
-<p>The newest melanistic mutation in budgerigar genetics. Dominant inheritance, developed by Ley H. Silva Filho in Brazil, and the variety that won Best in Show at the 2025 SOCO Cup. Complete breeding guide.</p>
-<div class="card-meta"><span>🇧🇷 Brazil</span><span>📖 12 min read</span></div>
+<p>The newest melanistic budgerigar mutation. Autosomal dominant inheritance, developed by Ley H. Silva Filho in Brazil, and the variety that won Best in Show at the 2025 SOCO Cup. Complete breeding guide with Punnett squares.</p>
+<div class="card-meta"><span>🇧🇷 Brazil</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 12 min read</span><span>June 19, 2026</span></div>
 </a>
 
 <a class="card" href="/blog/blackface-budgerigar-mutation.html">
-<p class="card-eyebrow">Autosomal Recessive · Netherlands 1992</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Autosomal recessive · Netherlands 1992</p>
 <h2>Blackface Budgerigar Mutation, Complete Genetics Guide</h2>
-<p>Discovered by Mr. Van Dijk at a Dutch bird market in 1992 and documented by Inte Onsman of MUTAVI Research. Black mask, abdominal striping, and the famous Double Black combination with Blackwing.</p>
-<div class="card-meta"><span>🇳🇱 Netherlands</span><span>📖 14 min read</span></div>
+<p>Discovered by Mr. Van Dijk at a Dutch bird market in 1992. Documented by Inte Onsman of MUTAVI Research. Black mask, abdominal striping, and the famous Double Black combination with Blackwing.</p>
+<div class="card-meta"><span>🇳🇱 Netherlands</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 14 min read</span><span>March 8, 2026</span></div>
 </a>
 
 <a class="card" href="/blog/blackwing-budgerigar-mutation.html">
-<p class="card-eyebrow">Autosomal Recessive · Venezuela 2002</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Autosomal recessive · Venezuela 2002</p>
 <h2>Blackwing Budgerigar Mutation, Genetics &amp; Pairing Guide</h2>
-<p>The Venezuelan Blackwing mutation discovered by Edixon Laya in 2002, stabilized by Alejandro Álvarez, and first bred in the UK by Don Dickson in 2019. Thick black wing markings, recessive inheritance, exhibition combinations.</p>
-<div class="card-meta"><span>🇻🇪 Venezuela</span><span>📖 13 min read</span></div>
+<p>Discovered by Edixon Laya in 2002, stabilized by Alejandro Álvarez, and first bred in the UK by Don Dickson in March 2019. Thick black wing markings, exhibition combinations, and the documented first season results.</p>
+<div class="card-meta"><span>🇻🇪 Venezuela</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 13 min read</span><span>May 4, 2026</span></div>
 </a>
 
 </div>
 
-<p class="section-h">Mutation Guides (Quick Reference)</p>
+<p class="section-h">Quick Reference Guides</p>
 <div class="grid">
 
 <a class="card" href="/guides/opaline.html">
-<p class="card-eyebrow">Sex-linked recessive</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>Sex-linked recessive</p>
 <h2>Opaline Genetics</h2>
-<p>Body colour extends onto wings, clearer wing markings, plus the auto-sex pairing trick that lets you identify chick sex at hatch by colour.</p>
+<p>Body colour extends onto wings, clearer wing markings, plus the auto-sex pairing trick that lets you identify chick sex at hatch by colour alone.</p>
+<div class="card-meta"><span>🇦🇺 Australia 1933</span></div>
 </a>
 
 <a class="card" href="/guides/ino-lutino-albino.html">
-<p class="card-eyebrow">Sex-linked recessive</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>Sex-linked recessive</p>
 <h2>Ino, Lutino &amp; Albino</h2>
-<p>Full melanin removal producing yellow (Lutino) on green base or white (Albino) on blue base. Why budgie Ino works differently from lovebird Ino.</p>
+<p>Full melanin removal producing yellow Lutino on green base or white Albino on blue base. Why budgie Ino works completely differently from lovebird Ino.</p>
+<div class="card-meta"><span>🌍 Global</span></div>
 </a>
 
 <a class="card" href="/guides/spangle.html">
-<p class="card-eyebrow">Autosomal incomplete dominant</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="10"/></svg>Autosomal incomplete dominant</p>
 <h2>Spangle (SF &amp; DF)</h2>
-<p>Reverse wing markings, the Mendelian 1:2:1 ratio, and why DF Spangle is often confused with Lutino or Albino.</p>
+<p>Reverse wing markings, the Mendelian 1:2:1 ratio, and why DF Spangle birds are often confused with Lutino or Albino.</p>
+<div class="card-meta"><span>🇦🇺 Australia</span></div>
 </a>
 
 <a class="card" href="/guides/dominant-pied.html">
-<p class="card-eyebrow">Autosomal incomplete dominant</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="10"/></svg>Autosomal incomplete dominant</p>
 <h2>Dominant Pied (Banded &amp; Clearflight)</h2>
 <p>Two separate pied genes, the Dark Eyed Clear emergence, and how to plan pairings for show class pied lines.</p>
+<div class="card-meta"><span>🇦🇺 + 🇳🇱 origins</span></div>
 </a>
 
 <a class="card" href="/guides/dark-factor.html">
-<p class="card-eyebrow">Autosomal incomplete dominant</p>
+<p class="card-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="10"/></svg>Autosomal incomplete dominant</p>
 <h2>Dark Factor (Sky, Cobalt, Mauve)</h2>
 <p>The cleanest Mendelian 1:2:1 example in budgerigar genetics. Light Green to Olive, Sky Blue to Mauve, by simple gene dosage.</p>
+<div class="card-meta"><span>🌍 Universal</span></div>
 </a>
 
 </div>
 
-<div style="background:rgba(76,161,84,0.06);border:1px solid rgba(76,161,84,0.25);border-radius:14px;padding:28px;margin-top:20px;text-align:center;">
-<p style="font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Try the calculator</p>
-<h2 style="font-size:22px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.01em;">Predict any pairing before you breed it</h2>
-<p style="font-size:15px;color:var(--text-2);margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto;">Free Budgerigar Genetics Calculator covering all 23 documented mutations. Pick a cock, pick a hen, see every possible offspring with exact percentages.</p>
-<a class="cta" href="/">Open the Budgerigar Genetics Calculator</a>
+<div class="calc-card">
+<p class="calc-card-eyebrow">Try the calculator</p>
+<h2>Predict any pairing before you breed it</h2>
+<p>Free Budgerigar Genetics Calculator covering all 23 documented mutations. Pick a cock, pick a hen, and see every possible offspring with exact percentages. No signup, no ads, no compromises.</p>
+<a class="cta" href="/">Open the Budgerigar Genetics Calculator
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+</a>
 </div>
 
 <p class="foot">© 2026 KinBird Aviary · <a href="https://www.facebook.com/kinbird.aviary/">Facebook</a> · Built in 🇧🇩 Bangladesh by working bird breeders</p>
