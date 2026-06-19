@@ -2294,8 +2294,71 @@ return traits;
 }
 function mkLabel(pp,pid){
 const tr=effectiveTraits(pid);const vis=[],spl=[];
-for(const t of tr){if(!t.id||t.id==="None")continue;if(_0xC8(t.id)){const b=_0xC6.find(x=>x.id===t.id);if(b)spl.push(b.label);}else{const m=_0xC9.find(x=>x.id===t.id);if(m){if(t.status==="visual")vis.push(m.label);else if(t.status==="SF")vis.push("SF "+m.label);else if(t.status==="DF")vis.push("DF "+m.label);else spl.push(m.label);}}}
-// Split base color into "base" + "embedded splits" (e.g., "Olive Green / Blue" → base="Olive Green", baseSplits=["Blue"])
+// JUDGE RULE (Shakil): Apply allelic series rules to parent display.
+// Dil-locus: Cw > Gw > Dilute. Cw+Gw together = Fullbody Greywing.
+// Ino-locus: + > TCB > Ino (Z chromosome, cock only — hens just take whichever single allele).
+// Detect dil-locus and ino-locus inputs and re-label per dominance.
+const isM=pid==="p1";
+const dilT={cw:null,gw:null,d:null};
+const inoT={tcb:null,ino:null};
+for(const t of tr){
+  if(!t.id||t.id==="None")continue;
+  if(t.id==='Clearwing')dilT.cw=t.status;
+  else if(t.id==='Greywing')dilT.gw=t.status;
+  else if(t.id==='Dilute')dilT.d=t.status;
+  else if(t.id==='TexasClearbody')inoT.tcb=t.status;
+  else if(t.id==='Ino')inoT.ino=t.status;
+}
+const dilLocus=dilT.cw||dilT.gw||dilT.d;
+const inoLocus=inoT.tcb||inoT.ino;
+// Build dil-locus phenotype if any dil-locus mutation involved
+let dilLabel=null;
+if(dilLocus){
+  const cw=dilT.cw,gw=dilT.gw,d=dilT.d;
+  const isV=s=>s==='visual';const isSp=s=>s==='split'||s==='possibleSplit';
+  // Rule order: Cw+Gw (any combo) = Fullbody Greywing; Cw visual+anything = Clearwing/split; etc.
+  if((isV(cw)||isSp(cw))&&(isV(gw)||isSp(gw))){dilLabel={vis:'Fullbody Greywing',sp:[]};}
+  else if(isV(cw)){const sps=[];if(isV(d)||isSp(d))sps.push('Dilute');dilLabel={vis:'Clearwing',sp:sps};}
+  else if(isV(gw)){const sps=[];if(isV(d)||isSp(d))sps.push('Dilute');dilLabel={vis:'Greywing',sp:sps};}
+  else if(isV(d)){dilLabel={vis:'Dilute',sp:[]};}
+  else if(isSp(cw))dilLabel={vis:null,sp:['Clearwing']};
+  else if(isSp(gw))dilLabel={vis:null,sp:['Greywing']};
+  else if(isSp(d))dilLabel={vis:null,sp:['Dilute']};
+}
+// Build ino-locus phenotype if any ino-locus mutation involved
+let inoLabel=null;
+if(inoLocus){
+  const tcb=inoT.tcb,ino=inoT.ino;
+  const isV=s=>s==='visual';const isSp=s=>s==='split'||s==='possibleSplit';
+  // Cock with TCB+Ino → visible TCB, split Ino. Hen can only have one or the other visual.
+  if(isM){
+    if(isV(tcb)&&isV(ino)){inoLabel={vis:'Texas Clearbody',sp:['Ino']};}
+    else if(isV(tcb)){const sps=[];if(isSp(ino))sps.push('Ino');inoLabel={vis:'Texas Clearbody',sp:sps};}
+    else if(isV(ino)){inoLabel={vis:'Ino',sp:[]};}
+    else if(isSp(tcb)){const sps=['Texas Clearbody'];if(isSp(ino))sps.push('Ino');inoLabel={vis:null,sp:sps};}
+    else if(isSp(ino))inoLabel={vis:null,sp:['Ino']};
+  }else{
+    // Hen: only one allele on her Z. TCB dominates Ino if both present (shouldn't happen for hen but handle gracefully).
+    if(isV(tcb))inoLabel={vis:'Texas Clearbody',sp:[]};
+    else if(isV(ino))inoLabel={vis:'Ino',sp:[]};
+  }
+}
+// Now build vis/spl excluding dil-locus and ino-locus traits (we handle them separately)
+for(const t of tr){
+  if(!t.id||t.id==="None")continue;
+  // Skip dil-locus + ino-locus — already processed above
+  if(t.id==='Clearwing'||t.id==='Greywing'||t.id==='Dilute')continue;
+  if(t.id==='TexasClearbody'||t.id==='Ino')continue;
+  if(_0xC8(t.id)){const b=_0xC6.find(x=>x.id===t.id);if(b)spl.push(b.label);}
+  else{const m=_0xC9.find(x=>x.id===t.id);if(m){if(t.status==="visual")vis.push(m.label);else if(t.status==="SF")vis.push("SF "+m.label);else if(t.status==="DF")vis.push("DF "+m.label);else spl.push(m.label);}}
+}
+// Inject dil-locus + ino-locus visible labels into vis array
+if(dilLabel&&dilLabel.vis)vis.push(dilLabel.vis);
+if(inoLabel&&inoLabel.vis)vis.push(inoLabel.vis);
+// Inject dil-locus + ino-locus splits
+if(dilLabel&&dilLabel.sp)spl.push(...dilLabel.sp);
+if(inoLabel&&inoLabel.sp)spl.push(...inoLabel.sp);
+// Split base color into "base" + "embedded splits"
 const slashIdx=pp.indexOf(" / ");
 const baseName=slashIdx>-1?pp.slice(0,slashIdx):pp;
 const baseSplits=slashIdx>-1?pp.slice(slashIdx+3).split(" / "):[];
