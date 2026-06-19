@@ -1,11 +1,23 @@
-# Redirect .html URLs to clean URLs (301 for SEO)
+# Redirect old guides URLs to new blog URLs (301)
+/guides/opaline.html   /blog/opaline-budgerigar-mutation   301
+/guides/opaline        /blog/opaline-budgerigar-mutation   301
+/guides/ino-lutino-albino.html   /blog/ino-lutino-albino-budgerigar-mutation   301
+/guides/ino-lutino-albino        /blog/ino-lutino-albino-budgerigar-mutation   301
+/guides/spangle.html   /blog/spangle-budgerigar-mutation   301
+/guides/spangle        /blog/spangle-budgerigar-mutation   301
+/guides/dominant-pied.html   /blog/dominant-pied-budgerigar-mutation   301
+/guides/dominant-pied        /blog/dominant-pied-budgerigar-mutation   301
+/guides/dark-factor.html   /blog/dark-factor-budgerigar-mutation   301
+/guides/dark-factor        /blog/dark-factor-budgerigar-mutation   301
+/guides             /blog/             301
+/guides/            /blog/             301
+
+# Existing blog article .html → clean URL redirects
 /blog/manto-negro-budgerigar-mutation.html  /blog/manto-negro-budgerigar-mutation  301
 /blog/blackface-budgerigar-mutation.html    /blog/blackface-budgerigar-mutation    301
 /blog/blackwing-budgerigar-mutation.html    /blog/blackwing-budgerigar-mutation    301
-/guides/opaline.html                        /guides/opaline                        301
-/guides/ino-lutino-albino.html              /guides/ino-lutino-albino              301
-/guides/spangle.html                        /guides/spangle                        301
-/guides/dominant-pied.html                  /guides/dominant-pied                  301
-/guides/dark-factor.html                    /guides/dark-factor                    301
-/guides    /blog/    301
-/guides/   /blog/    301
+/blog/opaline-budgerigar-mutation.html  /blog/opaline-budgerigar-mutation  301
+/blog/ino-lutino-albino-budgerigar-mutation.html  /blog/ino-lutino-albino-budgerigar-mutation  301
+/blog/spangle-budgerigar-mutation.html  /blog/spangle-budgerigar-mutation  301
+/blog/dominant-pied-budgerigar-mutation.html  /blog/dominant-pied-budgerigar-mutation  301
+/blog/dark-factor-budgerigar-mutation.html  /blog/dark-factor-budgerigar-mutation  301

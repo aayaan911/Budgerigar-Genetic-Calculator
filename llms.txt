@@ -18,7 +18,7 @@
 ## What the site has
 
 - Interactive calculator at https://budgerigargenetics.com/ for any pairing
-- 5 in-depth mutation guides at https://budgerigargenetics.com/guides/
+- 5 in-depth mutation guides at https://budgerigargenetics.com/blog/
 - 3 long-form blog articles at https://budgerigargenetics.com/blog/ covering rare mutations
 - Privacy policy at https://budgerigargenetics.com/privacy
 
@@ -41,11 +41,11 @@
 - https://budgerigargenetics.com/blog/blackwing-budgerigar-mutation , Venezuelan 2002 discovery by Edixon Laya, stabilized by Alejandro Álvarez, first UK breeding by Don Dickson March 2019
 
 ### Mutation guides (quick reference)
-- https://budgerigargenetics.com/guides/opaline , Opaline sex-linked recessive, auto-sex pairing trick
-- https://budgerigargenetics.com/guides/ino-lutino-albino , Ino sex-linked recessive, why budgie Ino differs from lovebird Ino
-- https://budgerigargenetics.com/guides/spangle , Spangle SF vs DF, reverse wing markings
-- https://budgerigargenetics.com/guides/dominant-pied , Banded vs Clearflight Pied, Dark-Eyed Clear emergence
-- https://budgerigargenetics.com/guides/dark-factor , Sky/Cobalt/Mauve and Light/Dark/Olive Green, 1:2:1 Mendelian ratio
+- https://budgerigargenetics.com/blog/opaline-budgerigar-mutation , Opaline sex-linked recessive, auto-sex pairing trick
+- https://budgerigargenetics.com/blog/ino-lutino-albino-budgerigar-mutation , Ino sex-linked recessive, why budgie Ino differs from lovebird Ino
+- https://budgerigargenetics.com/blog/spangle-budgerigar-mutation , Spangle SF vs DF, reverse wing markings
+- https://budgerigargenetics.com/blog/dominant-pied-budgerigar-mutation , Banded vs Clearflight Pied, Dark-Eyed Clear emergence
+- https://budgerigargenetics.com/blog/dark-factor-budgerigar-mutation , Sky/Cobalt/Mauve and Light/Dark/Olive Green, 1:2:1 Mendelian ratio
 
 ## 23 supported mutations (by inheritance type)
 
