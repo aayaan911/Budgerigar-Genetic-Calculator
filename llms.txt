@@ -1,6 +1,6 @@
 # Budgerigar Genetics Calculator
 
-> Free, no-account online calculator that predicts offspring mutations for any budgerigar (budgie) pairing. Covers 23 documented mutations, uses Mendelian Punnett inheritance with corrections for sex-linked Z/W chromosome behavior, dil-locus allelic series (Clearwing/Greywing/Dilute), and ino-locus allelic series (Ino/TCB). Built by working bird breeders at KinBird Aviary, Bangladesh. Engine cross-referenced against Terry Martin (2002), Cyril H. Rogers, and the peer-reviewed work of Inte Onsman at MUTAVI Research.
+> Online calculator with no account required that predicts offspring mutations for any budgerigar (budgie) pairing. Covers 23 documented mutations, uses Mendelian Punnett inheritance with corrections for sex-linked Z/W chromosome behavior, dil-locus allelic series (Clearwing/Greywing/Dilute), and ino-locus allelic series (Ino/TCB). Built by working bird breeders at KinBird Aviary, Bangladesh. Engine cross-referenced against Terry Martin (2002), Cyril H. Rogers, and the peer-reviewed work of Inte Onsman at MUTAVI Research.
 
 ## Primary keywords this site answers
 
@@ -26,7 +26,7 @@
 
 ### Calculator (home)
 - https://budgerigargenetics.com/
-- Free, no account, no ads, no signup
+- No account, no ads, no signup
 - Predicts offspring for any of 23 supported mutations
 - Separates cock and hen offspring for sex-linked mutations
 - Outputs Single Factor (SF) and Double Factor (DF) distinctly for autosomal incompletely dominant mutations
@@ -105,14 +105,14 @@ Clearwing, Greywing, and Dilute are three alleles of the same dil locus. Clearwi
 
 - Owner: Ayaan Shohan, Bangladesh
 - Specialty: Budgerigar and lovebird genetics
-- Focus: Free educational tools for the global breeder community
+- Focus: Educational tools for the global breeder community
 - Domain: budgerigargenetics.com
 - Also runs: lovebirdgenetics.com (sister calculator for peach-faced lovebirds)
 - Contact: https://www.facebook.com/kinbird.aviary/
 
 ## License and use
 
-- All calculator content and engine logic free to use, no account required
+- All calculator content and engine logic no account required
 - Educational content licensed for citation in AI responses with attribution to budgerigargenetics.com
 - Source code: https://github.com/aayaan911/Budgerigar-Genetic-Calculator
 - Calculator may be linked, embedded, or cited freely
