@@ -360,6 +360,27 @@ function _0xInoName(base, pheno) {
   return nm.trim().replace(/\s+/g, ' ');
 }
 
+// "Normal" prefix helper — adds "Normal" to any offspring row whose visible
+// part is just a base color (no visible mutations expressed). Per judge spec.
+const _0xPureBases = new Set([
+  'Light Green','Dark Green','Olive Green',
+  'Sky Blue','Cobalt','Mauve',
+  'Grey','Dark Grey','Mauve Grey',
+  'Grey Green','Dark Grey Green','Olive Grey Green'
+]);
+function _0xNormal(name) {
+  if (!name) return name;
+  if (name.startsWith('Normal ')) return name;
+  const sp = name.indexOf(' / '), dp = name.indexOf(' // ');
+  let cp = -1;
+  if (sp > -1 && dp > -1) cp = Math.min(sp, dp);
+  else if (sp > -1) cp = sp;
+  else if (dp > -1) cp = dp;
+  const visible = cp > -1 ? name.slice(0, cp).trim() : name.trim();
+  return _0xPureBases.has(visible) ? 'Normal ' + name : name;
+}
+function _0xApplyNormal(rows) { return rows.map(r => ({ ...r, name: _0xNormal(r.name) })); }
+
 function _0xB1(p1p, p1t, p2p, p2t) {
   if (!p1p || !p2p) return null;
   const _0xD8 = _0xA1(p1p, p2p), _0xD7 = _0xA2(_0xD8);
@@ -449,9 +470,9 @@ function _0xB1(p1p, p1t, p2p, p2t) {
       if (allTraits.some(t => t.id === 'TexasClearbody')) labelParts.push('Texas Clearbody');
       if (allTraits.some(t => t.id === 'Ino')) labelParts.push('Ino');
     }
-    _0xD9 = { label: labelParts.join(" + ") || "Sex-Linked", combined: isComb, maleOffspring: mFinal, femaleOffspring: fFinal };
+    _0xD9 = { label: labelParts.join(" + ") || "Sex-Linked", combined: isComb, maleOffspring: _0xApplyNormal(mFinal), femaleOffspring: _0xApplyNormal(fFinal) };
   }
-  return { combined: _0xA8(combined), slMut: _0xD9, adMut: null };
+  return { combined: _0xApplyNormal(_0xA8(combined)), slMut: _0xD9, adMut: null };
 }
 
 // ============================================================
@@ -479,6 +500,7 @@ function labelize(base, traits) {
   let s = base;
   if (vis.length) s += " " + vis.join(" ");
   if (splits.length) s += " / " + splits.join(" / ");
+  if (vis.length === 0 && splits.length === 0) s += " Normal";
   return s;
 }
 

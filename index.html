@@ -1934,6 +1934,27 @@ function _0xInoName(base,pheno){
   return nm.trim().replace(/\s+/g,' ');
 }
 
+// "Normal" prefix helper — adds "Normal" to any offspring row whose visible
+// part is just a base color (no visible mutations expressed). Per judge spec.
+const _0xPureBases=new Set([
+  'Light Green','Dark Green','Olive Green',
+  'Sky Blue','Cobalt','Mauve',
+  'Grey','Dark Grey','Mauve Grey',
+  'Grey Green','Dark Grey Green','Olive Grey Green'
+]);
+function _0xNormal(name){
+  if(!name)return name;
+  if(name.startsWith('Normal '))return name;
+  const sp=name.indexOf(' / '),dp=name.indexOf(' // ');
+  let cp=-1;
+  if(sp>-1&&dp>-1)cp=Math.min(sp,dp);
+  else if(sp>-1)cp=sp;
+  else if(dp>-1)cp=dp;
+  const visible=cp>-1?name.slice(0,cp).trim():name.trim();
+  return _0xPureBases.has(visible)?'Normal '+name:name;
+}
+function _0xApplyNormal(rows){return rows.map(r=>({...r,name:_0xNormal(r.name)}));}
+
 function _0xB1(p1p,p1t,p2p,p2t){
   if(!p1p||!p2p)return null;
   const _0xD8=_0xA1(p1p,p2p),_0xD7=_0xA2(_0xD8);
@@ -2036,9 +2057,9 @@ function _0xB1(p1p,p1t,p2p,p2t){
       if(allTraits.some(t=>t.id==='Ino'))inoMuts.push('Ino');
       labelParts.push(...inoMuts);
     }
-    _0xD9={label:labelParts.join(" + ")||"Sex-Linked",combined:isComb,maleOffspring:mFinal,femaleOffspring:fFinal};
+    _0xD9={label:labelParts.join(" + ")||"Sex-Linked",combined:isComb,maleOffspring:_0xApplyNormal(mFinal),femaleOffspring:_0xApplyNormal(fFinal)};
   }
-  return{combined:_0xA8(combined),slMut:_0xD9,adMut:null};
+  return{combined:_0xApplyNormal(_0xA8(combined)),slMut:_0xD9,adMut:null};
 }
 
 /* ─── APP STATE ──────────────────────────────────── */
@@ -2099,7 +2120,7 @@ return traits;
 }
 function mkLabel(pp,pid){
 const tr=effectiveTraits(pid);const vis=[],spl=[];
-for(const t of tr){if(!t.id||t.id==="None")continue;if(_0xC8(t.id)){const b=_0xC6.find(x=>x.id===t.id);if(b)spl.push(b.label);}else{const m=_0xC9.find(x=>x.id===t.id);if(m){if(t.status==="visual")vis.push(m.label);else spl.push(m.label);}}}
+for(const t of tr){if(!t.id||t.id==="None")continue;if(_0xC8(t.id)){const b=_0xC6.find(x=>x.id===t.id);if(b)spl.push(b.label);}else{const m=_0xC9.find(x=>x.id===t.id);if(m){if(t.status==="visual")vis.push(m.label);else if(t.status==="SF")vis.push("SF "+m.label);else if(t.status==="DF")vis.push("DF "+m.label);else spl.push(m.label);}}}
 // Split base color into "base" + "embedded splits" (e.g., "Olive Green / Blue" → base="Olive Green", baseSplits=["Blue"])
 const slashIdx=pp.indexOf(" / ");
 const baseName=slashIdx>-1?pp.slice(0,slashIdx):pp;
@@ -2108,6 +2129,8 @@ let l=baseName;
 if(vis.length)l+=" "+vis.join(" ");
 const allSplits=[...baseSplits,...spl];
 if(allSplits.length)l+=" / "+allSplits.join(" / ");
+// Per judge spec: when parent has NO mutations and NO splits, append "Normal" so it's unambiguous
+if(vis.length===0&&allSplits.length===0)l+=" Normal";
 return l;
 }
 function defSt(type){return type==="AD"?"SF":"visual";}
@@ -2509,7 +2532,7 @@ function snapEffectiveTraits(snap,which){
 function snapMkLabel(snap,which){
   const tr=snapEffectiveTraits(snap,which);
   const vis=[],spl=[];
-  for(const t of tr){if(!t.id||t.id==='None')continue;const m=_0xC9.find(x=>x.id===t.id);if(m){if(t.status==='visual')vis.push(m.label);else spl.push(m.label);}}
+  for(const t of tr){if(!t.id||t.id==='None')continue;const m=_0xC9.find(x=>x.id===t.id);if(m){if(t.status==='visual')vis.push(m.label);else if(t.status==='SF')vis.push('SF '+m.label);else if(t.status==='DF')vis.push('DF '+m.label);else spl.push(m.label);}}
   const pp=which==='p1'?snap.p1p:snap.p2p;
   const slashIdx=pp.indexOf(' / ');
   const baseName=slashIdx>-1?pp.slice(0,slashIdx):pp;
@@ -2518,6 +2541,7 @@ function snapMkLabel(snap,which){
   if(vis.length)l+=' '+vis.join(' ');
   const allSplits=[...baseSplits,...spl];
   if(allSplits.length)l+=' / '+allSplits.join(' / ');
+  if(vis.length===0&&allSplits.length===0)l+=' Normal';
   return l;
 }
 function computeSnapResults(snap){
