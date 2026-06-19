@@ -115,6 +115,13 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 /* Open Calculator: normal until hover (was always-green) */
 .brand-nav a.brand-cta{background:transparent !important;color:var(--text-2) !important;font-weight:600 !important;border:1px solid var(--border) !important;}
 .brand-nav a.brand-cta:hover{background:var(--accent) !important;color:#fff !important;border-color:var(--accent) !important;}
+
+/* === v5.0: Theme toggle MATCHING home page === */
+.theme-toggle{height:38px !important;width:auto !important;padding:0 14px !important;background:transparent !important;border:1px solid var(--border) !important;border-radius:10px !important;cursor:pointer;display:inline-flex !important;align-items:center;justify-content:center;gap:8px;color:var(--text-2) !important;font-family:var(--font);font-size:13px;font-weight:600;white-space:nowrap;transition:background 0.18s,color 0.18s,border-color 0.18s;}
+.theme-toggle:hover{background:var(--accent) !important;color:#fff !important;border-color:var(--accent) !important;}
+.theme-toggle svg{width:16px !important;height:16px !important;display:block;flex-shrink:0;}
+.theme-toggle .theme-btn-lbl{letter-spacing:-0.01em;line-height:1;}
+@media(max-width:520px){.theme-toggle .theme-btn-lbl{display:none;}.theme-toggle{padding:0 10px !important;}}
 </style>
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YDV3HV3XD"></script>
@@ -146,7 +153,8 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 </a>
 <nav class="brand-nav">
 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
-<svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<span id="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+<span class="theme-btn-lbl" id="theme-lbl">Dark</span>
 </button>
 <a href="/blog/">Blog</a>
 <a class="brand-cta" href="/">Open Calculator</a>
@@ -289,13 +297,14 @@ var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
 var html=document.documentElement,btn=document.getElementById('theme-toggle');
 if(!btn)return;
-var icon=document.getElementById('theme-icon');
-function apply(t){html.setAttribute('data-theme',t);if(icon){icon.outerHTML=(t==='dark'?SUN:MOON).replace('<svg ','<svg id="theme-icon" ');}btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');}
+var icon=document.getElementById('theme-icon'),lbl=document.getElementById('theme-lbl');
+function apply(t){html.setAttribute('data-theme',t);if(icon)icon.innerHTML=(t==='dark'?SUN:MOON);if(lbl)lbl.textContent=t==='dark'?'Light':'Dark';btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');}
 var stored;try{stored=localStorage.getItem('bg-theme');}catch(e){}
 if(!stored){stored=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
 apply(stored);
 btn.addEventListener('click',function(){var cur=html.getAttribute('data-theme')||'light';var next=cur==='dark'?'light':'dark';try{localStorage.setItem('bg-theme',next);}catch(e){}apply(next);});
 })();
 </script>
+
 </body>
 </html>

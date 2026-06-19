@@ -129,6 +129,22 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 .byline-follow svg{width:12px;height:12px;}
 @media(max-width:520px){.byline{flex-wrap:wrap;gap:10px;}.byline-follow{margin-left:auto;}}
 
+
+/* === v4.9: 3-column meta info block (bordered, no bg) === */
+.meta-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:12px;margin:0 0 22px;overflow:hidden;background:transparent;font-family:var(--font);text-transform:none;letter-spacing:0;}
+.meta-col{padding:14px 18px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:6px;min-width:0;}
+.meta-col:last-child{border-right:none;}
+.meta-col-label{font-family:var(--mono);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);font-weight:700;display:flex;align-items:center;gap:6px;}
+.meta-col-label svg{width:11px;height:11px;flex-shrink:0;}
+.meta-col-value{font-family:var(--font);font-size:14px;font-weight:600;color:var(--text);line-height:1.25;letter-spacing:-0.005em;}
+@media(max-width:640px){.meta-grid{grid-template-columns:1fr;}.meta-col{border-right:none;border-bottom:1px solid var(--border);}.meta-col:last-child{border-bottom:none;}}
+
+/* === v5.0: Theme toggle MATCHING home page === */
+.theme-toggle{height:38px !important;width:auto !important;padding:0 14px !important;background:transparent !important;border:1px solid var(--border) !important;border-radius:10px !important;cursor:pointer;display:inline-flex !important;align-items:center;justify-content:center;gap:8px;color:var(--text-2) !important;font-family:var(--font);font-size:13px;font-weight:600;white-space:nowrap;transition:background 0.18s,color 0.18s,border-color 0.18s;}
+.theme-toggle:hover{background:var(--accent) !important;color:#fff !important;border-color:var(--accent) !important;}
+.theme-toggle svg{width:16px !important;height:16px !important;display:block;flex-shrink:0;}
+.theme-toggle .theme-btn-lbl{letter-spacing:-0.01em;line-height:1;}
+@media(max-width:520px){.theme-toggle .theme-btn-lbl{display:none;}.theme-toggle{padding:0 10px !important;}}
 </style>
 <!-- Google Analytics (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YDV3HV3XD"></script>
@@ -159,7 +175,8 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 </a>
 <nav class="brand-nav">
 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
-<svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<span id="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+<span class="theme-btn-lbl" id="theme-lbl">Dark</span>
 </button>
 <a href="/blog/">Blog</a>
 <a class="brand-cta" href="/">Open Calculator</a>
@@ -172,7 +189,11 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 
 <h1>Opaline Budgerigar, Complete Genetics Guide</h1>
 <p class="lead">Sex-linked recessive · Origin: Australia, 1933 · Affects wing markings and body colour distribution</p>
-<div class="meta"><span>📅 Updated: June 1, 2026</span><span>📖 8 min read</span><span>🇦🇺 AU origin</span></div>
+<div class="meta-grid">
+<div class="meta-col"><span class="meta-col-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg> Updated</span><span class="meta-col-value">June 1, 2026</span></div>
+<div class="meta-col"><span class="meta-col-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> Read time</span><span class="meta-col-value">8 min</span></div>
+<div class="meta-col"><span class="meta-col-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Origin</span><span class="meta-col-value">Australia, 1933</span></div>
+</div>
 
 <div class="byline">
 <img class="byline-img" src="/avatar-ayaan.png" alt="Ayaan Shohan"/>
@@ -253,13 +274,14 @@ var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
 var html=document.documentElement,btn=document.getElementById('theme-toggle');
 if(!btn)return;
-var icon=document.getElementById('theme-icon');
-function apply(t){html.setAttribute('data-theme',t);if(icon){icon.outerHTML=(t==='dark'?SUN:MOON).replace('<svg ','<svg id="theme-icon" ');}btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');}
+var icon=document.getElementById('theme-icon'),lbl=document.getElementById('theme-lbl');
+function apply(t){html.setAttribute('data-theme',t);if(icon)icon.innerHTML=(t==='dark'?SUN:MOON);if(lbl)lbl.textContent=t==='dark'?'Light':'Dark';btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');}
 var stored;try{stored=localStorage.getItem('bg-theme');}catch(e){}
 if(!stored){stored=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
 apply(stored);
 btn.addEventListener('click',function(){var cur=html.getAttribute('data-theme')||'light';var next=cur==='dark'?'light':'dark';try{localStorage.setItem('bg-theme',next);}catch(e){}apply(next);});
 })();
 </script>
+
 </body>
 </html>
