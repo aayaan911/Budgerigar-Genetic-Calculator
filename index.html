@@ -1789,11 +1789,20 @@ function _0xA7(baseRes,arMuts,adMuts){
       const v=ad[vI];ad.splice(vI,1);
       base="Violet "+v.factor+" "+base;
     }
-    // Yellow Face, explicit "Yellow Face [SF/DF] [base]" format
+    // Yellow Face — JUDGE RULE: YF only shows VISUALLY in BLUE series.
+    // In GREEN series, YF gene is carried but MASKED (no visible effect).
+    // Source: budgie judge feedback (Khedr, Shakil) — confirmed by Terry Martin's published inheritance tables.
     const yI=ad.findIndex(a=>a.label==="Yellow Face");
+    let _maskedYF=null;
     if(yI>=0){
       const yf=ad[yI];ad.splice(yI,1);
-      base="Yellow Face "+yf.factor+" "+base;
+      if(/Green/.test(base)){
+        // Green series — mask YF visually, carry as note
+        _maskedYF=yf.factor;
+      } else {
+        // Blue series — visible
+        base="Yellow Face "+yf.factor+" "+base;
+      }
     }
     // Dark-Eyed Clear (DEC), emergent: Clearflight Pied (SF or DF) + VISIBLE Recessive Pied
     // Per expert spec: DEC factor inherits SF/DF status from the Clearflight gene.
@@ -1806,7 +1815,18 @@ function _0xA7(baseRes,arMuts,adMuts){
       ad.splice(cfI,1);           // consume Clearflight factor
       vis.splice(rpVisIdx,1);     // consume visible Recessive Pied
     }
-    // Remaining AD modifiers: Spangle, Dominant Pied, Clearflight Pied, Anthracite, Easley Clearbody, Goldenface
+    // Goldenface — JUDGE RULE: same as YF, only visual in BLUE series, masked in green series
+    const gfI=ad.findIndex(a=>a.label==="Goldenface");
+    let _maskedGF=null;
+    if(gfI>=0){
+      const gf=ad[gfI];ad.splice(gfI,1);
+      if(/Green/.test(base)){
+        _maskedGF=gf.factor;
+      } else {
+        base="Goldenface "+gf.factor+" "+base;
+      }
+    }
+    // Remaining AD modifiers: Spangle, Dominant Pied, Clearflight Pied, Anthracite, Easley Clearbody
     // Explicit "[Mutation] [SF/DF] [Base]" format per judge spec
     for(const a of ad){
       base=a.label+" "+a.factor+" "+base;
@@ -1815,10 +1835,27 @@ function _0xA7(baseRes,arMuts,adMuts){
     if(isDEC){
       base="Dark-Eyed Clear ("+decFactor+")";
     }
+    // JUDGE RULE: Opaline VISUALLY MASKS Black Face when both are visible.
+    // When chick has visual Opaline AND visual Black Face, output "Opaline ... (masking Black Face)"
+    let _opMasksBF=false;
+    const opIdx=vis.indexOf("Opaline");
+    const bfIdx=vis.indexOf("Black Face");
+    if(opIdx>=0&&bfIdx>=0){
+      _opMasksBF=true;
+      vis.splice(vis.indexOf("Opaline"),1);
+      vis.splice(vis.indexOf("Black Face"),1);
+    }
     let name=base;
+    if(_opMasksBF)name="Opaline "+name;
     if(vis.length)name+=" "+vis.join(" ");
     if(c.conf.length)name+=" / "+c.conf.join(" / ");
     if(c.poss.length)name+=" // "+c.poss.join(" // ");
+    // JUDGE RULES: append masking annotations
+    const _notes=[];
+    if(_opMasksBF)_notes.push("masking Black Face");
+    if(_maskedYF)_notes.push("carrying "+_maskedYF+" Yellow Face");
+    if(_maskedGF)_notes.push("carrying "+_maskedGF+" Goldenface");
+    if(_notes.length)name+=" ("+_notes.join(", ")+")";
     return{name:name.trim().replace(/\s+/g," "),pct:c.pct};
   });
   // Merge duplicates by phenotype name
