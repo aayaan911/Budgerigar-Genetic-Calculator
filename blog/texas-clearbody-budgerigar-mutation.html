@@ -35,7 +35,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budgerigargenetics.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://budgerigargenetics.com/blog/"},{"@type":"ListItem","position":3,"name":"Texas Clearbody","item":"https://budgerigargenetics.com/blog/texas-clearbody-budgerigar-mutation"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Texas Clearbody mutation?","acceptedAnswer":{"@type":"Answer","text":"Texas Clearbody (TCB) is a sex-linked recessive budgerigar mutation discovered in Texas USA in the 1950s. It sits at the Ino-locus on the Z chromosome and is dominant over Ino. The mutation lightens the body color while preserving the dark wing markings, face mask, and throat spots. The diagnostic visual feature is the contrast between cleared body and preserved markings."}},{"@type":"Question","name":"How is TCB different from Easley Clearbody?","acceptedAnswer":{"@type":"Answer","text":"TCB is sex-linked recessive (Z chromosome). Easley Clearbody is autosomal incompletely dominant (different gene entirely). Both produce visually similar body clearing. The test pairing distinguishes them: TCB × Normal auto-sexes chicks (sex-linked). Easley × Normal produces 50% visual + 50% Normal chicks of both sexes (no auto-sex). The Budgerigar Genetics Calculator handles them as separate mutations and never confuses them."}},{"@type":"Question","name":"How does TCB interact with Ino?","acceptedAnswer":{"@type":"Answer","text":"TCB and Ino are allelic — they sit at the same Z-chromosome locus. The dominance order is wild-type > TCB > Ino. A male budgerigar carrying TCB on one Z and Ino on the other is visually TCB and split for Ino. The Budgerigar Genetics Calculator implements this Ino-locus allelic series logic. Selecting TCB on one parent and Ino on the other shows the proper allelic interaction in offspring predictions."}},{"@type":"Question","name":"Does TCB support the auto-sex pairing trick?","acceptedAnswer":{"@type":"Answer","text":"Yes. TCB is one of the six sex-linked recessive budgerigar mutations that supports auto-sex pairing. A visual TCB cock paired with a Normal hen produces 100% visual TCB daughters and 100% split TCB sons. See our Sex-Linked Auto-Sex Pairing guide for the full mechanism."}},{"@type":"Question","name":"Can a hen be split for TCB?","acceptedAnswer":{"@type":"Answer","text":"No. Female budgerigars have only one Z chromosome paired with W. A hen either has TCB on her single Z (visual TCB) or does not (Normal or visual Ino if Ino is present on her single Z). There is no split state for any sex-linked recessive mutation in hens, including TCB. This is the same rule that applies to Opaline, Cinnamon, Ino, Lacewing, and Slate."}},{"@type":"Question","name":"What was the judge-validated test case for TCB and Lacewing?","acceptedAnswer":{"@type":"Answer","text":"1.0 Light Green / TCB × 0.1 Light Green Lacewing was the judge-validated test case for the calculator's Ino-locus allelic series + Lacewing crossover handling. Expected output: 25% Normal LG / Cinnamon / Ino sons, 25% TCB LG / Cinnamon / Ino sons, 25% TCB LG daughters, 25% Normal LG daughters. The Budgerigar Genetics Calculator produces this output correctly, validated by WBO Certified judges Khedr and Hossain."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Texas Clearbody mutation?","acceptedAnswer":{"@type":"Answer","text":"Texas Clearbody (TCB) is a sex-linked recessive budgerigar mutation discovered in Texas USA in the 1950s. It sits at the Ino-locus on the Z chromosome and is dominant over Ino. The mutation lightens the body color while preserving the dark wing markings, face mask, and throat spots. The diagnostic visual feature is the contrast between cleared body and preserved markings."}},{"@type":"Question","name":"How is TCB different from Easley Clearbody?","acceptedAnswer":{"@type":"Answer","text":"TCB is sex-linked recessive (Z chromosome). Easley Clearbody is autosomal incompletely dominant (different gene entirely). Both produce visually similar body clearing. The test pairing distinguishes them: TCB × Normal auto-sexes chicks (sex-linked). Easley × Normal produces 50% visual + 50% Normal chicks of both sexes (no auto-sex). The Budgerigar Genetics Calculator handles them as separate mutations and never confuses them."}},{"@type":"Question","name":"How does TCB interact with Ino?","acceptedAnswer":{"@type":"Answer","text":"TCB and Ino are allelic, they sit at the same Z-chromosome locus. The dominance order is wild-type > TCB > Ino. A male budgerigar carrying TCB on one Z and Ino on the other is visually TCB and split for Ino. The Budgerigar Genetics Calculator implements this Ino-locus allelic series logic. Selecting TCB on one parent and Ino on the other shows the proper allelic interaction in offspring predictions."}},{"@type":"Question","name":"Does TCB support the auto-sex pairing trick?","acceptedAnswer":{"@type":"Answer","text":"Yes. TCB is one of the six sex-linked recessive budgerigar mutations that supports auto-sex pairing. A visual TCB cock paired with a Normal hen produces 100% visual TCB daughters and 100% split TCB sons. See our Sex-Linked Auto-Sex Pairing guide for the full mechanism."}},{"@type":"Question","name":"Can a hen be split for TCB?","acceptedAnswer":{"@type":"Answer","text":"No. Female budgerigars have only one Z chromosome paired with W. A hen either has TCB on her single Z (visual TCB) or does not (Normal or visual Ino if Ino is present on her single Z). There is no split state for any sex-linked recessive mutation in hens, including TCB. This is the same rule that applies to Opaline, Cinnamon, Ino, Lacewing, and Slate."}},{"@type":"Question","name":"What was the judge-validated test case for TCB and Lacewing?","acceptedAnswer":{"@type":"Answer","text":"1.0 Light Green / TCB × 0.1 Light Green Lacewing was the judge-validated test case for the calculator's Ino-locus allelic series + Lacewing crossover handling. Expected output: 25% Normal LG / Cinnamon / Ino sons, 25% TCB LG / Cinnamon / Ino sons, 25% TCB LG daughters, 25% Normal LG daughters. The Budgerigar Genetics Calculator produces this output correctly, validated by WBO Certified judges Khedr and Hossain."}}]}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -151,7 +151,7 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 .theme-toggle .theme-btn-lbl{letter-spacing:-0.01em;line-height:1;}
 @media(max-width:520px){.theme-toggle .theme-btn-lbl{display:none;}.theme-toggle{padding:0 10px !important;}}
 
-/* === v6.2: Mobile header — keep all elements on 1 line === */
+/* === v6.2: Mobile header, keep all elements on 1 line === */
 @media(max-width:520px){
   .brand-inner{padding:12px 14px !important;gap:8px !important;}
   .brand-nav{gap:4px !important;}
@@ -213,7 +213,7 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 <nav class="crumbs"><a href="/">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg><a href="/blog/">Blog</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Texas Clearbody</nav>
 
 <h1>Texas Clearbody (TCB) Budgerigar Mutation, Complete Genetics Guide</h1>
-<p class="lead">A sex-linked recessive mutation that lightens the body color while preserving the dark wing and face markings. Discovered in Texas, USA in the 1950s. Texas Clearbody sits at the Ino-locus on the Z chromosome and is dominant over Ino — a bird heterozygous TCB/Ino is visually TCB and split for Ino. This makes TCB the textbook example of allelic series inheritance in budgerigar genetics.</p>
+<p class="lead">A sex-linked recessive mutation that lightens the body color while preserving the dark wing and face markings. Discovered in Texas, USA in the 1950s. Texas Clearbody sits at the Ino-locus on the Z chromosome and is dominant over Ino, a bird heterozygous TCB/Ino is visually TCB and split for Ino. This makes TCB the textbook example of allelic series inheritance in budgerigar genetics.</p>
 <div class="meta-grid">
 <div class="meta-col"><span class="meta-col-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg> Published</span><span class="meta-col-value">June 19, 2026</span></div>
 <div class="meta-col"><span class="meta-col-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> Read time</span><span class="meta-col-value">9 min</span></div>
@@ -233,38 +233,38 @@ Follow
 
 <div class="tldr">
 <p class="tldr-label">TL;DR</p>
-<p>Texas Clearbody (TCB) is a sex-linked recessive budgerigar mutation discovered in Texas USA in the 1950s. It is allelic with Ino at the Ino-locus on the Z chromosome, and TCB is dominant over Ino. The body lightens (yellow on green base, near-white on blue base) but the wing and face markings remain dark — the diagnostic feature that distinguishes TCB from Ino (which removes all melanin). A bird carrying TCB on one Z and Ino on the other is visually TCB and split for Ino. Pairings work via standard sex-linked recessive rules with the additional allelic series logic at the Ino-locus.</p>
+<p>Texas Clearbody (TCB) is a sex-linked recessive budgerigar mutation discovered in Texas USA in the 1950s. It is allelic with Ino at the Ino-locus on the Z chromosome, and TCB is dominant over Ino. The body lightens (yellow on green base, near-white on blue base) but the wing and face markings remain dark, the diagnostic feature that distinguishes TCB from Ino (which removes all melanin). A bird carrying TCB on one Z and Ino on the other is visually TCB and split for Ino. Pairings work via standard sex-linked recessive rules with the additional allelic series logic at the Ino-locus.</p>
 </div>
 
 
 <h2>What Texas Clearbody looks like</h2>
 <p>A Texas Clearbody (TCB) budgerigar has a lightened body color while retaining the dark wing markings, face mask, and throat spots characteristic of Normal birds. On green-series TCB birds, the body is yellow with slight green tinting and dark wing markings. On blue-series TCB birds, the body is near-white with slight blue tinting and dark wing markings.</p>
-<p>The diagnostic visual feature is the contrast between the cleared body and preserved markings. Unlike Ino (Lutino/Albino) which removes ALL melanin including wing markings, TCB clears only the body while preserving the structural pattern. The eyes are dark or near-dark — not red like Ino.</p>
+<p>The diagnostic visual feature is the contrast between the cleared body and preserved markings. Unlike Ino (Lutino/Albino) which removes ALL melanin including wing markings, TCB clears only the body while preserving the structural pattern. The eyes are dark or near-dark, not red like Ino.</p>
 <p>The cere and feet appear normal. The bird's behavior and breeding biology are identical to Normal birds. The mutation is purely cosmetic.</p>
 
 <h2>History and origin</h2>
 <p>Texas Clearbody was discovered in Texas, USA in the 1950s. The original line entered American exhibition aviculture during that decade, with stable breeding stock distributed through Texas and Oklahoma breeder networks.</p>
 <p>The mutation spread internationally during the 1960s and 1970s as American breeders shared stock with European and Australian aviaries. By the 1980s TCB was an established exhibition class at major bird shows.</p>
-<p>The Texas origin gives the mutation its name. Modern exhibition standards classify TCB separately from Easley Clearbody (California 1992, autosomal incompletely dominant — a completely different gene that happens to produce a similar visual signature).</p>
+<p>The Texas origin gives the mutation its name. Modern exhibition standards classify TCB separately from Easley Clearbody (California 1992, autosomal incompletely dominant, a completely different gene that happens to produce a similar visual signature).</p>
 
 <h2>How Texas Clearbody inheritance works</h2>
 <p>TCB follows sex-linked recessive inheritance on the Z chromosome. It is allelic with Ino at the Ino-locus, meaning both genes sit at the same chromosomal location and cannot coexist on the same Z chromosome.</p>
 <p>The dominance order at the Ino-locus is: wild-type > TCB > Ino. A bird heterozygous TCB/wild-type is visually TCB. A bird heterozygous TCB/Ino is visually TCB and split for Ino. A bird homozygous TCB/TCB is visually TCB.</p>
-<p>Male budgerigars (ZZ) can be Normal, split TCB, visual TCB, heterozygous TCB/Ino, or visual Ino — depending on which alleles they carry on each Z chromosome.</p>
+<p>Male budgerigars (ZZ) can be Normal, split TCB, visual TCB, heterozygous TCB/Ino, or visual Ino, depending on which alleles they carry on each Z chromosome.</p>
 <p>Female budgerigars (ZW) have only one Z chromosome. They can only be Normal, visual TCB, or visual Ino. They cannot be split for either, because there is no second Z chromosome to carry the wild-type.</p>
 
 <h2>The Ino-locus allelic series</h2>
 <p>The Ino-locus on the budgerigar Z chromosome carries multiple alleles. The Budgerigar Genetics Calculator implements the proper allelic series logic for this locus.</p>
-<p>Wild-type allele (+) — no mutation effect.</p>
-<p>TCB allele — produces Texas Clearbody phenotype. Dominant over Ino, recessive to wild-type.</p>
-<p>Ino allele — produces Ino (Lutino on green, Albino on blue). Recessive to both wild-type and TCB.</p>
+<p>Wild-type allele (+), no mutation effect.</p>
+<p>TCB allele, produces Texas Clearbody phenotype. Dominant over Ino, recessive to wild-type.</p>
+<p>Ino allele, produces Ino (Lutino on green, Albino on blue). Recessive to both wild-type and TCB.</p>
 <p>Dominance order: + > TCB > Ino.</p>
 <p>A male budgerigar with TCB on one Z and Ino on the other is visually TCB (TCB dominates Ino) and split for Ino. Cross him with a wild-type hen and his daughters will be either visually TCB or visually Ino at 50% each, with sons split for whichever allele they inherit.</p>
 <p>This allelic series logic is what makes the Budgerigar Genetics Calculator judge-validated for sex-linked TCB and Ino combinations.</p>
 
 <h2>The auto-sex pairing with TCB</h2>
 <p>Texas Clearbody supports the standard sex-linked auto-sex pairing rule. A visual TCB cock paired with a Normal hen produces 100% visual TCB daughters and 100% split TCB sons. Daughters can be sexed at hatch by their TCB phenotype, sons by their normal phenotype.</p>
-<p>This is the same rule that applies to Opaline, Cinnamon, Ino, Lacewing, and Slate — all six sex-linked recessive mutations support the auto-sex trick. TCB is the sixth in the list.</p>
+<p>This is the same rule that applies to Opaline, Cinnamon, Ino, Lacewing, and Slate, all six sex-linked recessive mutations support the auto-sex trick. TCB is the sixth in the list.</p>
 <p>See our Sex-Linked Auto-Sex Pairing guide for the full mechanism and breeder applications across all six sex-linked mutations.</p>
 
 <h2>Texas Clearbody combinations</h2>
@@ -274,13 +274,13 @@ Follow
 <p>TCB Spangle on blue base combines reverse wing markings with clear body.</p>
 <p>TCB Yellow Face on blue base adds yellow face wash to a clear-body bird.</p>
 <p>TCB Cobalt Opaline Yellow Face Spangle is an extreme multi-mutation combination popular in some exhibition lines.</p>
-<p>TCB cannot combine with Ino on the same bird — they are alleles at the same locus. A bird carrying both TCB and Ino alleles is visually TCB with Ino as split (split phenotype on the same locus means the dominant TCB is visible, Ino is masked).</p>
+<p>TCB cannot combine with Ino on the same bird, they are alleles at the same locus. A bird carrying both TCB and Ino alleles is visually TCB with Ino as split (split phenotype on the same locus means the dominant TCB is visible, Ino is masked).</p>
 
 <h2>TCB pairing predictions in the calculator</h2>
 <p>The Budgerigar Genetics Calculator handles all TCB pairings with proper Ino-locus allelic series logic, including TCB × Ino combinations, auto-sex pairings, and combinations with all other mutations.</p>
 <p>Try visual TCB cock × Normal hen for the classic auto-sex pairing.</p>
-<p>Try visual TCB cock × visual Ino hen to see the allelic series in action — sons inherit TCB and Ino on different Z chromosomes, becoming visually TCB and split for Ino.</p>
-<p>Try Lacewing hen × visual TCB cock to see the judge-validated Onsman crossover interaction — this is one of the test cases that established the calculator's accuracy with WBO judges.</p>
+<p>Try visual TCB cock × visual Ino hen to see the allelic series in action, sons inherit TCB and Ino on different Z chromosomes, becoming visually TCB and split for Ino.</p>
+<p>Try Lacewing hen × visual TCB cock to see the judge-validated Onsman crossover interaction, this is one of the test cases that established the calculator's accuracy with WBO judges.</p>
 <p>Test any TCB pairing at <a href="/">budgerigargenetics.com</a>.</p>
 
 <h2>Frequently asked questions about texas clearbody</h2>
@@ -289,7 +289,7 @@ Follow
 <h3>How is TCB different from Easley Clearbody?</h3>
 <p>TCB is sex-linked recessive (Z chromosome). Easley Clearbody is autosomal incompletely dominant (different gene entirely). Both produce visually similar body clearing. The test pairing distinguishes them: TCB × Normal auto-sexes chicks (sex-linked). Easley × Normal produces 50% visual + 50% Normal chicks of both sexes (no auto-sex). The Budgerigar Genetics Calculator handles them as separate mutations and never confuses them.</p>
 <h3>How does TCB interact with Ino?</h3>
-<p>TCB and Ino are allelic — they sit at the same Z-chromosome locus. The dominance order is wild-type > TCB > Ino. A male budgerigar carrying TCB on one Z and Ino on the other is visually TCB and split for Ino. The Budgerigar Genetics Calculator implements this Ino-locus allelic series logic. Selecting TCB on one parent and Ino on the other shows the proper allelic interaction in offspring predictions.</p>
+<p>TCB and Ino are allelic, they sit at the same Z-chromosome locus. The dominance order is wild-type > TCB > Ino. A male budgerigar carrying TCB on one Z and Ino on the other is visually TCB and split for Ino. The Budgerigar Genetics Calculator implements this Ino-locus allelic series logic. Selecting TCB on one parent and Ino on the other shows the proper allelic interaction in offspring predictions.</p>
 <h3>Does TCB support the auto-sex pairing trick?</h3>
 <p>Yes. TCB is one of the six sex-linked recessive budgerigar mutations that supports auto-sex pairing. A visual TCB cock paired with a Normal hen produces 100% visual TCB daughters and 100% split TCB sons. See our Sex-Linked Auto-Sex Pairing guide for the full mechanism.</p>
 <h3>Can a hen be split for TCB?</h3>
