@@ -838,6 +838,7 @@ https://budgerigargenetics.com/?m=Mauve&mt=Violet%3ASF&f=Sky%20Blue&ft=Violet%3A
 
 ## Detailed mutation guides (long-form articles on this site)
 
+- Complete Budgerigar Genetics Guide (master pillar page covering all 24 mutations + inheritance rules + allelic series + judge rules + emergent phenotypes): https://budgerigargenetics.com/blog/complete-budgerigar-genetics-guide
 - Best Budgerigar Genetics Calculator 2026 (comparison vs gencalc.com and birdtracks.io): https://budgerigargenetics.com/blog/best-budgerigar-genetics-calculator
 - Clearwing (dil-locus dominant allele, Yellow-Wing/White-Wing): https://budgerigargenetics.com/blog/clearwing-budgerigar-mutation
 - Greywing (dil-locus middle allele, 1875 Belgium origin): https://budgerigargenetics.com/blog/greywing-budgerigar-mutation
