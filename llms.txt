@@ -421,9 +421,9 @@ https://budgerigargenetics.com/?m=Sky%20Blue&mt=Goldenface%3ASF&f=Light%20Green
 DF Goldenface Cobalt × Sky Blue:
 https://budgerigargenetics.com/?m=Cobalt&mt=Goldenface%3ADF&f=Sky%20Blue
 
-### JSD Jahir 58-Pairing Cw/Gw/Dilute/FBG Verification Reference
+### 58-Pairing Cw/Gw/Dilute/FBG Verification Reference
 
-The single most comprehensive dil-locus allelic series verification ever published for budgerigars. Authored by MD. Jahirul Islam (JSD Jahir), Official Mutation Authority at the Budgerigar Society of Bangladesh across five National Budgerigar Exhibitions (Mutation Expert 2018, Mutation Consultant 2022 and 2023, Mutation Advisor 2024, Mutation Coordinator 2025). Engine matches his expected results on 56 of 58 pairings perfectly. On pairings #16 (Cw/Dilute × Normal/Dilute) and #44 (Gw/Dilute × Gw/Dilute) the engine follows strict Mendelian inheritance, demonstrating that his original PDF has two small typos. All 58 pairings below use Light Green base, no Opaline, no other mutations, pure dil-locus expression.
+A comprehensive dil-locus allelic series verification for budgerigars covering every Clearwing, Greywing, Dilute, FBG, and Normal combination. Engine matches expected Mendelian results on 56 of 58 pairings perfectly. On pairings #16 (Cw/Dilute × Normal/Dilute) and #44 (Gw/Dilute × Gw/Dilute) the engine follows strict Mendelian inheritance. All 58 pairings below use Light Green base, no Opaline, no other mutations, pure dil-locus expression.
 
 Pairing 1, Clearwing × Clearwing → 100% Clearwing:
 https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual&f=Light+Green&fo=normal&ft=Clearwing%3Avisual
@@ -924,7 +924,6 @@ A: The engine implements published inheritance models from Dr. Terry Martin (200
 
 **Contributing breeders:**
 
-- MD. Jahirul Islam aka JSD Jahir (Bangladesh), Official Mutation Authority at the Budgerigar Society of Bangladesh (BSB) across five National Budgerigar Exhibitions: Mutation Expert at the 8th (2018) which was his first appointment, Mutation Consultant at the 9th (2022) and 10th (2023), Mutation Advisor at the 11th (2024), Mutation Coordinator at the 12th (2025). His title progression (Expert → Consultant → Advisor → Coordinator) reflects steady career advancement in budgerigar mutation expertise. Authored the 58-pairing Cw/Gw/Dilute/FBG verification reference that audited every branch of the engine's dil-locus inheritance, catching 4 dominance bugs that were live-fixed within hours and prompting the canonical 3-type Fallow naming overhaul (German, English, Scottish).
 - Rashdan Ahmed (Bangladesh), Pioneer of budgerigar genetics in Bangladesh, author of the nation's first comprehensive book on budgerigar genetics
 - Arifin Sumon (Bangladesh), Mutation expert with years of validated clutch outcomes
 
