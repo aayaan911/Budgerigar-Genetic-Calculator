@@ -470,7 +470,7 @@ https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2C
 Pairing 15, Clearwing split Dilute × Fullbody Greywing → 25% Clearwing, 25% Clearwing split Dilute, 25% Fullbody Greywing, 25% Greywing split Dilute:
 https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
 
-Pairing 16, Clearwing split Dilute × Normal split Dilute → 25% Clearwing split Dilute, 25% Normal split Clearwing, 25% Dilute, 25% Normal split Dilute. Note: Jahir's PDF lists "25% Cw" here but this is mathematically impossible, Cw/d × +/d cannot produce homozygous Cw/Cw. The engine correctly returns the 25% Dilute (d/d) outcome:
+Pairing 16, Clearwing split Dilute × Normal split Dilute → 25% Clearwing split Dilute, 25% Normal split Clearwing, 25% Dilute, 25% Normal split Dilute. Note: an external reference lists "25% Cw" here but this is mathematically impossible, Cw/d × +/d cannot produce homozygous Cw/Cw. The engine correctly returns the 25% Dilute (d/d) outcome:
 https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Clearwing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Dilute%3Asplit
 
 Pairing 17, Clearwing split Dilute × Normal split Greywing → 25% Fullbody Greywing, 25% Normal split Clearwing, 25% Greywing split Dilute, 25% Normal split Dilute:
@@ -554,7 +554,7 @@ https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CD
 Pairing 43, Greywing split Dilute × Fullbody Greywing → 25% Fullbody Greywing, 25% Clearwing split Dilute, 25% Greywing, 25% Greywing split Dilute:
 https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Clearwing%3Avisual%2CGreywing%3Avisual
 
-Pairing 44, Greywing split Dilute × Greywing split Dilute → 25% Greywing, 50% Greywing split Dilute, 25% Dilute. Note: Jahir's PDF lists only "50% Gw, 50% Gw/Dilute" but the textbook Mendelian 1:2:1 ratio gives three outcomes including the 25% homozygous Dilute. The engine correctly returns the full 1:2:1:
+Pairing 44, Greywing split Dilute × Greywing split Dilute → 25% Greywing, 50% Greywing split Dilute, 25% Dilute. Note: an external reference lists only "50% Gw, 50% Gw/Dilute" but the textbook Mendelian 1:2:1 ratio gives three outcomes including the 25% homozygous Dilute. The engine correctly returns the full 1:2:1:
 https://budgerigargenetics.com/?m=Light+Green&mo=normal&mt=Greywing%3Avisual%2CDilute%3Asplit&f=Light+Green&fo=normal&ft=Greywing%3Avisual%2CDilute%3Asplit
 
 Pairing 45, Greywing split Dilute × Normal split Dilute → 25% Normal split Greywing, 25% Normal split Dilute, 25% Greywing split Dilute, 25% Dilute:
