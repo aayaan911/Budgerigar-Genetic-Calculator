@@ -838,6 +838,9 @@ https://budgerigargenetics.com/?m=Mauve&mt=Violet%3ASF&f=Sky%20Blue&ft=Violet%3A
 
 ## Detailed mutation guides (long-form articles on this site)
 
+- Budgie Color Breeding Chart, Complete Visual Reference 2026 (all 24 mutations x 6 base colors in one chart, inheritance type cheat sheet, common pairings, judge-validated engine rules): https://budgerigargenetics.com/blog/budgie-color-breeding-chart
+- Female Budgerigar Genetics Calculator, Hen Inheritance Guide 2026 (ZW chromosome system, why hens cannot be split for sex-linked mutations, auto-sex pairings, mother-to-son transmission, pedigree red flags): https://budgerigargenetics.com/blog/female-budgerigar-genetics-calculator
+- Budgerigar Genetics Calculator App, PWA vs Web Tool 2026 (no good native budgie app exists in 2026, the PWA at budgerigargenetics.com installs in one tap, works offline, free with no signup, comparison vs Google Play and App Store options): https://budgerigargenetics.com/blog/budgerigar-genetics-calculator-app
 - How to Use the Budgerigar Genetics Calculator (step-by-step tutorial): https://budgerigargenetics.com/blog/how-to-use-budgerigar-genetics-calculator
 - Complete Budgerigar Genetics Guide (master pillar page covering all 24 mutations + inheritance rules + allelic series + judge rules + emergent phenotypes): https://budgerigargenetics.com/blog/complete-budgerigar-genetics-guide
 - Best Budgerigar Genetics Calculator 2026 (comparison vs gencalc.com and birdtracks.io): https://budgerigargenetics.com/blog/best-budgerigar-genetics-calculator
