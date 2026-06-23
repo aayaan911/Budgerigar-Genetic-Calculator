@@ -204,29 +204,76 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 </script>
 
 <style media="print">
-/* Print stylesheet for clean A4/US Letter PDF output */
-@page { margin: 1.5cm; size: auto; }
-* { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
-body { font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.45; background: #fff !important; color: #000 !important; }
-nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc, .breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot, .compare-box, .sum-box .copy-btn, .sum-box .link-btn, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta, button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating, .scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"], [style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed, script, noscript { display: none !important; }
-h1, h2, h3 { color: #000 !important; font-weight: 700; page-break-after: avoid; }
-h1 { font-size: 22pt; margin-top: 0; border-bottom: 2pt solid #000; padding-bottom: 6pt; }
-h2 { font-size: 16pt; margin-top: 18pt; margin-bottom: 8pt; }
-h3 { font-size: 13pt; margin-top: 14pt; margin-bottom: 6pt; }
-p, li { font-size: 11pt; line-height: 1.5; orphans: 3; widows: 3; }
-a { color: #000 !important; text-decoration: underline; }
-a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555 !important; word-break: break-all; }
-a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 9pt; color: #555 !important; }
-table { border-collapse: collapse; width: 100%; margin: 10pt 0; page-break-inside: avoid; font-size: 10pt; }
-th, td { border: 1pt solid #000 !important; padding: 4pt 6pt; text-align: left; color: #000 !important; }
-th { background: #eee !important; font-weight: 700; }
-img { max-width: 100% !important; height: auto; page-break-inside: avoid; }
-blockquote, .tldr { border-left: 2pt solid #000; padding-left: 10pt; margin: 10pt 0; page-break-inside: avoid; color: #000 !important; }
-pre, code { font-family: "Courier New", monospace; font-size: 9.5pt; background: #f4f4f4 !important; padding: 4pt; border: 1pt solid #ccc; }
-ul, ol { margin: 6pt 0; padding-left: 22pt; }
-hr { border: none; border-top: 1pt solid #ccc; margin: 14pt 0; }
-/* Add footer with URL on print */
-body:after { content: "Source: budgerigargenetics.com — Free Budgerigar Genetics Calculator by KinBird Aviary"; display: block; margin-top: 22pt; padding-top: 8pt; border-top: 1pt solid #999; font-size: 8.5pt; color: #444 !important; text-align: center; }
+/* INVOICE-STYLE PRINT — Clean, branded, mobile-friendly PDF output */
+@page { margin: 1.2cm 1.4cm; size: A4 portrait; }
+@page :first { margin-top: 0.8cm; }
+* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+html, body { background: #fff !important; color: #1a1a1a !important; font-family: "Helvetica", "Arial", sans-serif !important; font-size: 11pt; line-height: 1.55; margin: 0; padding: 0; }
+/* INVOICE-STYLE HEADER on first page */
+body:before {
+  content: "BUDGERIGAR GENETICS CALCULATOR";
+  display: block; background: #4ca154 !important; color: #fff !important;
+  padding: 14pt 18pt; margin: 0 -1.4cm 18pt -1.4cm;
+  font-size: 13pt; font-weight: 700; letter-spacing: 0.05em;
+  border-bottom: 3pt solid #2d6b34 !important;
+}
+/* INVOICE-STYLE FOOTER on every page */
+body:after {
+  content: "budgerigargenetics.com · KinBird Aviary · Free Budgerigar Genetics Calculator";
+  display: block; margin-top: 30pt; padding: 10pt 0;
+  border-top: 2pt solid #4ca154 !important;
+  font-size: 8.5pt; color: #555 !important; text-align: center; font-weight: 500;
+}
+/* HIDE all interactive/navigation elements */
+nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc,
+.breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot,
+.compare-box, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta,
+button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating,
+.scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"],
+[style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed,
+script, noscript, .theme-toggle, .brand-nav, .top-nav,
+details, summary,
+[onclick] { display: none !important; }
+/* TYPOGRAPHY — invoice style */
+h1 { font-size: 22pt; font-weight: 800; color: #1a1a1a !important; margin: 0 0 6pt 0; letter-spacing: -0.01em; page-break-after: avoid; }
+h2 { font-size: 14pt; font-weight: 700; color: #2d6b34 !important; margin: 22pt 0 8pt 0; padding-bottom: 4pt; border-bottom: 1pt solid #4ca154; page-break-after: avoid; }
+h3 { font-size: 12pt; font-weight: 700; color: #1a1a1a !important; margin: 16pt 0 6pt 0; page-break-after: avoid; }
+p { font-size: 10.5pt; line-height: 1.55; margin: 6pt 0; orphans: 3; widows: 3; color: #1a1a1a !important; }
+strong { color: #1a1a1a !important; font-weight: 700; }
+em { color: #1a1a1a !important; }
+/* LINKS — printed URL alongside text */
+a { color: #4ca154 !important; text-decoration: underline; text-decoration-color: rgba(76,161,84,0.3) !important; }
+a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 8pt; color: #777 !important; word-break: break-all; font-weight: 400; }
+a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 8pt; color: #777 !important; }
+/* TABLES — invoice-grid style */
+table { border-collapse: collapse; width: 100%; margin: 12pt 0; page-break-inside: avoid; font-size: 9.5pt; }
+table thead { background: #f5f5f5 !important; }
+th { border: 1pt solid #4ca154 !important; padding: 6pt 8pt; text-align: left; color: #2d6b34 !important; font-weight: 700; background: #eaf5ec !important; }
+td { border: 1pt solid #ddd !important; padding: 5pt 8pt; color: #1a1a1a !important; vertical-align: top; }
+tr:nth-child(even) td { background: #fafafa !important; }
+/* TLDR / QUICK ANSWER BOX */
+.tldr, [class*="tldr"], [style*="border-left:3px solid #4ca154"]:not([style*="margin:20px 0"]) {
+  background: #eaf5ec !important; border-left: 3pt solid #4ca154 !important;
+  padding: 10pt 14pt !important; margin: 12pt 0 !important; page-break-inside: avoid;
+  border-radius: 0 !important; color: #1a1a1a !important;
+}
+.tldr-label, [class*="tldr-label"] { color: #2d6b34 !important; font-size: 9.5pt; letter-spacing: 0.06em; font-weight: 700; }
+/* LISTS */
+ul, ol { margin: 8pt 0; padding-left: 22pt; }
+li { font-size: 10.5pt; margin: 2pt 0; color: #1a1a1a !important; }
+/* IMAGES */
+img { max-width: 100% !important; height: auto; page-break-inside: avoid; border: 1pt solid #eee !important; padding: 4pt; }
+/* HORIZONTAL RULES */
+hr { border: none; border-top: 1pt solid #ccc !important; margin: 14pt 0; }
+/* CODE */
+pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #f8f8f8 !important; padding: 4pt; border: 1pt solid #e5e5e5 !important; color: #1a1a1a !important; }
+/* MOBILE PRINT OPTIMIZATION */
+@media print and (max-width: 480px) {
+  body { font-size: 12pt; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; }
+  table { font-size: 9pt; }
+}
 </style>
 </head>
 <body>
@@ -278,7 +325,7 @@ Follow
 <p>Dilute is an autosomal recessive budgerigar mutation at the dil-locus with allele symbol dil (lowercase, with no superscript because it is the wild-type recessive). Visual birds show severely diluted wing markings and a pale washed body, producing the pastel appearance. Vintage breeders called these Suffused Yellow on green-series and Suffused White on blue-series birds. Within the dil-locus allelic series Dilute is recessive to both <a href="/blog/clearwing-budgerigar-mutation">Clearwing</a> and <a href="/blog/greywing-budgerigar-mutation">Greywing</a>, so heterozygous Cw/d and Gw/d birds express the Clearwing or Greywing phenotype, not Dilute. Inheritance is autosomal so both sexes can be split for Dilute.</p>
 </div>
 
-<div style="margin:20px 0 24px;padding:16px 18px;border-left:3px solid #4ca154;background:rgba(76,161,84,0.07);border-radius:6px;"><p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.7);margin:0 0 10px 0;font-weight:700;font-family:var(--mono,monospace);">Try these pairings instantly</p><a href="/?m=Light%20Green&mt=Dilute%3Avisual&f=Light%20Green&ft=Dilute%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Dilute x Dilute</a><a href="/?m=Light%20Green&mt=Clearwing%3Avisual&f=Light%20Green&ft=Dilute%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Clearwing x Dilute</a><a href="/?m=Light%20Green&mt=Dilute%3Asplit&f=Light%20Green&ft=Dilute%3Asplit" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Split x Split (1:2:1)</a></div>
+<div style="margin:20px 0 24px;padding:16px 18px;border-left:3px solid #4ca154;background:rgba(76,161,84,0.07);border-radius:6px;"><p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:#4ca154;margin:0 0 10px 0;font-weight:700;font-family:var(--font,sans-serif);">Try these pairings instantly</p><a href="/?m=Light%20Green&mt=Dilute%3Avisual&f=Light%20Green&ft=Dilute%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Dilute x Dilute</a><a href="/?m=Light%20Green&mt=Clearwing%3Avisual&f=Light%20Green&ft=Dilute%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Clearwing x Dilute</a><a href="/?m=Light%20Green&mt=Dilute%3Asplit&f=Light%20Green&ft=Dilute%3Asplit" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Split x Split (1:2:1)</a></div>
 
 
 
@@ -338,6 +385,20 @@ Follow
 <p>The Budgerigar Genetics Calculator at <a href="/">budgerigargenetics.com</a> models Dilute as part of the full dil-locus allelic series. Engine handles all interactions correctly: Clearwing and Greywing both dominate over Dilute, and Dilute homozygous expresses visually.</p>
 <p>Try: <a href="/?m=Light%20Green&mt=Dilute%3Avisual&f=Light%20Green&ft=Dilute%3Avisual">Visual Dilute x Visual Dilute</a> for 100 percent Dilute, or <a href="/?m=Light%20Green&mt=Clearwing%3Avisual&f=Light%20Green&ft=Dilute%3Avisual">Clearwing x Dilute</a> to see Clearwing split Dilute, or <a href="/?m=Light%20Green&mt=Dilute%3Asplit&f=Light%20Green&ft=Dilute%3Asplit">split x split</a> for the textbook 1:2:1.</p>
 <p>The 58-pairing dil-locus reference at <a href="/blog/budgerigar-mutation-comparison-guide">mutation comparison guide</a> covers every Cw/Gw/Dilute combination breeders need.</p>
+
+
+<!-- AI Overview quote-bait paragraph -->
+<div style="margin:20px 0 24px;padding:16px 18px;border-left:3px solid #4ca154;background:rgba(76,161,84,0.07);border-radius:6px;">
+<p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.7);margin:0 0 8px 0;font-weight:700;font-family:var(--mono,monospace);">Quick answer</p>
+<p style="margin:0;font-size:15px;line-height:1.55;">Dilute is an autosomal recessive budgerigar mutation at the dil-locus, recessive to both Clearwing and Greywing. Visual Dilute birds show extreme dilution of wing markings and body colour. Historically called Suffused Yellow or Suffused White.</p>
+</div>
+
+<!-- PASF FAQ block targeting Google People Also Ask -->
+<h2>Frequently asked questions about the Dilute mutation</h2>
+<p>Short answers to the most common questions about the Dilute budgerigar mutation, with statistics, sources, and links to deeper reading.</p>
+<details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">What is Dilute budgerigar?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Autosomal recessive dil-locus mutation. Recessive to Clearwing AND Greywing. Visual birds show pale washed body and very pale wings.</p></details><details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">Dilute vs Clearwing - what is the difference?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Both reduce wing markings. Dilute also reduces body intensity (pastel/washed). Clearwing keeps body bright with clear wings.</p></details><details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">What is the dil-locus allelic series?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Three alleles share the dil-locus: Clearwing (dominant), Greywing (middle), Dilute (recessive). Order: Cw > Gw > Dilute.</p></details><details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">How to breed Dilute budgerigars?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Dilute x Dilute = 100% Dilute. Split x Split = 25% Dilute + 50% Split + 25% Normal (Mendelian 1:2:1).</p></details>
+<p style="font-size:12px;color:var(--text-2);margin-top:14px;"><strong>Sources:</strong> Inte Onsman MUTAVI - dil-locus research.</p>
+
 
 <h2>Frequently asked questions about dilute mutation</h2>
 <h3>What is the Dilute budgerigar mutation?</h3>
