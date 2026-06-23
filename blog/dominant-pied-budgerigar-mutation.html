@@ -207,6 +207,32 @@ html[data-theme="light"] .wrap p a,html[data-theme="light"] .wrap li a{color:#3d
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "x99d6x9gan");
 </script>
+
+<style media="print">
+/* Print stylesheet for clean A4/US Letter PDF output */
+@page { margin: 1.5cm; size: auto; }
+* { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+body { font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.45; background: #fff !important; color: #000 !important; }
+nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc, .breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot, .compare-box, .sum-box .copy-btn, .sum-box .link-btn, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta, button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating, .scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"], [style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed, script, noscript { display: none !important; }
+h1, h2, h3 { color: #000 !important; font-weight: 700; page-break-after: avoid; }
+h1 { font-size: 22pt; margin-top: 0; border-bottom: 2pt solid #000; padding-bottom: 6pt; }
+h2 { font-size: 16pt; margin-top: 18pt; margin-bottom: 8pt; }
+h3 { font-size: 13pt; margin-top: 14pt; margin-bottom: 6pt; }
+p, li { font-size: 11pt; line-height: 1.5; orphans: 3; widows: 3; }
+a { color: #000 !important; text-decoration: underline; }
+a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555 !important; word-break: break-all; }
+a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 9pt; color: #555 !important; }
+table { border-collapse: collapse; width: 100%; margin: 10pt 0; page-break-inside: avoid; font-size: 10pt; }
+th, td { border: 1pt solid #000 !important; padding: 4pt 6pt; text-align: left; color: #000 !important; }
+th { background: #eee !important; font-weight: 700; }
+img { max-width: 100% !important; height: auto; page-break-inside: avoid; }
+blockquote, .tldr { border-left: 2pt solid #000; padding-left: 10pt; margin: 10pt 0; page-break-inside: avoid; color: #000 !important; }
+pre, code { font-family: "Courier New", monospace; font-size: 9.5pt; background: #f4f4f4 !important; padding: 4pt; border: 1pt solid #ccc; }
+ul, ol { margin: 6pt 0; padding-left: 22pt; }
+hr { border: none; border-top: 1pt solid #ccc; margin: 14pt 0; }
+/* Add footer with URL on print */
+body:after { content: "Source: budgerigargenetics.com — Free Budgerigar Genetics Calculator by KinBird Aviary"; display: block; margin-top: 22pt; padding-top: 8pt; border-top: 1pt solid #999; font-size: 8.5pt; color: #444 !important; text-align: center; }
+</style>
 </head>
 <body>
 <header class="brand-bar">
