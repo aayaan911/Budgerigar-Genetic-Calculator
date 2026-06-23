@@ -281,13 +281,13 @@ Blog
 <p class="lead">Articles and guides on budgerigar genetics, rare mutations, and breeding strategy. Written by working breeders and validated by WBO certified judges. No filler, no signup.</p>
 
 
-<nav class="cat-tabs" role="tablist" aria-label="Filter articles by category">
-  <button class="cat-tab active" data-tab="all" role="tab" aria-selected="true">All Articles<span class="cat-count">36</span></button>
-  <button class="cat-tab" data-tab="sl" role="tab" aria-selected="false">Sex-linked<span class="cat-count">6</span></button>
-  <button class="cat-tab" data-tab="ar" role="tab" aria-selected="false">Autosomal Recessive<span class="cat-count">11</span></button>
-  <button class="cat-tab" data-tab="aid" role="tab" aria-selected="false">Autosomal Incomp. Dominant<span class="cat-count">9</span></button>
-  <button class="cat-tab" data-tab="guides" role="tab" aria-selected="false">Guides &amp; Tools<span class="cat-count">8</span></button>
-  <button class="cat-tab" data-tab="special" role="tab" aria-selected="false">Special<span class="cat-count">2</span></button>
+<nav class="cat-tabs" role="navigation" aria-label="Filter articles by category">
+  <a class="cat-tab active" href="/blog/" aria-current="page">All Articles<span class="cat-count">36</span></a>
+  <a class="cat-tab" href="/blog/sex-linked">Sex-linked<span class="cat-count">6</span></a>
+  <a class="cat-tab" href="/blog/autosomal-recessive">Autosomal Recessive<span class="cat-count">11</span></a>
+  <a class="cat-tab" href="/blog/autosomal-incomp-dominant">Autosomal Incomp. Dominant<span class="cat-count">9</span></a>
+  <a class="cat-tab" href="/blog/guides">Guides &amp; Tools<span class="cat-count">8</span></a>
+  <a class="cat-tab" href="/blog/special">Special<span class="cat-count">2</span></a>
 </nav>
 <div class="cat-empty" id="catEmpty" style="display:none;">No articles in this category yet.</div>
 
@@ -772,7 +772,7 @@ Blog
 </a>
 </div>
 
-<p class="foot">© 2026 KinBird Aviary · <a href="https://www.facebook.com/kinbird.aviary/">Facebook</a> · Built in 🇧🇩 Bangladesh by working bird breeders</p>
+<p class="foot">© 2026 KinBird Aviary · <a href="https://www.facebook.com/kinbird.aviary/">Facebook</a> · <a href="https://lovebirdgenetics.com/" target="_blank" rel="noopener noreferrer">Sister site: Lovebird Genetics</a> · Built in 🇧🇩 Bangladesh by working bird breeders</p>
 </main>
 <script>
 (function(){
@@ -790,49 +790,7 @@ btn.addEventListener('click',function(){var cur=html.getAttribute('data-theme')|
 </script>
 
 
-<script>
-(function(){
-  var tabs = document.querySelectorAll('.cat-tab');
-  var cards = document.querySelectorAll('.grid .card');
-  var emptyMsg = document.getElementById('catEmpty');
-  var grid = document.querySelector('.grid');
-  function applyFilter(cat){
-    var visibleCount = 0;
-    cards.forEach(function(card){
-      var c = card.getAttribute('data-cat');
-      if(cat === 'all' || c === cat){
-        card.removeAttribute('data-cat-hidden');
-        visibleCount++;
-      } else {
-        card.setAttribute('data-cat-hidden', '1');
-      }
-    });
-    tabs.forEach(function(t){
-      var isActive = t.getAttribute('data-tab') === cat;
-      t.classList.toggle('active', isActive);
-      t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-    if(emptyMsg) emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
-    if(grid) grid.style.display = visibleCount === 0 ? 'none' : '';
-  }
-  function readHash(){
-    var h = (location.hash || '').replace('#', '').toLowerCase();
-    var map = { 'all':'all', 'sex-linked':'sl', 'sl':'sl', 'autosomal-recessive':'ar', 'ar':'ar', 'autosomal-dominant':'aid', 'autosomal-incomp-dominant':'aid', 'aid':'aid', 'guides':'guides', 'guides-tools':'guides', 'special':'special' };
-    return map[h] || 'all';
-  }
-  tabs.forEach(function(t){
-    t.addEventListener('click', function(){
-      var cat = t.getAttribute('data-tab');
-      var hashMap = { 'all':'all', 'sl':'sex-linked', 'ar':'autosomal-recessive', 'aid':'autosomal-dominant', 'guides':'guides', 'special':'special' };
-      if(cat === 'all'){ history.replaceState(null, '', location.pathname + location.search); }
-      else { history.replaceState(null, '', '#' + hashMap[cat]); }
-      applyFilter(cat);
-    });
-  });
-  window.addEventListener('hashchange', function(){ applyFilter(readHash()); });
-  applyFilter(readHash());
-})();
-</script>
+<!-- Category filter now handled by real URLs, not JS -->
 
 </body>
 </html>
