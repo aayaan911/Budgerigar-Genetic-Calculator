@@ -49,10 +49,9 @@
   to = "/privacy.html"
   status = 200
 
-# Custom domain redirect — DISABLED until budgerigargenetics.com (or similar) is purchased & DNS-pointed.
-# When the custom domain is ready, uncomment and update the from/to URLs.
-# [[redirects]]
-#   from = "https://your-budgerigar.netlify.app/*"
-#   to = "https://budgerigargenetics.com/:splat"
-#   status = 301
-#   force = true
+# Custom domain redirect — ACTIVE. All Netlify subdomain traffic 301s to canonical domain.
+[[redirects]]
+  from = "https://budgerigar-genetic-calculator.netlify.app/*"
+  to = "https://budgerigargenetics.com/:splat"
+  status = 301
+  force = true

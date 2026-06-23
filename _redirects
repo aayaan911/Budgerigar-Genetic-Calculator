@@ -21,3 +21,8 @@
 /blog/spangle-budgerigar-mutation.html  /blog/spangle-budgerigar-mutation  301
 /blog/dominant-pied-budgerigar-mutation.html  /blog/dominant-pied-budgerigar-mutation  301
 /blog/dark-factor-budgerigar-mutation.html  /blog/dark-factor-budgerigar-mutation  301
+
+# Catch-all 301: any request to budgerigar-genetic-calculator.netlify.app
+# (or any non-canonical Netlify subdomain) redirects to the canonical domain.
+# This is server-side 301 — passes full SEO equity (unlike JS redirect).
+https://budgerigar-genetic-calculator.netlify.app/*  https://budgerigargenetics.com/:splat  301!
