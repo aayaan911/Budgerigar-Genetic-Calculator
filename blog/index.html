@@ -280,10 +280,21 @@ Blog
 <h1>Budgerigar Genetics Blog</h1>
 <p class="lead">Articles and guides on budgerigar genetics, rare mutations, and breeding strategy. Written by working breeders and validated by WBO certified judges. No filler, no signup.</p>
 
+
+<nav class="cat-tabs" role="tablist" aria-label="Filter articles by category">
+  <button class="cat-tab active" data-tab="all" role="tab" aria-selected="true">All Articles<span class="cat-count">36</span></button>
+  <button class="cat-tab" data-tab="sl" role="tab" aria-selected="false">Sex-linked<span class="cat-count">6</span></button>
+  <button class="cat-tab" data-tab="ar" role="tab" aria-selected="false">Autosomal Recessive<span class="cat-count">11</span></button>
+  <button class="cat-tab" data-tab="aid" role="tab" aria-selected="false">Autosomal Incomp. Dominant<span class="cat-count">9</span></button>
+  <button class="cat-tab" data-tab="guides" role="tab" aria-selected="false">Guides &amp; Tools<span class="cat-count">8</span></button>
+  <button class="cat-tab" data-tab="special" role="tab" aria-selected="false">Special<span class="cat-count">2</span></button>
+</nav>
+<div class="cat-empty" id="catEmpty" style="display:none;">No articles in this category yet.</div>
+
 <p class="section-h">All Articles</p>
 <div class="grid">
 
-<a class="card" href="/blog/budgie-color-breeding-chart">
+<a class="card" href="/blog/budgie-color-breeding-chart" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Visual Reference</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Color Chart</span>
@@ -296,7 +307,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/female-budgerigar-genetics-calculator">
+<a class="card" href="/blog/female-budgerigar-genetics-calculator" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Hen Genetics</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Inheritance Guide</span>
@@ -309,7 +320,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/budgerigar-genetics-calculator-app">
+<a class="card" href="/blog/budgerigar-genetics-calculator-app" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> App Review</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> PWA vs Native</span>
@@ -322,7 +333,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/how-to-use-budgerigar-genetics-calculator">
+<a class="card" href="/blog/how-to-use-budgerigar-genetics-calculator" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Step-by-Step</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Tutorial Guide</span>
@@ -335,7 +346,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/complete-budgerigar-genetics-guide" style="grid-column: 1 / -1;">
+<a class="card" href="/blog/complete-budgerigar-genetics-guide" data-cat="guides" style="grid-column: 1 / -1;">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Master Reference</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Pillar Guide</span>
@@ -348,7 +359,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/clearwing-budgerigar-mutation">
+<a class="card" href="/blog/clearwing-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -361,7 +372,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/greywing-budgerigar-mutation">
+<a class="card" href="/blog/greywing-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Belgium 1875</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -374,7 +385,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/dilute-budgerigar-mutation">
+<a class="card" href="/blog/dilute-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Europe 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -387,7 +398,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/slate-budgerigar-mutation">
+<a class="card" href="/blog/slate-budgerigar-mutation" data-cat="sl">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> UK 1950s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -400,7 +411,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/clearflight-pied-budgerigar-mutation">
+<a class="card" href="/blog/clearflight-pied-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Belgium/NL 1948</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incompletely Dominant</span>
@@ -413,7 +424,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/easley-clearbody-budgerigar-mutation">
+<a class="card" href="/blog/easley-clearbody-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> California 1992</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incompletely Dominant</span>
@@ -426,7 +437,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/best-budgerigar-genetics-calculator">
+<a class="card" href="/blog/best-budgerigar-genetics-calculator" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Comparison 2026</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Tool Comparison</span>
@@ -439,7 +450,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/german-fallow-budgerigar-mutation">
+<a class="card" href="/blog/german-fallow-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Germany 1929</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -452,7 +463,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/english-fallow-budgerigar-mutation">
+<a class="card" href="/blog/english-fallow-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> England 1937</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -465,7 +476,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/scottish-fallow-budgerigar-mutation">
+<a class="card" href="/blog/scottish-fallow-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Scotland 1947</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -478,7 +489,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/budgie-sex-linked-auto-sex-pairing-guide">
+<a class="card" href="/blog/budgie-sex-linked-auto-sex-pairing-guide" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Universal</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -491,7 +502,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/recessive-pied-budgerigar-mutation">
+<a class="card" href="/blog/recessive-pied-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Denmark 1932</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -504,7 +515,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/dark-eyed-clear-budgerigar-mutation">
+<a class="card" href="/blog/dark-eyed-clear-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Emergent</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Emergent Phenotype</span>
@@ -517,7 +528,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/budgerigar-mutation-comparison-guide">
+<a class="card" href="/blog/budgerigar-mutation-comparison-guide" data-cat="guides">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Comparison</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Identification Guide</span>
@@ -530,7 +541,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/double-black-budgerigar-breeding-guide">
+<a class="card" href="/blog/double-black-budgerigar-breeding-guide" data-cat="special">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Exhibition</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -543,7 +554,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/texas-clearbody-budgerigar-mutation">
+<a class="card" href="/blog/texas-clearbody-budgerigar-mutation" data-cat="sl">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Texas USA 1950s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -556,7 +567,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/anthracite-budgerigar-mutation">
+<a class="card" href="/blog/anthracite-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Germany 1998</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -569,7 +580,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/saddleback-budgerigar-mutation">
+<a class="card" href="/blog/saddleback-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -582,7 +593,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/cinnamon-budgerigar-mutation">
+<a class="card" href="/blog/cinnamon-budgerigar-mutation" data-cat="sl">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -595,7 +606,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/yellow-face-goldenface-budgerigar-mutation">
+<a class="card" href="/blog/yellow-face-goldenface-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Europe 1900s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -608,7 +619,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/lacewing-budgerigar-mutation">
+<a class="card" href="/blog/lacewing-budgerigar-mutation" data-cat="sl">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> UK 1948</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -621,7 +632,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/violet-budgerigar-mutation">
+<a class="card" href="/blog/violet-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Belgium 1928</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -634,7 +645,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/grey-factor-budgerigar-mutation">
+<a class="card" href="/blog/grey-factor-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia / UK 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -647,7 +658,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/manto-negro-budgerigar-mutation">
+<a class="card" href="/blog/manto-negro-budgerigar-mutation" data-cat="special">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Brazil 2021</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Dominant</span>
@@ -660,7 +671,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/blackwing-budgerigar-mutation">
+<a class="card" href="/blog/blackwing-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Venezuela 2002</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -673,7 +684,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/blackface-budgerigar-mutation">
+<a class="card" href="/blog/blackface-budgerigar-mutation" data-cat="ar">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Netherlands 1992</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Recessive</span>
@@ -686,7 +697,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/dominant-pied-budgerigar-mutation">
+<a class="card" href="/blog/dominant-pied-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia + Netherlands</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -699,7 +710,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/spangle-budgerigar-mutation">
+<a class="card" href="/blog/spangle-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia 1978</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -712,7 +723,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/dark-factor-budgerigar-mutation">
+<a class="card" href="/blog/dark-factor-budgerigar-mutation" data-cat="aid">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Universal</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Autosomal Incomplete Dominant</span>
@@ -725,7 +736,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/opaline-budgerigar-mutation">
+<a class="card" href="/blog/opaline-budgerigar-mutation" data-cat="sl">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia 1933</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -738,7 +749,7 @@ Blog
 </div>
 </a>
 
-<a class="card" href="/blog/ino-lutino-albino-budgerigar-mutation">
+<a class="card" href="/blog/ino-lutino-albino-budgerigar-mutation" data-cat="sl">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Global 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -775,6 +786,51 @@ var stored;try{stored=localStorage.getItem('bg-theme');}catch(e){}
 if(!stored){stored=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
 apply(stored);
 btn.addEventListener('click',function(){var cur=html.getAttribute('data-theme')||'light';var next=cur==='dark'?'light':'dark';try{localStorage.setItem('bg-theme',next);}catch(e){}apply(next);});
+})();
+</script>
+
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.cat-tab');
+  var cards = document.querySelectorAll('.grid .card');
+  var emptyMsg = document.getElementById('catEmpty');
+  var grid = document.querySelector('.grid');
+  function applyFilter(cat){
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var c = card.getAttribute('data-cat');
+      if(cat === 'all' || c === cat){
+        card.removeAttribute('data-cat-hidden');
+        visibleCount++;
+      } else {
+        card.setAttribute('data-cat-hidden', '1');
+      }
+    });
+    tabs.forEach(function(t){
+      var isActive = t.getAttribute('data-tab') === cat;
+      t.classList.toggle('active', isActive);
+      t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    if(emptyMsg) emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+    if(grid) grid.style.display = visibleCount === 0 ? 'none' : '';
+  }
+  function readHash(){
+    var h = (location.hash || '').replace('#', '').toLowerCase();
+    var map = { 'all':'all', 'sex-linked':'sl', 'sl':'sl', 'autosomal-recessive':'ar', 'ar':'ar', 'autosomal-dominant':'aid', 'autosomal-incomp-dominant':'aid', 'aid':'aid', 'guides':'guides', 'guides-tools':'guides', 'special':'special' };
+    return map[h] || 'all';
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      var cat = t.getAttribute('data-tab');
+      var hashMap = { 'all':'all', 'sl':'sex-linked', 'ar':'autosomal-recessive', 'aid':'autosomal-dominant', 'guides':'guides', 'special':'special' };
+      if(cat === 'all'){ history.replaceState(null, '', location.pathname + location.search); }
+      else { history.replaceState(null, '', '#' + hashMap[cat]); }
+      applyFilter(cat);
+    });
+  });
+  window.addEventListener('hashchange', function(){ applyFilter(readHash()); });
+  applyFilter(readHash());
 })();
 </script>
 
