@@ -76,24 +76,24 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--font);line-he
 .crumbs svg{width:12px;height:12px;}
 h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;color:var(--text);line-height:1.1;}
 .lead{font-size:17px;color:var(--text-2);margin-bottom:42px;max-width:680px;}
-.section-h{font-size:14px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--text-3);margin:48px 0 16px;font-weight:700;}
+.section-h{font-size:13px;font-family:var(--font);text-transform:uppercase;letter-spacing:0.08em;color:var(--text-3);margin:48px 0 16px;font-weight:700;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-bottom:24px;}
 .card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;min-height:340px;position:relative;overflow:hidden;}
 .card:hover{border-color:rgba(76,161,84,0.45);transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,0.06);}
 @media(prefers-color-scheme:dark){.card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.4);}}
 .card-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
-.chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:999px;border:1px solid var(--border);background:rgba(76,161,84,0.05);color:var(--text-2);white-space:nowrap;}
+.chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--font);font-size:11px;letter-spacing:0.02em;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid var(--border);background:rgba(76,161,84,0.05);color:var(--text-2);white-space:nowrap;text-transform:none;}
 .chip.origin{background:rgba(76,161,84,0.08);border-color:rgba(76,161,84,0.22);color:var(--accent);}
 .chip.type{background:transparent;border-color:var(--border);color:var(--text-2);}
 .chip svg{width:10px;height:10px;flex-shrink:0;}
 .card h2{font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .card .card-desc{font-size:13.5px;line-height:1.55;color:var(--text-2);margin:0 0 18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
 .card-foot{margin-top:auto;display:flex;flex-direction:column;gap:14px;padding-top:14px;border-top:1px solid var(--border);}
-.card-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.card-meta{font-family:var(--font);font-size:12px;color:var(--text-3);display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-weight:500;}
 .card-meta span{display:inline-flex;align-items:center;gap:5px;}
 .card-meta svg{width:11px;height:11px;}
 .card-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-3);opacity:0.6;}
-.read-btn{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:8px 14px;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;border:1px solid rgba(76,161,84,0.35);border-radius:8px;transition:background 0.2s,border-color 0.2s,color 0.2s,gap 0.2s;}
+.read-btn{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:9px 16px;font-family:var(--font);font-size:13px;letter-spacing:0;color:var(--accent);font-weight:600;border:1px solid rgba(76,161,84,0.35);border-radius:8px;transition:background 0.2s,border-color 0.2s,color 0.2s,gap 0.2s;text-transform:none;}
 .read-btn .arrow{transition:transform 0.2s;}
 .card:hover .read-btn{background:var(--accent);color:#fff;border-color:var(--accent);}
 .card:hover .read-btn .arrow{transform:translateX(3px);}
@@ -101,7 +101,7 @@ h1{font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.02em;margin-
 .cta:hover{background:var(--accent-dark);}
 .cta svg{width:14px;height:14px;}
 .calc-card{background:linear-gradient(135deg,rgba(76,161,84,0.10),rgba(76,161,84,0.04));border:1px solid rgba(76,161,84,0.25);border-radius:16px;padding:32px;margin-top:36px;text-align:center;}
-.calc-card-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;}
+.calc-card-eyebrow{font-family:var(--font);font-size:13px;letter-spacing:0.02em;color:var(--accent);font-weight:700;margin-bottom:10px;text-transform:none;}
 .calc-card h2{font-size:24px;font-weight:700;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em;}
 .calc-card p{font-size:15px;color:var(--text-2);margin-bottom:22px;max-width:520px;margin-left:auto;margin-right:auto;}
 .foot{text-align:center;margin-top:60px;font-size:12px;color:var(--text-3);}
@@ -176,29 +176,76 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 </script>
 
 <style media="print">
-/* Print stylesheet for clean A4/US Letter PDF output */
-@page { margin: 1.5cm; size: auto; }
-* { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
-body { font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.45; background: #fff !important; color: #000 !important; }
-nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc, .breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot, .compare-box, .sum-box .copy-btn, .sum-box .link-btn, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta, button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating, .scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"], [style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed, script, noscript { display: none !important; }
-h1, h2, h3 { color: #000 !important; font-weight: 700; page-break-after: avoid; }
-h1 { font-size: 22pt; margin-top: 0; border-bottom: 2pt solid #000; padding-bottom: 6pt; }
-h2 { font-size: 16pt; margin-top: 18pt; margin-bottom: 8pt; }
-h3 { font-size: 13pt; margin-top: 14pt; margin-bottom: 6pt; }
-p, li { font-size: 11pt; line-height: 1.5; orphans: 3; widows: 3; }
-a { color: #000 !important; text-decoration: underline; }
-a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555 !important; word-break: break-all; }
-a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 9pt; color: #555 !important; }
-table { border-collapse: collapse; width: 100%; margin: 10pt 0; page-break-inside: avoid; font-size: 10pt; }
-th, td { border: 1pt solid #000 !important; padding: 4pt 6pt; text-align: left; color: #000 !important; }
-th { background: #eee !important; font-weight: 700; }
-img { max-width: 100% !important; height: auto; page-break-inside: avoid; }
-blockquote, .tldr { border-left: 2pt solid #000; padding-left: 10pt; margin: 10pt 0; page-break-inside: avoid; color: #000 !important; }
-pre, code { font-family: "Courier New", monospace; font-size: 9.5pt; background: #f4f4f4 !important; padding: 4pt; border: 1pt solid #ccc; }
-ul, ol { margin: 6pt 0; padding-left: 22pt; }
-hr { border: none; border-top: 1pt solid #ccc; margin: 14pt 0; }
-/* Add footer with URL on print */
-body:after { content: "Source: budgerigargenetics.com — Free Budgerigar Genetics Calculator by KinBird Aviary"; display: block; margin-top: 22pt; padding-top: 8pt; border-top: 1pt solid #999; font-size: 8.5pt; color: #444 !important; text-align: center; }
+/* INVOICE-STYLE PRINT — Clean, branded, mobile-friendly PDF output */
+@page { margin: 1.2cm 1.4cm; size: A4 portrait; }
+@page :first { margin-top: 0.8cm; }
+* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+html, body { background: #fff !important; color: #1a1a1a !important; font-family: "Helvetica", "Arial", sans-serif !important; font-size: 11pt; line-height: 1.55; margin: 0; padding: 0; }
+/* INVOICE-STYLE HEADER on first page */
+body:before {
+  content: "BUDGERIGAR GENETICS CALCULATOR";
+  display: block; background: #4ca154 !important; color: #fff !important;
+  padding: 14pt 18pt; margin: 0 -1.4cm 18pt -1.4cm;
+  font-size: 13pt; font-weight: 700; letter-spacing: 0.05em;
+  border-bottom: 3pt solid #2d6b34 !important;
+}
+/* INVOICE-STYLE FOOTER on every page */
+body:after {
+  content: "budgerigargenetics.com · KinBird Aviary · Free Budgerigar Genetics Calculator";
+  display: block; margin-top: 30pt; padding: 10pt 0;
+  border-top: 2pt solid #4ca154 !important;
+  font-size: 8.5pt; color: #555 !important; text-align: center; font-weight: 500;
+}
+/* HIDE all interactive/navigation elements */
+nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc,
+.breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot,
+.compare-box, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta,
+button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating,
+.scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"],
+[style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed,
+script, noscript, .theme-toggle, .brand-nav, .top-nav,
+details, summary,
+[onclick] { display: none !important; }
+/* TYPOGRAPHY — invoice style */
+h1 { font-size: 22pt; font-weight: 800; color: #1a1a1a !important; margin: 0 0 6pt 0; letter-spacing: -0.01em; page-break-after: avoid; }
+h2 { font-size: 14pt; font-weight: 700; color: #2d6b34 !important; margin: 22pt 0 8pt 0; padding-bottom: 4pt; border-bottom: 1pt solid #4ca154; page-break-after: avoid; }
+h3 { font-size: 12pt; font-weight: 700; color: #1a1a1a !important; margin: 16pt 0 6pt 0; page-break-after: avoid; }
+p { font-size: 10.5pt; line-height: 1.55; margin: 6pt 0; orphans: 3; widows: 3; color: #1a1a1a !important; }
+strong { color: #1a1a1a !important; font-weight: 700; }
+em { color: #1a1a1a !important; }
+/* LINKS — printed URL alongside text */
+a { color: #4ca154 !important; text-decoration: underline; text-decoration-color: rgba(76,161,84,0.3) !important; }
+a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 8pt; color: #777 !important; word-break: break-all; font-weight: 400; }
+a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 8pt; color: #777 !important; }
+/* TABLES — invoice-grid style */
+table { border-collapse: collapse; width: 100%; margin: 12pt 0; page-break-inside: avoid; font-size: 9.5pt; }
+table thead { background: #f5f5f5 !important; }
+th { border: 1pt solid #4ca154 !important; padding: 6pt 8pt; text-align: left; color: #2d6b34 !important; font-weight: 700; background: #eaf5ec !important; }
+td { border: 1pt solid #ddd !important; padding: 5pt 8pt; color: #1a1a1a !important; vertical-align: top; }
+tr:nth-child(even) td { background: #fafafa !important; }
+/* TLDR / QUICK ANSWER BOX */
+.tldr, [class*="tldr"], [style*="border-left:3px solid #4ca154"]:not([style*="margin:20px 0"]) {
+  background: #eaf5ec !important; border-left: 3pt solid #4ca154 !important;
+  padding: 10pt 14pt !important; margin: 12pt 0 !important; page-break-inside: avoid;
+  border-radius: 0 !important; color: #1a1a1a !important;
+}
+.tldr-label, [class*="tldr-label"] { color: #2d6b34 !important; font-size: 9.5pt; letter-spacing: 0.06em; font-weight: 700; }
+/* LISTS */
+ul, ol { margin: 8pt 0; padding-left: 22pt; }
+li { font-size: 10.5pt; margin: 2pt 0; color: #1a1a1a !important; }
+/* IMAGES */
+img { max-width: 100% !important; height: auto; page-break-inside: avoid; border: 1pt solid #eee !important; padding: 4pt; }
+/* HORIZONTAL RULES */
+hr { border: none; border-top: 1pt solid #ccc !important; margin: 14pt 0; }
+/* CODE */
+pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #f8f8f8 !important; padding: 4pt; border: 1pt solid #e5e5e5 !important; color: #1a1a1a !important; }
+/* MOBILE PRINT OPTIMIZATION */
+@media print and (max-width: 480px) {
+  body { font-size: 12pt; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; }
+  table { font-size: 9pt; }
+}
 </style>
 </head>
 <body>

@@ -204,29 +204,76 @@ html[data-theme="dark"]:root,html[data-theme="dark"]{--bg:#0a0a0a;--bg-card:#141
 </script>
 
 <style media="print">
-/* Print stylesheet for clean A4/US Letter PDF output */
-@page { margin: 1.5cm; size: auto; }
-* { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
-body { font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.45; background: #fff !important; color: #000 !important; }
-nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc, .breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot, .compare-box, .sum-box .copy-btn, .sum-box .link-btn, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta, button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating, .scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"], [style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed, script, noscript { display: none !important; }
-h1, h2, h3 { color: #000 !important; font-weight: 700; page-break-after: avoid; }
-h1 { font-size: 22pt; margin-top: 0; border-bottom: 2pt solid #000; padding-bottom: 6pt; }
-h2 { font-size: 16pt; margin-top: 18pt; margin-bottom: 8pt; }
-h3 { font-size: 13pt; margin-top: 14pt; margin-bottom: 6pt; }
-p, li { font-size: 11pt; line-height: 1.5; orphans: 3; widows: 3; }
-a { color: #000 !important; text-decoration: underline; }
-a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555 !important; word-break: break-all; }
-a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 9pt; color: #555 !important; }
-table { border-collapse: collapse; width: 100%; margin: 10pt 0; page-break-inside: avoid; font-size: 10pt; }
-th, td { border: 1pt solid #000 !important; padding: 4pt 6pt; text-align: left; color: #000 !important; }
-th { background: #eee !important; font-weight: 700; }
-img { max-width: 100% !important; height: auto; page-break-inside: avoid; }
-blockquote, .tldr { border-left: 2pt solid #000; padding-left: 10pt; margin: 10pt 0; page-break-inside: avoid; color: #000 !important; }
-pre, code { font-family: "Courier New", monospace; font-size: 9.5pt; background: #f4f4f4 !important; padding: 4pt; border: 1pt solid #ccc; }
-ul, ol { margin: 6pt 0; padding-left: 22pt; }
-hr { border: none; border-top: 1pt solid #ccc; margin: 14pt 0; }
-/* Add footer with URL on print */
-body:after { content: "Source: budgerigargenetics.com — Free Budgerigar Genetics Calculator by KinBird Aviary"; display: block; margin-top: 22pt; padding-top: 8pt; border-top: 1pt solid #999; font-size: 8.5pt; color: #444 !important; text-align: center; }
+/* INVOICE-STYLE PRINT — Clean, branded, mobile-friendly PDF output */
+@page { margin: 1.2cm 1.4cm; size: A4 portrait; }
+@page :first { margin-top: 0.8cm; }
+* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+html, body { background: #fff !important; color: #1a1a1a !important; font-family: "Helvetica", "Arial", sans-serif !important; font-size: 11pt; line-height: 1.55; margin: 0; padding: 0; }
+/* INVOICE-STYLE HEADER on first page */
+body:before {
+  content: "BUDGERIGAR GENETICS CALCULATOR";
+  display: block; background: #4ca154 !important; color: #fff !important;
+  padding: 14pt 18pt; margin: 0 -1.4cm 18pt -1.4cm;
+  font-size: 13pt; font-weight: 700; letter-spacing: 0.05em;
+  border-bottom: 3pt solid #2d6b34 !important;
+}
+/* INVOICE-STYLE FOOTER on every page */
+body:after {
+  content: "budgerigargenetics.com · KinBird Aviary · Free Budgerigar Genetics Calculator";
+  display: block; margin-top: 30pt; padding: 10pt 0;
+  border-top: 2pt solid #4ca154 !important;
+  font-size: 8.5pt; color: #555 !important; text-align: center; font-weight: 500;
+}
+/* HIDE all interactive/navigation elements */
+nav, header, footer, aside, .nav, .header, .footer, .sidebar, .menu, .toc,
+.breadcrumb, .article-nav, .article-meta, .article-tags, .read-btn, .card-foot,
+.compare-box, .copy-btn, .share-btn, .lbtn, .cbtn, .pair-btn, .calc-cta, .cta,
+button, .button, .badge, .chip, .fcard-cta, .fcard-avatar, .floating,
+.scroll-top, .dark-mode-toggle, [class*="pair-link"], [class*="pairing-link"],
+[style*="border-left:3px solid #4ca154"], iframe, video, audio, .embed,
+script, noscript, .theme-toggle, .brand-nav, .top-nav,
+details, summary,
+[onclick] { display: none !important; }
+/* TYPOGRAPHY — invoice style */
+h1 { font-size: 22pt; font-weight: 800; color: #1a1a1a !important; margin: 0 0 6pt 0; letter-spacing: -0.01em; page-break-after: avoid; }
+h2 { font-size: 14pt; font-weight: 700; color: #2d6b34 !important; margin: 22pt 0 8pt 0; padding-bottom: 4pt; border-bottom: 1pt solid #4ca154; page-break-after: avoid; }
+h3 { font-size: 12pt; font-weight: 700; color: #1a1a1a !important; margin: 16pt 0 6pt 0; page-break-after: avoid; }
+p { font-size: 10.5pt; line-height: 1.55; margin: 6pt 0; orphans: 3; widows: 3; color: #1a1a1a !important; }
+strong { color: #1a1a1a !important; font-weight: 700; }
+em { color: #1a1a1a !important; }
+/* LINKS — printed URL alongside text */
+a { color: #4ca154 !important; text-decoration: underline; text-decoration-color: rgba(76,161,84,0.3) !important; }
+a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 8pt; color: #777 !important; word-break: break-all; font-weight: 400; }
+a[href^="/"]:after { content: " (budgerigargenetics.com" attr(href) ")"; font-size: 8pt; color: #777 !important; }
+/* TABLES — invoice-grid style */
+table { border-collapse: collapse; width: 100%; margin: 12pt 0; page-break-inside: avoid; font-size: 9.5pt; }
+table thead { background: #f5f5f5 !important; }
+th { border: 1pt solid #4ca154 !important; padding: 6pt 8pt; text-align: left; color: #2d6b34 !important; font-weight: 700; background: #eaf5ec !important; }
+td { border: 1pt solid #ddd !important; padding: 5pt 8pt; color: #1a1a1a !important; vertical-align: top; }
+tr:nth-child(even) td { background: #fafafa !important; }
+/* TLDR / QUICK ANSWER BOX */
+.tldr, [class*="tldr"], [style*="border-left:3px solid #4ca154"]:not([style*="margin:20px 0"]) {
+  background: #eaf5ec !important; border-left: 3pt solid #4ca154 !important;
+  padding: 10pt 14pt !important; margin: 12pt 0 !important; page-break-inside: avoid;
+  border-radius: 0 !important; color: #1a1a1a !important;
+}
+.tldr-label, [class*="tldr-label"] { color: #2d6b34 !important; font-size: 9.5pt; letter-spacing: 0.06em; font-weight: 700; }
+/* LISTS */
+ul, ol { margin: 8pt 0; padding-left: 22pt; }
+li { font-size: 10.5pt; margin: 2pt 0; color: #1a1a1a !important; }
+/* IMAGES */
+img { max-width: 100% !important; height: auto; page-break-inside: avoid; border: 1pt solid #eee !important; padding: 4pt; }
+/* HORIZONTAL RULES */
+hr { border: none; border-top: 1pt solid #ccc !important; margin: 14pt 0; }
+/* CODE */
+pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #f8f8f8 !important; padding: 4pt; border: 1pt solid #e5e5e5 !important; color: #1a1a1a !important; }
+/* MOBILE PRINT OPTIMIZATION */
+@media print and (max-width: 480px) {
+  body { font-size: 12pt; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; }
+  table { font-size: 9pt; }
+}
 </style>
 </head>
 <body>
@@ -278,7 +325,7 @@ Follow
 <p>Greywing is an autosomal recessive budgerigar mutation at the dil-locus with allele symbol dil^gw. Visual birds show wing markings diluted to about half intensity and a slightly paler body colour than Normal birds. Within the dil-locus allelic series Greywing is dominant over <a href="/blog/dilute-budgerigar-mutation">Dilute</a> but recessive to <a href="/blog/clearwing-budgerigar-mutation">Clearwing</a>. The most important interaction in this series is Greywing crossed with <a href="/blog/clearwing-budgerigar-mutation">Clearwing</a>, which produces the hetero-allelic Fullbody Greywing (FBG) phenotype, a bird with the diluted wing markings of Greywing combined with the full body colour intensity of Clearwing. Originated in Belgium around 1875.</p>
 </div>
 
-<div style="margin:20px 0 24px;padding:16px 18px;border-left:3px solid #4ca154;background:rgba(76,161,84,0.07);border-radius:6px;"><p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.7);margin:0 0 10px 0;font-weight:700;font-family:var(--mono,monospace);">Try these pairings instantly</p><a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Greywing%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Greywing x Greywing</a><a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Clearwing%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Greywing x Clearwing = FBG</a><a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Dilute%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Greywing x Dilute</a></div>
+<div style="margin:20px 0 24px;padding:16px 18px;border-left:3px solid #4ca154;background:rgba(76,161,84,0.07);border-radius:6px;"><p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:#4ca154;margin:0 0 10px 0;font-weight:700;font-family:var(--font,sans-serif);">Try these pairings instantly</p><a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Greywing%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Greywing x Greywing</a><a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Clearwing%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Greywing x Clearwing = FBG</a><a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Dilute%3Avisual" style="display:inline-block;padding:7px 13px;margin:4px 6px 4px 0;background:rgba(76,161,84,0.15);border:1px solid rgba(76,161,84,0.35);border-radius:6px;color:#4ca154;font-size:13px;font-weight:500;text-decoration:none;">→ Greywing x Dilute</a></div>
 
 
 
@@ -338,6 +385,20 @@ Follow
 <p>Select Greywing on either parent and set the status to Visual or Split. The calculator outputs offspring percentages with proper dil-locus segregation. Combinations with Opaline, Cinnamon, Spangle, Pieds, Dark Factor, Yellow Face, and other mutations are all supported.</p>
 <p>Try: <a href="/?m=Light%20Green&mt=Greywing%3Avisual&f=Light%20Green&ft=Greywing%3Avisual">Visual Greywing x Visual Greywing</a> for 100 percent Greywing, or <a href="/?m=Light%20Green&mt=Clearwing%3Avisual&f=Light%20Green&ft=Greywing%3Avisual">Clearwing x Greywing</a> to produce 100 percent FBG.</p>
 <p>The 58-pairing reference at the <a href="/blog/budgerigar-mutation-comparison-guide">mutation comparison guide</a> covers every dil-locus combination with pre-loaded calculator URLs.</p>
+
+
+<!-- AI Overview quote-bait paragraph -->
+<div style="margin:20px 0 24px;padding:16px 18px;border-left:3px solid #4ca154;background:rgba(76,161,84,0.07);border-radius:6px;">
+<p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.7);margin:0 0 8px 0;font-weight:700;font-family:var(--mono,monospace);">Quick answer</p>
+<p style="margin:0;font-size:15px;line-height:1.55;">Greywing is an autosomal recessive budgerigar mutation at the dil-locus, originating in Belgium around 1875. Greywing produces wing markings diluted to about half intensity with a slightly paler body. Combined with Clearwing produces the Fullbody Greywing phenotype.</p>
+</div>
+
+<!-- PASF FAQ block targeting Google People Also Ask -->
+<h2>Frequently asked questions about the Greywing mutation</h2>
+<p>Short answers to the most common questions about the Greywing budgerigar mutation, with statistics, sources, and links to deeper reading.</p>
+<details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">What is Greywing budgerigar?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Autosomal recessive dil-locus mutation. Wing markings diluted to ~50% intensity. Slightly paler body than Normal. Belgium ~1875, one of the oldest budgie mutations.</p></details><details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">Is Greywing dominant or recessive?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Autosomal recessive. Within dil-locus, Greywing is dominant over Dilute but recessive to Clearwing.</p></details><details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">What is Fullbody Greywing?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">Hetero-allelic phenotype: Clearwing allele + Greywing allele on the same bird. Bright body of Clearwing + faded markings of Greywing. Cannot breed true.</p></details><details style="margin:8px 0;padding:10px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;"><summary style="cursor:pointer;font-weight:600;color:var(--text);font-size:15px;">How rare is Greywing in budgerigars?</summary><p style="margin:8px 0 0 0;font-size:14px;color:var(--text-2);line-height:1.55;">One of the oldest mutations. Continuously available since 1875. Combines with all dil-locus and ino-locus mutations.</p></details>
+<p style="font-size:12px;color:var(--text-2);margin-top:14px;"><strong>Sources:</strong> Cyril H. Rogers - World of Budgerigars.</p>
+
 
 <h2>Frequently asked questions about greywing mutation</h2>
 <h3>What is the Greywing budgerigar mutation?</h3>
