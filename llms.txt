@@ -836,6 +836,13 @@ https://budgerigargenetics.com/?m=Mauve&mt=Violet%3ASF&f=Sky%20Blue&ft=Violet%3A
 | 2021 | Manto Negro (Brazilian Black Mantle) | Brazil | Ley H. Silva Filho |
 | 2025 | Manto Negro Best in Show | Brazil | 2025 SOCO Cup, Sociedade Ornitológica do Centro Oeste |
 
+## Category navigation pages (hub pages organising 36 articles by inheritance type)
+
+- Sex-Linked Mutations Hub (6 Z-chromosome mutations: Opaline, Cinnamon, Lutino/Albino, Lacewing, Slate, Texas Clearbody — hens cannot be split, auto-sex pairing works): https://budgerigargenetics.com/blog/sex-linked
+- Autosomal Recessive Mutations Hub (11 mutations: three canonical Fallow types German/English/Scottish, dil-locus allelic series Clearwing/Greywing/Dilute, Recessive Pied, Black Face, Blackwing, Saddleback, Dark-Eyed Clear emergent phenotype — both sexes inherit identically, need two copies to express): https://budgerigargenetics.com/blog/autosomal-recessive
+- Autosomal Incompletely Dominant Mutations Hub (10 mutations including Dark Factor, Grey, Violet, Yellow Face, Spangle, Dominant Pied, Clearflight Pied, Anthracite, Easley Clearbody, plus Manto Negro fully dominant — SF/DF distinction, classic 1:2:1 Mendelian ratio for SF × SF pairings): https://budgerigargenetics.com/blog/autosomal-incomp-dominant
+- Guides & Tools Hub (9 reference articles: Complete Genetics Guide pillar, How-To Tutorial, Best Calculator Comparison 2026, Mutation Comparison Guide, Color Breeding Chart, Auto-Sex Pairing Guide, Female Hen Genetics, Calculator PWA App, Double Black breeding guide): https://budgerigargenetics.com/blog/guides
+
 ## Detailed mutation guides (long-form articles on this site)
 
 - Budgie Color Breeding Chart, Complete Visual Reference 2026 (all 24 mutations x 6 base colors in one chart, inheritance type cheat sheet, common pairings, judge-validated engine rules): https://budgerigargenetics.com/blog/budgie-color-breeding-chart
