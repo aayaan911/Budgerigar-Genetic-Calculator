@@ -255,6 +255,16 @@ pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #
 {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is autosomal incompletely dominant inheritance?","acceptedAnswer":{"@type":"Answer","text":"A mutation where one copy of the mutant allele produces a partial visible effect (Single Factor / SF) and two copies produce a stronger effect (Double Factor / DF). Unlike recessive mutations, the gene shows even with one copy — but the SF and DF expressions are visually different."}},{"@type":"Question","name":"SF vs DF — what is the difference?","acceptedAnswer":{"@type":"Answer","text":"SF = Single Factor = one copy of the mutant gene = moderate expression. DF = Double Factor = two copies of the mutant gene = stronger expression. Examples: SF Violet shows violet sheen, DF Violet shows deeper violet. SF Spangle reverses wing markings, DF Spangle clears the body almost entirely (but with normal dark eyes)."}},{"@type":"Question","name":"Why does Cobalt x Cobalt produce 1:2:1?","acceptedAnswer":{"@type":"Answer","text":"Cobalt = Sky Blue + 1 Dark Factor (SF). Cobalt x Cobalt = both parents pass either a Dark Factor or no Dark Factor with 50/50 probability. Result: 25% no Dark Factor (Sky Blue), 50% one Dark Factor (Cobalt), 25% two Dark Factors (Mauve). Textbook 1:2:1."}},{"@type":"Question","name":"Is Manto Negro incompletely dominant?","acceptedAnswer":{"@type":"Answer","text":"No. Manto Negro is fully dominant. There is no SF/DF distinction. Any bird with one or two copies looks identical. No splits possible — every Manto Negro bird visibly shows the mutation. It is the only fully dominant budgerigar mutation we know of."}}]}
 ]}
 </script>
+<style>
+.cat-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0 18px; padding: 6px; background: rgba(76,161,84,0.06); border: 1px solid var(--border); border-radius: 12px; }
+.cat-tab { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; font-family: var(--font); font-size: 13.5px; font-weight: 600; color: var(--text-2); background: transparent; border: 1px solid transparent; border-radius: 8px; cursor: pointer; transition: all 0.18s; text-decoration: none; }
+.cat-tab:hover { background: rgba(76,161,84,0.08); color: var(--text); }
+.cat-tab.active { background: var(--accent); color: #fff !important; border-color: var(--accent); box-shadow: 0 1px 3px rgba(76,161,84,0.25); }
+.cat-tab .cat-count { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 20px; padding: 0 7px; font-size: 11px; font-weight: 700; background: rgba(255,255,255,0.18); border-radius: 999px; }
+.cat-tab:not(.active) .cat-count { background: rgba(76,161,84,0.12); color: var(--accent); }
+.cat-empty { text-align: center; padding: 40px 20px; color: var(--text-3); font-size: 14px; }
+@media(max-width:640px) { .cat-tabs { gap: 6px; padding: 5px; } .cat-tab { padding: 8px 12px; font-size: 12.5px; } .cat-tab .cat-count { min-width: 20px; height: 18px; font-size: 10.5px; } }
+</style>
 </head>
 <body>
 

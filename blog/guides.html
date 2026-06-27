@@ -255,6 +255,16 @@ pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #
 {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where should I start as a beginner?","acceptedAnswer":{"@type":"Answer","text":"Start with the Complete Budgerigar Genetics Guide for the conceptual foundation. Then use the How-To Tutorial to learn the calculator workflow. Then bookmark the Budgie Color Breeding Chart as your quick visual reference."}},{"@type":"Question","name":"Which guide explains hen-specific inheritance?","acceptedAnswer":{"@type":"Answer","text":"The Female Budgerigar Genetics Calculator guide covers the ZW chromosome system, why hens cannot be split for sex-linked mutations, mother-to-son transmission, and the auto-sex pairing technique."}},{"@type":"Question","name":"Is the calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator and all 36 articles on this site are free with no signup, no payment, no ads. All 24 documented mutations work in the free version."}},{"@type":"Question","name":"Can I install the calculator as an app?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is a Progressive Web App (PWA). The Budgerigar Genetics Calculator App guide covers installation steps for iPhone, Android, Mac, and Windows. The PWA runs in a standalone window like a native app."}}]}
 ]}
 </script>
+<style>
+.cat-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0 18px; padding: 6px; background: rgba(76,161,84,0.06); border: 1px solid var(--border); border-radius: 12px; }
+.cat-tab { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; font-family: var(--font); font-size: 13.5px; font-weight: 600; color: var(--text-2); background: transparent; border: 1px solid transparent; border-radius: 8px; cursor: pointer; transition: all 0.18s; text-decoration: none; }
+.cat-tab:hover { background: rgba(76,161,84,0.08); color: var(--text); }
+.cat-tab.active { background: var(--accent); color: #fff !important; border-color: var(--accent); box-shadow: 0 1px 3px rgba(76,161,84,0.25); }
+.cat-tab .cat-count { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 20px; padding: 0 7px; font-size: 11px; font-weight: 700; background: rgba(255,255,255,0.18); border-radius: 999px; }
+.cat-tab:not(.active) .cat-count { background: rgba(76,161,84,0.12); color: var(--accent); }
+.cat-empty { text-align: center; padding: 40px 20px; color: var(--text-3); font-size: 14px; }
+@media(max-width:640px) { .cat-tabs { gap: 6px; padding: 5px; } .cat-tab { padding: 8px 12px; font-size: 12.5px; } .cat-tab .cat-count { min-width: 20px; height: 18px; font-size: 10.5px; } }
+</style>
 </head>
 <body>
 
