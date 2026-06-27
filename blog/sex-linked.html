@@ -265,6 +265,60 @@ pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #
 .cat-empty { text-align: center; padding: 40px 20px; color: var(--text-3); font-size: 14px; }
 @media(max-width:640px) { .cat-tabs { gap: 6px; padding: 5px; } .cat-tab { padding: 8px 12px; font-size: 12.5px; } .cat-tab .cat-count { min-width: 20px; height: 18px; font-size: 10.5px; } }
 </style>
+<style>
+/* Category optimization block — link styling + no bullets */
+section[style*="border:1px solid rgba(76,161,84,0.12)"] a,
+section[style*="background:rgba(76,161,84,0.04)"] a {
+  color: #4ca154 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(76,161,84,0.35);
+  transition: border-color 0.18s, color 0.18s;
+}
+section[style*="background:rgba(76,161,84,0.04)"] a:hover {
+  color: #5fb968 !important;
+  border-bottom-color: rgba(76,161,84,0.7);
+}
+[data-theme="light"] section[style*="background:rgba(76,161,84,0.04)"] a {
+  color: #2d6b34 !important;
+  border-bottom-color: rgba(45,107,52,0.35);
+}
+[data-theme="light"] section[style*="background:rgba(76,161,84,0.04)"] a:hover {
+  color: #1f4d24 !important;
+  border-bottom-color: rgba(45,107,52,0.7);
+}
+section[style*="background:rgba(76,161,84,0.04)"] ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 10px 0 14px !important;
+}
+section[style*="background:rgba(76,161,84,0.04)"] ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(76,161,84,0.08);
+  line-height: 1.6;
+}
+section[style*="background:rgba(76,161,84,0.04)"] ul li:last-child {
+  border-bottom: none;
+}
+section[style*="background:rgba(76,161,84,0.04)"] ul li strong a {
+  font-weight: 700;
+}
+section[style*="background:rgba(76,161,84,0.04)"] h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 0;
+  color: var(--text);
+}
+section[style*="background:rgba(76,161,84,0.04)"] h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 24px;
+  color: var(--text);
+}
+section[style*="background:rgba(76,161,84,0.04)"] p {
+  line-height: 1.65;
+  color: var(--text-2);
+}
+</style>
 </head>
 <body>
 
