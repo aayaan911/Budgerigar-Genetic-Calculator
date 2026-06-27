@@ -275,6 +275,67 @@ pre, code { font-family: "Courier New", monospace; font-size: 9pt; background: #
   table { font-size: 9pt; }
 }
 </style>
+<style id="global-ext-link-fix">
+/* GLOBAL: green branded styling for external citation links sitewide */
+p a[href^="http"]:not([class]),
+.extra-citations a,
+.foot a,
+.foot a[href^="http"],
+li a[href^="http"]:not([class]),
+li a[href^="/blog"]:not([class]),
+[class*="seo-block"] a:not([class]),
+[class*="seo-block"] p a,
+[class*="seo-block"] strong a,
+[class*="seo-block"] em a,
+.fcard-bio a,
+.tldr a,
+section[style*="background:rgba(76,161,84,0"] p a,
+section[style*="background:rgba(76,161,84,0"] li a,
+section[style*="border-left:3px solid #4ca154"] p a {
+  color: #4ca154 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(76,161,84,0.35);
+  transition: border-color 0.18s, color 0.18s;
+}
+p a[href^="http"]:not([class]):hover,
+.extra-citations a:hover,
+.foot a:hover,
+li a[href^="http"]:not([class]):hover,
+li a[href^="/blog"]:not([class]):hover,
+[class*="seo-block"] a:not([class]):hover,
+[class*="seo-block"] p a:hover,
+.fcard-bio a:hover,
+.tldr a:hover,
+section[style*="background:rgba(76,161,84,0"] p a:hover,
+section[style*="background:rgba(76,161,84,0"] li a:hover,
+section[style*="border-left:3px solid #4ca154"] p a:hover {
+  color: #5fb968 !important;
+  border-bottom-color: rgba(76,161,84,0.7);
+}
+/* Light mode variants */
+[data-theme="light"] p a[href^="http"]:not([class]),
+[data-theme="light"] .extra-citations a,
+[data-theme="light"] .foot a,
+[data-theme="light"] li a[href^="http"]:not([class]),
+[data-theme="light"] li a[href^="/blog"]:not([class]),
+[data-theme="light"] [class*="seo-block"] a:not([class]),
+[data-theme="light"] [class*="seo-block"] p a,
+[data-theme="light"] .fcard-bio a,
+[data-theme="light"] .tldr a,
+[data-theme="light"] section[style*="background:rgba(76,161,84,0"] p a,
+[data-theme="light"] section[style*="background:rgba(76,161,84,0"] li a {
+  color: #2d6b34 !important;
+  border-bottom-color: rgba(45,107,52,0.35);
+}
+[data-theme="light"] p a[href^="http"]:not([class]):hover,
+[data-theme="light"] .extra-citations a:hover,
+[data-theme="light"] .foot a:hover,
+[data-theme="light"] .fcard-bio a:hover,
+[data-theme="light"] .tldr a:hover {
+  color: #1f4d24 !important;
+  border-bottom-color: rgba(45,107,52,0.7);
+}
+</style>
 </head>
 <body>
 
