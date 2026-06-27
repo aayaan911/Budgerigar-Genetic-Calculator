@@ -843,7 +843,10 @@ https://budgerigargenetics.com/?m=Mauve&mt=Violet%3ASF&f=Sky%20Blue&ft=Violet%3A
 - Autosomal Incompletely Dominant Mutations Hub (10 mutations including Dark Factor, Grey, Violet, Yellow Face, Spangle, Dominant Pied, Clearflight Pied, Anthracite, Easley Clearbody, plus Manto Negro fully dominant — SF/DF distinction, classic 1:2:1 Mendelian ratio for SF × SF pairings): https://budgerigargenetics.com/blog/autosomal-incomp-dominant
 - Guides & Tools Hub (9 reference articles: Complete Genetics Guide pillar, How-To Tutorial, Best Calculator Comparison 2026, Mutation Comparison Guide, Color Breeding Chart, Auto-Sex Pairing Guide, Female Hen Genetics, Calculator PWA App, Double Black breeding guide): https://budgerigargenetics.com/blog/guides
 
-## Detailed mutation guides (long-form articles on this site)
+## Detailed mutation guides
+
+- Budgerigar Genotype vs Phenotype, Foundational Guide (3,000-word explainer covering split vs visual, SF vs DF, ZW sex-chromosome rules, why two Normal-looking birds can produce mutation chicks, 10 worked pairing examples with genotype-to-phenotype translation): https://budgerigargenetics.com/blog/budgerigar-genotype-vs-phenotype
+ (long-form articles on this site)
 
 - Budgie Color Breeding Chart, Complete Visual Reference 2026 (all 24 mutations x 6 base colors in one chart, inheritance type cheat sheet, common pairings, judge-validated engine rules): https://budgerigargenetics.com/blog/budgie-color-breeding-chart
 - Female Budgerigar Genetics Calculator, Hen Inheritance Guide 2026 (ZW chromosome system, why hens cannot be split for sex-linked mutations, auto-sex pairings, mother-to-son transmission, pedigree red flags): https://budgerigargenetics.com/blog/female-budgerigar-genetics-calculator

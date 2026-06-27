@@ -302,4 +302,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-  </urlset>
+  
+  <url>
+    <loc>https://budgerigargenetics.com/blog/budgerigar-genotype-vs-phenotype</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+</urlset>
