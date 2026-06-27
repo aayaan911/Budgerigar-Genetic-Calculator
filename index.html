@@ -34,9 +34,8 @@
 <link rel="icon" type="image/png" sizes="144x144" href="/favicon-144x144.png"/>
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-<!-- PWA manifest DISABLED for now, re-enable when PWA install prompt is ready
+<!-- PWA manifest — required for Play Store TWA + Add to Home Screen -->
 <link rel="manifest" href="/manifest.json"/>
--->
 <!-- Canonical & SEO -->
 <link rel="canonical" href="https://budgerigargenetics.com/"/>
 <!-- Open Graph -->
@@ -267,10 +266,10 @@
   if(location.hostname==='budgie-calculator-v1.netlify.app'){
     location.replace('https://budgerigargenetics.com'+location.pathname+location.search);
   }
-  // Service worker DISABLED for now, re-enable when PWA is ready
-  // if('serviceWorker' in navigator){
-  //   window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js');});
-  // }
+  // Service worker — required for PWA install prompt + TWA
+  if('serviceWorker' in navigator){
+    window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{});});
+  }
 </script>
 <style>
 /* ── TOKENS ─────────────────────────────────────── */
