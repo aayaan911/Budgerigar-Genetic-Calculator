@@ -1596,39 +1596,55 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
     </p>
 
 
-    <p class="seo-eyebrow" style="margin-top:48px;margin-bottom:14px;">Supported Mutations</p>
-    <div class="seo-mut-grid" style="margin-bottom:10px;" role="list" aria-label="Supported budgerigar mutations">
-      <span class="seo-mut-tag" role="listitem">Light Green</span>
-      <span class="seo-mut-tag" role="listitem">Dark Green</span>
-      <span class="seo-mut-tag" role="listitem">Olive Green</span>
-      <span class="seo-mut-tag" role="listitem">Sky Blue</span>
-      <span class="seo-mut-tag" role="listitem">Cobalt</span>
-      <span class="seo-mut-tag" role="listitem">Mauve</span>
-      <span class="seo-mut-tag" role="listitem">Grey Factor (SF/DF)</span>
-      <span class="seo-mut-tag" role="listitem">Violet Factor (SF/DF)</span>
-      <span class="seo-mut-tag" role="listitem">Yellow Face (SF/DF)</span>
-      <span class="seo-mut-tag" role="listitem">Ino / Lutino / Albino (SL)</span>
-      <span class="seo-mut-tag" role="listitem">Opaline (SL)</span>
-      <span class="seo-mut-tag" role="listitem">Cinnamon (SL)</span>
-      <span class="seo-mut-tag" role="listitem">Slate (SL)</span>
-      <span class="seo-mut-tag" role="listitem">Texas Clearbody (SL)</span>
-      <span class="seo-mut-tag" role="listitem">Spangle (SF/DF)</span>
-      <span class="seo-mut-tag" role="listitem">Dominant Pied</span>
-      <span class="seo-mut-tag" role="listitem">Recessive Pied</span>
-      <span class="seo-mut-tag" role="listitem">Fallow</span>
-      <span class="seo-mut-tag" role="listitem">Clearwing</span>
-      <span class="seo-mut-tag" role="listitem">Greywing</span>
-      <span class="seo-mut-tag" role="listitem">Dilute</span>
-      <span class="seo-mut-tag" role="listitem">Black Face</span>
-      <span class="seo-mut-tag" role="listitem">Blackwing</span>
-      <span class="seo-mut-tag" role="listitem">Saddleback</span>
-      <span class="seo-mut-tag" role="listitem">Anthracite (SF/DF)</span>
-      <span class="seo-mut-tag" role="listitem">Lacewing (SL)</span>
-      <span class="seo-mut-tag" role="listitem">Goldenface</span>
-      <span class="seo-mut-tag" role="listitem">Easley Clearbody</span>
-      <span class="seo-mut-tag" role="listitem">Clearflight Pied</span>
-      <span class="seo-mut-tag" role="listitem">Fullbody Greywing (Cw × Gw)</span>
+    <!-- SUPPORTED MUTATIONS — numbered grid with inheritance code (lovebird-style) -->
+    <p class="seo-eyebrow" style="margin-top:48px;margin-bottom:6px;color:#4ca154;">SUPPORTED MUTATIONS</p>
+    <p style="font-size:14px;color:#a8a8a8;margin-bottom:18px;">28 mutations and color series fully supported, one of the most complete budgerigar genetics calculators available.</p>
+    <div class="mut-grid-table" style="border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(255,255,255,0.02);">
+      <style>
+        .mut-grid-table .mut-row{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid rgba(255,255,255,0.05);border-right:1px solid rgba(255,255,255,0.05);font-size:14px;}
+        .mut-grid-table .mut-row:nth-child(3n){border-right:none;}
+        .mut-grid-table .mut-num{font-family:'DM Mono',monospace;font-size:11px;color:#666;font-weight:500;letter-spacing:0.05em;min-width:22px;}
+        .mut-grid-table .mut-name{color:#e6e6e6;font-weight:500;flex:1;}
+        .mut-grid-table .mut-name small{color:#888;font-weight:400;font-size:12px;}
+        .mut-grid-table .mut-code{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;font-weight:700;color:#666;text-transform:uppercase;}
+        .mut-grid-table .mut-code.base{color:#888;}
+        .mut-grid-table .mut-code.sl{color:#4ca154;}
+        .mut-grid-table .mut-code.ar{color:#666;}
+        .mut-grid-table .mut-code.aid{color:#6daad6;}
+        .mut-grid-table .mut-code.dil{color:#b89342;}
+        @media (max-width:760px){.mut-grid-table{grid-template-columns:repeat(2,1fr);} .mut-grid-table .mut-row:nth-child(3n){border-right:1px solid rgba(255,255,255,0.05);} .mut-grid-table .mut-row:nth-child(2n){border-right:none;}}
+        @media (max-width:480px){.mut-grid-table{grid-template-columns:1fr;} .mut-grid-table .mut-row{border-right:none !important;}}
+      </style>
+      <div class="mut-row"><span class="mut-num">01</span><span class="mut-name">Green Series <small>(Light/Dark/Olive)</small></span><span class="mut-code base">BASE</span></div>
+      <div class="mut-row"><span class="mut-num">02</span><span class="mut-name">Blue Series <small>(Sky/Cobalt/Mauve)</small></span><span class="mut-code base">BASE</span></div>
+      <div class="mut-row"><span class="mut-num">03</span><span class="mut-name">Opaline</span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">04</span><span class="mut-name">Cinnamon</span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">05</span><span class="mut-name">Ino / Lutino / Albino</span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">06</span><span class="mut-name">Lacewing</span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">07</span><span class="mut-name">Slate</span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">08</span><span class="mut-name">Texas Clearbody</span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">09</span><span class="mut-name">Recessive Pied</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">10</span><span class="mut-name">German Fallow</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">11</span><span class="mut-name">English Fallow</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">12</span><span class="mut-name">Scottish Fallow</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">13</span><span class="mut-name">Black Face</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">14</span><span class="mut-name">Blackwing</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">15</span><span class="mut-name">Saddleback</span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">16</span><span class="mut-name">Clearwing</span><span class="mut-code dil">DIL</span></div>
+      <div class="mut-row"><span class="mut-num">17</span><span class="mut-name">Greywing</span><span class="mut-code dil">DIL</span></div>
+      <div class="mut-row"><span class="mut-num">18</span><span class="mut-name">Dilute</span><span class="mut-code dil">DIL</span></div>
+      <div class="mut-row"><span class="mut-num">19</span><span class="mut-name">Dark Factor <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">20</span><span class="mut-name">Grey Factor <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">21</span><span class="mut-name">Violet <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">22</span><span class="mut-name">Yellow Face <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">23</span><span class="mut-name">Goldenface</span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">24</span><span class="mut-name">Spangle <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">25</span><span class="mut-name">Dominant Pied</span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">26</span><span class="mut-name">Clearflight Pied</span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">27</span><span class="mut-name">Anthracite <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">28</span><span class="mut-name">Easley Clearbody</span><span class="mut-code aid">AID</span></div>
     </div>
+    <p style="font-size:12px;color:#888;margin-top:14px;font-family:'DM Mono',monospace;letter-spacing:0.03em;">BASE = Base color series · AR = Autosomal Recessive · SL = Sex-Linked Recessive · AID = Autosomal Incomp. Dominant · DIL = Dil-locus allelic series (Cw/Gw/Dil co-dominance)</p>
 
     <p class="seo-eyebrow" style="margin-top:36px;margin-bottom:14px;">Trusted by Breeders In</p>
     <div class="seo-mut-grid" role="list" aria-label="Countries where breeders use this calculator">
