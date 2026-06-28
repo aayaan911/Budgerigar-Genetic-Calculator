@@ -699,6 +699,19 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
 [data-theme="dark"] .rm:hover{background:rgba(220,38,38,0.15);border-color:rgba(220,38,38,0.3);color:#f87171;}
 .mut-hint{font-size:11px;color:var(--text-3);padding:0 4px 8px;letter-spacing:0.01em;line-height:1.5;margin-top:-4px;}
 
+/* Tactile press feedback on all interactive elements (mobile-first UX) */
+.tr select:active,.tr .ss:active,.add-btn:active,.rm:active,select:active{transform:scale(0.97);transition:transform 0.08s ease;}
+.add-btn:active{transform:scale(0.95) translateY(0)!important;}
+/* Ensure single-line labels never wrap on status selects */
+.tr .ss option{white-space:nowrap;}
+.tr select option{white-space:nowrap;}
+/* Better mobile tap targets (force 48px min on touch devices) */
+@media(hover:none) and (pointer:coarse){
+  .tr select,.tr .ss{min-height:48px;font-size:14px;}
+  .add-btn{min-height:44px;padding:10px 18px;}
+  .rm{min-width:44px;min-height:44px;}
+}
+
 /* SL warning */
 .sl-warn{
   font-size:12px;
