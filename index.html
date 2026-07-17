@@ -1562,7 +1562,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   <div class="seo-inner">
     <p class="seo-eyebrow">No Account Needed</p>
     <h2>The Most Complete Budgerigar Genetics Calculator Online</h2>
-    <p class="seo-lead">This genetics tool is designed to instantly predict offspring mutations for any budgerigar (budgie) pairing, from common Light Green and Sky Blue to complex combinations involving Dark Factor, Grey, Violet, Yellow Face, Spangle, and the sex-linked mutations Ino, Opaline, and Cinnamon. Select parent colors, add mutation traits, and get clear probability outcomes in seconds. No account required. No data collected. This is a complete 2026 build engineered to handle every documented budgie mutation pairing, exhibition lines, colour pet stock, and rare combination breeders all use the same engine. <a href="/privacy" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Privacy Policy →</a></p>
+    <p class="seo-lead">This genetics tool is designed to instantly predict offspring mutations for any budgerigar (budgie) pairing, from common Light Green and Sky Blue to complex combinations involving Dark Factor, Grey, Violet, Yellow Face, Spangle, and the sex-linked mutations Ino, Opaline, and Cinnamon. Select parent colors, add mutation traits, and get clear probability outcomes in seconds. No account required. Anonymous usage analytics only, no personal data collected. This is a complete 2026 build engineered to handle every documented budgie mutation pairing, exhibition lines, colour pet stock, and rare combination breeders all use the same engine. <a href="/privacy" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Privacy Policy →</a></p>
 
     <p class="seo-eyebrow" style="margin-bottom:14px;">How to Use</p>
     <ol class="seo-steps">
@@ -1777,7 +1777,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
       <p class="seo-faq-title">Frequently Asked Questions</p>
       <div class="seo-faq-item">
         <h3>Is this budgerigar genetics calculator free to use?</h3>
-        <p>Yes. No account, no subscription, no ads. Built by KinBird Aviary as a gift to the global budgerigar breeding community. It will stay this way permanently. No personal data is collected when you use the calculator, see our <a href="/privacy" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Privacy Policy</a> for full details.</p>
+        <p>Yes. No account, no subscription, no ads. Built by KinBird Aviary as a gift to the global budgerigar breeding community. It will stay this way permanently. No personal data is collected. Anonymous usage analytics only (aggregate page views and click patterns, fully anonymized), see our <a href="/privacy" style="color:#4ca154;text-decoration:none;border-bottom:1px solid rgba(76,161,84,0.35);">Privacy Policy</a> for full details.</p>
       </div>
       <div class="seo-faq-item">
         <h3>What does "split" mean in budgerigar genetics?</h3>
@@ -3031,7 +3031,22 @@ const snapBar=canSave?`<div class="snap-bar">
 return hdr+pairBox+`<div class="off-list">${body}</div>`+snapBar+legend+`<div class="pct-footer">All percentages sum to 100%</div>`;
 }
 
-function track(n,p){try{if(typeof gtag==='function')gtag('event',n,p||{});}catch(e){}}
+// Sex-linked mutation ids for segment tagging
+const _SEX_LINKED=['Opaline','Cinnamon','Ino','Lutino','Albino','Lacewing','Slate','TexasClearbody'];
+
+// Detect entry type once on load: TWA app / installed PWA / regular web
+(function tagEntry(){try{
+  const isTWA=document.referrer&&document.referrer.startsWith('android-app://');
+  const isPWA=window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches;
+  const entryType=isTWA?'app':(isPWA?'pwa':'web');
+  const fire=()=>{try{if(typeof clarity==='function'){clarity('set','entry_type',entryType);}}catch(e){}};
+  if(typeof clarity==='function')fire();else setTimeout(fire,2000);
+}catch(e){}})();
+
+function track(n,p){
+  try{if(typeof gtag==='function')gtag('event',n,p||{});}catch(e){}
+  try{if(typeof clarity==='function')clarity('event',n);}catch(e){}
+}
 
 let _pairingTimer=null;
 function trackPairing(){
@@ -3039,7 +3054,12 @@ function trackPairing(){
   clearTimeout(_pairingTimer);
   _pairingTimer=setTimeout(()=>{
     const p1L=mkLabel(S.p1p,'p1'),p2L=mkLabel(S.p2p,'p2');
-    const mutCount=(S.p1t.filter(t=>t.id&&t.id!=='None').length)+(S.p2t.filter(t=>t.id&&t.id!=='None').length);
+    const p1Muts=S.p1t.filter(t=>t.id&&t.id!=='None');
+    const p2Muts=S.p2t.filter(t=>t.id&&t.id!=='None');
+    const allMuts=[...p1Muts,...p2Muts];
+    const mutCount=allMuts.length;
+    const hasSexLinked=allMuts.some(t=>_SEX_LINKED.includes(t.id))||S.p1Op==='visual'||S.p1Op==='split'||S.p2Op==='visual';
+    const hasSplit=allMuts.some(t=>t.status==='split')||S.p1Op==='split';
     track('pairing_completed',{
       pairing:p1L+' × '+p2L,
       father:p1L,
@@ -3048,6 +3068,18 @@ function trackPairing(){
       mother_base:S.p2p,
       mutation_count:mutCount
     });
+    // Clarity segment tags (persist for the session, unlock segmenting in dashboard)
+    try{if(typeof clarity==='function'){
+      clarity('set','father_base',String(S.p1p||''));
+      clarity('set','mother_base',String(S.p2p||''));
+      clarity('set','mutation_count',String(mutCount));
+      clarity('set','has_sex_linked',hasSexLinked?'true':'false');
+      clarity('set','has_split',hasSplit?'true':'false');
+      // Power user tag: 4+ mutations = serious breeder
+      if(mutCount>=4)clarity('set','user_tier','power_user');
+      else if(mutCount>=1)clarity('set','user_tier','active');
+      else clarity('set','user_tier','browsing');
+    }}catch(e){}
   },1500);
 }
 
