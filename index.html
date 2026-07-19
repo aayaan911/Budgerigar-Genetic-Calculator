@@ -1380,9 +1380,131 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   color: #1f4d24 !important;
   border-bottom-color: rgba(45,107,52,0.7);
 }
+
+/* ============ VERIFIED AUTHORITY TOP BAR ============ */
+.vbar{
+  width:100%;
+  background:#181818;
+  color:#a0a0a0;
+  font-size:12.5px;
+  font-weight:500;
+  padding:8px 20px;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  letter-spacing:0.01em;
+  line-height:1.5;
+  position:relative;
+  z-index:100;
+}
+[data-theme="light"] .vbar{
+  background:#eceae6;
+  color:#555;
+  border-bottom-color:rgba(0,0,0,0.06);
+}
+.vbar-check{
+  color:#4ca154;
+  font-weight:700;
+  margin-right:6px;
+}
+.vbar-book{
+  font-style:italic;
+  color:#c0c0c0;
+}
+[data-theme="light"] .vbar-book{color:#333;}
+.vbar-sm{display:none;}
+@media(max-width:640px){
+  .vbar{font-size:11.5px;padding:7px 14px;}
+  .vbar-lg{display:none;}
+  .vbar-sm{display:inline;}
+}
+
+/* ============ TRUST STATS SECTION ============ */
+.trust-stats{
+  max-width:1200px;
+  margin:80px auto 40px;
+  padding:0 24px;
+}
+.trust-stats-eyebrow{
+  display:block;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:#4ca154;
+  font-weight:700;
+  margin-bottom:14px;
+  text-align:center;
+}
+.trust-stats-title{
+  font-size:clamp(22px,3vw,32px);
+  font-weight:700;
+  color:#f0f0ee;
+  text-align:center;
+  letter-spacing:-0.02em;
+  margin:0 0 40px;
+}
+[data-theme="light"] .trust-stats-title{color:#0a0a0a;}
+.trust-stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  align-items:stretch;
+}
+.trust-card{
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:20px;
+  padding:28px 20px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:170px;
+  transition:transform 0.2s ease, border-color 0.2s ease;
+}
+[data-theme="light"] .trust-card{
+  background:#ffffff;
+  border-color:rgba(0,0,0,0.06);
+  box-shadow:0 1px 2px rgba(0,0,0,0.03);
+}
+.trust-card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(76,161,84,0.35);
+}
+.trust-number{
+  font-size:clamp(36px,5vw,52px);
+  font-weight:800;
+  color:#4ca154;
+  line-height:1;
+  letter-spacing:-0.03em;
+  margin-bottom:12px;
+  font-variant-numeric:tabular-nums;
+}
+.trust-desc{
+  font-size:13px;
+  color:#a0a0a0;
+  line-height:1.55;
+  font-weight:500;
+}
+[data-theme="light"] .trust-desc{color:#555;}
+.trust-number-small{font-size:clamp(22px,3vw,28px);letter-spacing:-0.01em;}
+@media(max-width:900px){
+  .trust-stats-grid{grid-template-columns:repeat(2,1fr);}
+  .trust-card{min-height:150px;padding:24px 16px;}
+}
+@media(max-width:480px){
+  .trust-stats{margin-top:50px;}
+  .trust-stats-grid{gap:12px;}
+  .trust-card{padding:20px 12px;min-height:130px;}
+}
 </style>
 </head>
 <body>
+
+<!-- VERIFIED AUTHORITY TOP BAR -->
+<div class="vbar" role="note" aria-label="Verified authority notice">
+  <span class="vbar-check" aria-hidden="true">✓</span><span class="vbar-lg">The verified budgerigar genetics calculator, cross-checked against Terry Martin's <span class="vbar-book">A Guide to Colour Mutations and Genetics in Parrots</span> (2002)</span><span class="vbar-sm">Verified against Martin's <span class="vbar-book">Colour Mutations &amp; Genetics</span> (2002)</span>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1411,6 +1533,65 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
     <div class="rp" id="rc"></div>
   </div>
 </main>
+
+<!-- TRUST STATS SECTION -->
+<section class="trust-stats" aria-label="By the numbers">
+  <span class="trust-stats-eyebrow">By the numbers</span>
+  <h2 class="trust-stats-title">Verified where it matters</h2>
+  <div class="trust-stats-grid">
+    <div class="trust-card">
+      <div class="trust-number" data-count-to="23" data-count-suffix="">0</div>
+      <div class="trust-desc">Budgerigar mutations modelled in the engine</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-number" data-count-to="2002">0</div>
+      <div class="trust-desc">Book-verified against Martin's <em>Colour Mutations &amp; Genetics in Parrots</em></div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-number" data-count-to="9">0</div>
+      <div class="trust-desc">Countries of breeders using this calculator</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-number trust-number-small">Free</div>
+      <div class="trust-desc">No account, no ads, no paywall</div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Count-up animation for trust stats
+(function(){
+  const els = document.querySelectorAll('.trust-number[data-count-to]');
+  if(!els.length || !('IntersectionObserver' in window)){
+    // Fallback: just show the final value
+    els.forEach(el=>{el.textContent=el.dataset.countTo+(el.dataset.countSuffix||'');});
+    return;
+  }
+  const animate = (el) => {
+    if(el.dataset.counted)return;
+    el.dataset.counted='1';
+    const target = parseInt(el.dataset.countTo,10);
+    const suffix = el.dataset.countSuffix||'';
+    const duration = 1400;
+    const startTime = performance.now();
+    const startVal = 0;
+    function tick(now){
+      const elapsed = Math.min(1, (now-startTime)/duration);
+      // easeOutCubic
+      const eased = 1 - Math.pow(1-elapsed, 3);
+      const val = Math.round(startVal + (target-startVal)*eased);
+      el.textContent = val + suffix;
+      if(elapsed<1)requestAnimationFrame(tick);
+      else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(tick);
+  };
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting)animate(e.target);});
+  },{threshold:0.35});
+  els.forEach(el=>io.observe(el));
+})();
+</script>
 
 <!-- FOOTER -->
 <footer class="site-footer">
