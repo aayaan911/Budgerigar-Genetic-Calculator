@@ -3292,9 +3292,7 @@ return items.map((r,i)=>{
 const nm=r.name||r.label||'';
 const pct=r.pct;
 const isHigh=pct>=25;
-const swatchColor=getPhenotypeColor(nm);
-const swatch=swatchColor?`<span class="oc-swatch" style="background:${swatchColor}"></span>`:'';
-return `<div class="oc"><div class="oc-inner"><div class="oc-info"><p class="oc-idx">Offspring ${startIdx+i+1}</p><p class="oc-name">${swatch}${nm}</p></div><span class="oc-pct${isHigh?' oc-pct-high':''}">${fmt(pct)}%</span></div><div class="oc-bar"><div class="oc-bar-fill${isHigh?' high':''}" style="width:${Math.round((pct/max)*100)}%"></div></div></div>`;
+return `<div class="oc"><div class="oc-inner"><div class="oc-info"><p class="oc-idx">Offspring ${startIdx+i+1}</p><p class="oc-name">${nm}</p></div><span class="oc-pct${isHigh?' oc-pct-high':''}">${fmt(pct)}%</span></div><div class="oc-bar"><div class="oc-bar-fill${isHigh?' high':''}" style="width:${Math.round((pct/max)*100)}%"></div></div></div>`;
 }).join('');
 }
 
@@ -3706,8 +3704,7 @@ function renderCompareModal(){
     return res.combined.map(r=>({...r,sex:null}));
   };
   const rowHtml=r=>{
-    const sc=getPhenotypeColor(r.name);
-    return `<div class="cmp-result-row"><div><span class="oc-swatch" style="background:${sc||'#888'}"></span>${r.name}${r.sex?' <span style="opacity:0.5">'+r.sex+'</span>':''}</div><span class="cmp-pct${r.pct>=25?' high':''}">${fmt(r.pct)}%</span></div>`;
+    return `<div class="cmp-result-row"><div>${r.name}${r.sex?' <span style="opacity:0.5">'+r.sex+'</span>':''}</div><span class="cmp-pct${r.pct>=25?' high':''}">${fmt(r.pct)}%</span></div>`;
   };
   const html=`<div class="cmp-overlay" id="cmp-ov"><div class="cmp-modal">
     <div class="cmp-header">
