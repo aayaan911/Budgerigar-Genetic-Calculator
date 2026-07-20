@@ -978,19 +978,19 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
 /* ── RESPONSIVE ─────────────────────────────────── */
 @media(max-width:1024px){
   .main-grid{grid-template-columns:1fr;}
-  .rp{position:static;}
+  .rp{position:static;max-height:none;overflow-y:visible;}
 }
 @media(max-width:768px){
-  .site-header,.hero,.app-main,.footer-inner{padding-left:20px;padding-right:20px;}
+  .site-header,.hero,.app-main,.footer-inner{padding-left:14px;padding-right:14px;}
   .hero{padding-top:20px;padding-bottom:24px;}
-  .hero-controls{right:20px;}
+  .hero-controls{right:14px;}
   .hero-title{font-size:28px;line-height:1.1;}
   .app-main{padding-bottom:48px;}
   .main-grid{gap:16px;}
   .color-row{grid-template-columns:1fr;}
   .tr{grid-template-columns:1fr 110px 44px;}
   .pb{padding:15px 10px;}
-  .rp{min-height:180px;padding:20px;}
+  .rp{min-height:180px;padding:15px 10px;}
   .footer-grid{grid-template-columns:1fr;gap:10px;}
   .fcard{padding:18px;}
   .fcard-avatar{width:40px;height:40px;margin-bottom:10px;}
