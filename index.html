@@ -1432,7 +1432,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   font-size:11px;
   letter-spacing:0.15em;
   text-transform:uppercase;
-  color:#4ca154;
+  color:var(--accent);
   font-weight:700;
   margin-bottom:14px;
   text-align:center;
@@ -1440,12 +1440,11 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 .trust-stats-title{
   font-size:clamp(22px,3vw,32px);
   font-weight:700;
-  color:#f0f0ee;
+  color:var(--text-1);
   text-align:center;
   letter-spacing:-0.02em;
   margin:0 0 40px;
 }
-[data-theme="light"] .trust-stats-title{color:#0a0a0a;}
 .trust-stats-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -1453,8 +1452,8 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   align-items:stretch;
 }
 .trust-card{
-  background:rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.07);
+  background:var(--bg-card);
+  border:1px solid var(--border);
   border-radius:20px;
   padding:28px 20px;
   text-align:center;
@@ -1464,10 +1463,9 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   min-height:170px;
   transition:transform 0.2s ease, border-color 0.2s ease;
 }
-[data-theme="light"] .trust-card{
-  background:#ffffff;
-  border-color:rgba(0,0,0,0.06);
-  box-shadow:0 1px 2px rgba(0,0,0,0.03);
+[data-theme="dark"] .trust-card{
+  background:rgba(255,255,255,0.02);
+  border-color:rgba(255,255,255,0.07);
 }
 .trust-card:hover{
   transform:translateY(-2px);
@@ -1476,7 +1474,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 .trust-number{
   font-size:clamp(36px,5vw,52px);
   font-weight:800;
-  color:#4ca154;
+  color:var(--accent);
   line-height:1;
   letter-spacing:-0.03em;
   margin-bottom:12px;
@@ -1484,11 +1482,13 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 }
 .trust-desc{
   font-size:13px;
-  color:#a0a0a0;
+  color:var(--text-2);
   line-height:1.55;
   font-weight:500;
 }
-[data-theme="light"] .trust-desc{color:#555;}
+
+/* Hide Tour/help button on all viewports (per Ayaan Jul 17) */
+.help-btn{display:none !important;}
 .trust-number-small{font-size:clamp(22px,3vw,28px);letter-spacing:-0.01em;}
 @media(max-width:900px){
   .trust-stats-grid{grid-template-columns:repeat(2,1fr);}
