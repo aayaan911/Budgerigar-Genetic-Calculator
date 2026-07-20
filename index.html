@@ -693,7 +693,8 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
 }
 .rm:hover{background:#fee2e2;border-color:#fca5a5;color:#dc2626;}
 [data-theme="dark"] .rm:hover{background:rgba(220,38,38,0.15);border-color:rgba(220,38,38,0.3);color:#f87171;}
-.mut-hint{font-size:11px;color:var(--text-3);padding:0 4px 8px;letter-spacing:0.01em;line-height:1.5;margin-top:-4px;}
+.mut-hint{font-size:11px;color:var(--text-3);padding:0 4px 8px;letter-spacing:0.01em;line-height:1.5;margin-top:-4px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;}
+@media(max-width:768px){.mut-hint{-webkit-line-clamp:2;}}
 
 /* Tactile press feedback on all interactive elements (mobile-first UX) */
 .tr select:active,.tr .ss:active,.add-btn:active,.rm:active,select:active{transform:scale(0.97);transition:transform 0.08s ease;}
