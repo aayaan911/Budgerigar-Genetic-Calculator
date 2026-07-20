@@ -1418,10 +1418,16 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   .vbar-sm{display:inline;}
 }
 
-/* ============ TRUST STATS SECTION ============ */
+/* ============ TRUST STATS SECTION (always dark bg, matches footer) ============ */
 .trust-stats{
+  background:#0a0a0a;
+  padding:80px 0 60px;
+  margin:60px 0 0;
+  width:100%;
+}
+.trust-stats-inner{
   max-width:1480px;
-  margin:80px auto 40px;
+  margin:0 auto;
   padding:0 clamp(16px,4vw,48px);
   width:100%;
   box-sizing:border-box;
@@ -1440,7 +1446,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 .trust-stats-title{
   font-size:clamp(22px,3vw,32px);
   font-weight:700;
-  color:var(--text-1);
+  color:#f0f0ee;
   text-align:center;
   letter-spacing:-0.02em;
   margin:0 0 40px;
@@ -1452,8 +1458,8 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   align-items:stretch;
 }
 .trust-card{
-  background:var(--bg-card);
-  border:1px solid var(--border);
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.07);
   border-radius:20px;
   padding:28px 20px;
   text-align:center;
@@ -1463,10 +1469,6 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   min-height:170px;
   transition:transform 0.2s ease, border-color 0.2s ease;
 }
-[data-theme="dark"] .trust-card{
-  background:rgba(255,255,255,0.02);
-  border-color:rgba(255,255,255,0.07);
-}
 .trust-card:hover{
   transform:translateY(-2px);
   border-color:rgba(76,161,84,0.35);
@@ -1474,7 +1476,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 .trust-number{
   font-size:clamp(36px,5vw,52px);
   font-weight:800;
-  color:var(--accent);
+  color:#4ca154;
   line-height:1;
   letter-spacing:-0.03em;
   margin-bottom:12px;
@@ -1482,7 +1484,7 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 }
 .trust-desc{
   font-size:13px;
-  color:var(--text-2);
+  color:#a0a0a0;
   line-height:1.55;
   font-weight:500;
 }
@@ -1540,24 +1542,26 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 
 <!-- TRUST STATS SECTION -->
 <section class="trust-stats" aria-label="By the numbers">
-  <span class="trust-stats-eyebrow">By the numbers</span>
-  <h2 class="trust-stats-title">Verified where it matters</h2>
-  <div class="trust-stats-grid">
-    <div class="trust-card">
-      <div class="trust-number" data-count-to="23" data-count-suffix="">0</div>
-      <div class="trust-desc">Budgerigar mutations modelled in the engine</div>
-    </div>
-    <div class="trust-card">
-      <div class="trust-number" data-count-to="2002">0</div>
-      <div class="trust-desc">Book-verified against Martin's <em>Colour Mutations &amp; Genetics in Parrots</em></div>
-    </div>
-    <div class="trust-card">
-      <div class="trust-number" data-count-to="9">0</div>
-      <div class="trust-desc">Countries of breeders using this calculator</div>
-    </div>
-    <div class="trust-card">
-      <div class="trust-number trust-number-small">Free</div>
-      <div class="trust-desc">No account, no ads, no paywall</div>
+  <div class="trust-stats-inner">
+    <span class="trust-stats-eyebrow">By the numbers</span>
+    <h2 class="trust-stats-title">Verified where it matters</h2>
+    <div class="trust-stats-grid">
+      <div class="trust-card">
+        <div class="trust-number" data-count-to="23" data-count-suffix="">0</div>
+        <div class="trust-desc">Budgerigar mutations modelled in the engine</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-number" data-count-to="2002">0</div>
+        <div class="trust-desc">Book-verified against Martin's <em>Colour Mutations &amp; Genetics in Parrots</em></div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-number" data-count-to="9">0</div>
+        <div class="trust-desc">Countries of breeders using this calculator</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-number trust-number-small">Free</div>
+        <div class="trust-desc">No account, no ads, no paywall</div>
+      </div>
     </div>
   </div>
 </section>
