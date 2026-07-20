@@ -585,25 +585,8 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
 .op-sel.op-set{background-color:var(--bg-op-set);border-color:rgba(76,161,84,0.4);color:var(--op-color);}
 [data-theme="dark"] .op-sel.op-set{border-color:rgba(76,161,84,0.25);}
 
-/* Color swatches, visual feedback for selected base & for predicted offspring */
+/* Color swatch preview REMOVED (2026-07-20) — clean field matching sister site */
 .base-color-wrapper{position:relative;display:block;}
-.base-color-wrapper select{padding-left:42px;}
-.color-preview{
-  position:absolute;
-  left:14px;
-  top:50%;
-  transform:translateY(-50%);
-  width:18px;height:18px;
-  border-radius:50%;
-  border:1.5px solid rgba(0,0,0,0.12);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);
-  pointer-events:none;
-  z-index:2;
-  transition:background var(--transition);
-}
-[data-theme="dark"] .color-preview{border-color:rgba(255,255,255,0.18);}
-.color-preview.empty{background:#ffffff;}
-[data-theme="dark"] .color-preview.empty{background:#ffffff;}
 
 .oc-swatch{
   display:inline-block;
@@ -3276,7 +3259,6 @@ return `<div class="pcard">
   <span class="field-label">Bird Series</span>
   <div class="color-row">
     <div class="base-color-wrapper">
-      <span class="color-preview ${primary?'':'empty'}" style="${primary?'background:'+getPhenotypeColor(primary):''}"></span>
       <select id="${pid}-base" aria-label="${isMale?'Male':'Female'} bird series" class="js-cbs ${primary?'filled':''}" data-cbs-placeholder="- Choose Bird Series -">${baseOpts(primary)}</select>
     </div>
     ${oplineSel}
