@@ -1520,6 +1520,9 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
   transition:border-color 0.15s ease,background-color 0.15s ease;
 }
 .cbs>summary::-webkit-details-marker{display:none;}
+.cbs>summary::marker{content:'';display:none;font-size:0;}
+.cbs>summary{list-style-type:none;list-style-image:none;}
+details.cbs>summary{list-style:none !important;}
 .cbs.cbs-filled>summary{background-color:var(--bg-input-filled);border-color:var(--border-strong);}
 .cbs[open]>summary{border-color:var(--accent);background-color:var(--bg-input-filled);}
 .cbs>summary .cbs-val{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;}
