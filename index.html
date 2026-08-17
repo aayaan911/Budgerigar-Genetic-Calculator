@@ -1655,8 +1655,60 @@ details.cbs>summary{list-style:none !important;}
   .trust-card{padding:20px 12px;min-height:130px;}
 }
 </style>
+
+<style id="tour-nuke">
+/* Tour popup fully disabled 2026-08-15 per Ayaan — match sister site behaviour */
+.tour, .tour-popup, .tour-overlay, .tour-card, .tour-modal, .tour-backdrop,
+[class*="tour-step"], [class*="tour-body"], [class*="tour-btn"],
+[id^="tour-"], [id*="tour-popup"], [data-tour], .help-btn, .tour-dots {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+body.tour-open, body.tour-active { overflow: auto !important; }
+</style>
 </head>
 <body>
+<script id="tour-kill">
+/* Tour auto-launch disabled 2026-08-15 per Ayaan — match sister site (no tour) */
+(function(){
+  try {
+    // Set localStorage flags so any tour-checking code thinks tour was seen
+    try { localStorage.setItem('hasSeenTour', '1'); } catch(e){}
+    try { localStorage.setItem('tourSeen', '1'); } catch(e){}
+    try { localStorage.setItem('tourCompleted', '1'); } catch(e){}
+    try { localStorage.setItem('tour_completed', '1'); } catch(e){}
+    try { localStorage.setItem('bg_tour_seen', '1'); } catch(e){}
+    // Nuke any tour DOM the moment it appears
+    function nukeTour(){
+      document.querySelectorAll('.tour, .tour-popup, .tour-overlay, .tour-card, .tour-modal, .tour-backdrop, [class*="tour-step"], [class*="tour-body"], [id^="tour-"], [data-tour], .help-btn, .tour-dots').forEach(function(el){ el.style.display='none'; el.remove(); });
+      document.body.classList.remove('tour-open','tour-active');
+    }
+    nukeTour();
+    document.addEventListener('DOMContentLoaded', nukeTour);
+    window.addEventListener('load', nukeTour);
+    // Watch for late-injected tour elements
+    if (typeof MutationObserver !== 'undefined') {
+      var obs = new MutationObserver(function(muts){
+        for (var m of muts) {
+          for (var n of m.addedNodes) {
+            if (n.nodeType === 1) {
+              var cls = (n.className || '') + ' ' + (n.id || '');
+              if (/tour|help-btn/i.test(cls)) { try { n.remove(); } catch(e){} }
+            }
+          }
+        }
+      });
+      obs.observe(document.documentElement, {childList: true, subtree: true});
+    }
+    // Override common tour-starter globals if present
+    ['startTour','showTour','launchTour','runTour','openTour','initTour'].forEach(function(fn){
+      try { window[fn] = function(){}; } catch(e){}
+    });
+  } catch(e){}
+})();
+</script>
+
 
 <!-- VERIFIED AUTHORITY TOP BAR -->
 <div class="vbar" role="note" aria-label="Verified authority notice">
