@@ -2565,8 +2565,8 @@ const ms=m||"normal",fs=f||"normal";
 if(ms==="visual"&&fs==="visual")return[{status:"visual",pct:100}];
 if((ms==="visual"&&fs==="split")||(ms==="split"&&fs==="visual"))return[{status:"visual",pct:50},{status:"split",pct:50}];
 if((ms==="visual"&&fs==="normal")||(ms==="normal"&&fs==="visual"))return[{status:"split",pct:100}];
-if(ms==="split"&&fs==="split")return[{status:"visual",pct:25},{status:"split",pct:50},{status:"normal",pct:25}];
-if((ms==="split"&&fs==="normal")||(ms==="normal"&&fs==="split"))return[{status:"split",pct:50},{status:"normal",pct:50}];
+if(ms==="split"&&fs==="split")return[{status:"visual",pct:25},{status:"possibleSplit",pct:75}];
+if((ms==="split"&&fs==="normal")||(ms==="normal"&&fs==="split"))return[{status:"possibleSplit",pct:100}];
 return[{status:"normal",pct:100}];
 }
 function _0xA5(mSt,fSt){
