@@ -4269,7 +4269,7 @@ window.CBSF_FILTER_MENU=function(menu){
   // Empty-state message
   var em=menu.querySelector('.cbs-empty-msg');
   if(visibleCount===0&&qLower){
-    if(!em){em=document.createElement('div');em.className='cbs-empty-msg';em.textContent='No mutations match your search';menu.appendChild(em);}
+    if(!em){em=document.createElement('div');em.className='cbs-empty-msg';em.textContent='No matches. This mutation may already be selected on this parent, or try a different keyword.';menu.appendChild(em);}
   }else if(em){em.remove();}
 };
 window.CBSF_ENHANCE_MENU=function(menu,mode){
@@ -4373,87 +4373,8 @@ document.addEventListener('click',function(e){
   if(addBtn)addBtn.click();
 },true);
 
-/* ==== FIX: Search dropdown should show ALL mutations, even already-selected ones ==== */
-/* Master list of all 23 budgie mutations (matches CBSF_ALIASES keys) */
-var CBSF_ALL_MUT_LABELS={
-  'Opaline':'Opaline','Cinnamon':'Cinnamon','Ino':'Ino / Lutino / Albino','Slate':'Slate',
-  'TexasClearbody':'Texas Clearbody','Lacewing':'Lacewing','RecessivePied':'Recessive Pied',
-  'GermanFallow':'German Fallow','EnglishFallow':'English Fallow','ScottishFallow':'Scottish Fallow',
-  'BlackFace':'Black Face','Blackwing':'Blackwing','Saddleback':'Saddleback',
-  'Clearwing':'Clearwing','Greywing':'Greywing','Dilute':'Dilute',
-  'Grey':'Grey Factor','Violet':'Violet','YellowFace':'Yellow Face','Goldenface':'Goldenface',
-  'Spangle':'Spangle','DominantPied':'Dominant Pied','ClearflightPied':'Clearflight Pied',
-  'Anthracite':'Anthracite','DominantClearbody':'Easley Clearbody'
-};
-/* Group mapping */
-var CBSF_MUT_GROUP={
-  'Opaline':'Sex-linked recessive','Cinnamon':'Sex-linked recessive','Ino':'Sex-linked recessive',
-  'Slate':'Sex-linked recessive','TexasClearbody':'Sex-linked recessive','Lacewing':'Sex-linked recessive',
-  'RecessivePied':'Autosomal recessive','GermanFallow':'Autosomal recessive','EnglishFallow':'Autosomal recessive',
-  'ScottishFallow':'Autosomal recessive','BlackFace':'Autosomal recessive','Blackwing':'Autosomal recessive',
-  'Saddleback':'Autosomal recessive','Clearwing':'Autosomal recessive','Greywing':'Autosomal recessive','Dilute':'Autosomal recessive',
-  'Grey':'Autosomal incompletely dominant','Violet':'Autosomal incompletely dominant','YellowFace':'Autosomal incompletely dominant',
-  'Goldenface':'Autosomal incompletely dominant','Spangle':'Autosomal incompletely dominant','DominantPied':'Autosomal incompletely dominant',
-  'ClearflightPied':'Autosomal incompletely dominant','Anthracite':'Autosomal incompletely dominant','DominantClearbody':'Autosomal incompletely dominant'
-};
-/* When any mutation dropdown opens, ensure every mutation exists as an option (in original inheritance groups) */
-function CBSF_ENSURE_ALL_MUTATIONS(menu){
-  if(!menu)return;
-  var det=menu.closest('details.cbs');
-  if(!det)return;
-  var sel=det.querySelector('select.cbs-native');
-  if(!sel||sel.getAttribute('data-role')!=='trait')return;
-  /* Ensure the underlying <select> also has all mutations as <option> so sel.value = MutId works when picked */
-  var existingOptVals={};
-  Array.from(sel.options).forEach(function(o){existingOptVals[o.value]=1;});
-  Object.keys(CBSF_ALL_MUT_LABELS).forEach(function(id){
-    if(!existingOptVals[id]){
-      var newOpt=document.createElement('option');
-      newOpt.value=id;
-      newOpt.textContent=CBSF_ALL_MUT_LABELS[id];
-      sel.appendChild(newOpt);
-    }
-  });
-  // Build set of currently-present option values in this dropdown
-  var presentVals={};
-  menu.querySelectorAll('.cbs-opt[data-cbs-val]').forEach(function(o){presentVals[o.getAttribute('data-cbs-val')]=1;});
-  // For each mutation not present, add it under its group
-  var groups={};
-  menu.querySelectorAll('.cbs-grp-lbl').forEach(function(l){groups[(l.textContent||'').trim()]=l;});
-  Object.keys(CBSF_ALL_MUT_LABELS).forEach(function(id){
-    if(presentVals[id])return;
-    var groupName=CBSF_MUT_GROUP[id];
-    var groupLbl=groups[groupName];
-    var opt=document.createElement('div');
-    opt.className='cbs-opt';
-    opt.setAttribute('data-cbs-val',id);
-    opt.setAttribute('role','option');
-    opt.textContent=CBSF_ALL_MUT_LABELS[id];
-    if(groupLbl){
-      // Insert after last existing opt in that group
-      var next=groupLbl.nextElementSibling;
-      while(next&&next.classList.contains('cbs-opt')){next=next.nextElementSibling;}
-      if(next)groupLbl.parentNode.insertBefore(opt,next);
-      else groupLbl.parentNode.appendChild(opt);
-    }else{
-      // No matching group label found — create one
-      var newGrp=document.createElement('div');
-      newGrp.className='cbs-grp-lbl';
-      newGrp.textContent=groupName;
-      var list=menu.querySelector('.cbs-list')||menu;
-      list.appendChild(newGrp);
-      list.appendChild(opt);
-    }
-  });
-}
-/* Hook this into the toggle event so it runs when the dropdown opens */
-document.addEventListener('toggle',function(e){
-  var det=e.target;
-  if(!det||det.tagName!=='DETAILS'||!det.classList.contains('cbs'))return;
-  if(!det.open)return;
-  var menu=det.querySelector('.cbs-menu');
-  if(menu)CBSF_ENSURE_ALL_MUTATIONS(menu);
-},true);
+/* [reverted broken show-all-mutations logic — sister correctly excludes selected mutations] */
+
 
 /* ==== FIX: Keyboard nav in search dropdown (arrow up/down, Enter, Escape) ==== */
 document.addEventListener('keydown',function(e){
