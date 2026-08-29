@@ -2185,6 +2185,10 @@ body.tour-open, body.tour-active { overflow: auto !important; }
         .mut-grid-table .mut-code.ar{color:#666;}
         .mut-grid-table .mut-code.aid{color:#6daad6;}
         .mut-grid-table .mut-code.dil{color:#b89342;}
+
+        .mut-grid-table .mut-link{color:inherit;text-decoration:none;transition:color 0.15s ease;border-bottom:1px solid transparent;}
+        .mut-grid-table .mut-link:hover{color:#4ca154;border-bottom-color:rgba(76,161,84,0.4);}
+        .mut-grid-table .mut-row:hover{background:rgba(76,161,84,0.04);}
         @media (max-width:760px){.mut-grid-table{grid-template-columns:repeat(2,1fr);} .mut-grid-table .mut-row:nth-child(3n){border-right:1px solid rgba(255,255,255,0.05);} .mut-grid-table .mut-row:nth-child(2n){border-right:none;}}
         @media (max-width:480px){.mut-grid-table{grid-template-columns:1fr;} .mut-grid-table .mut-row{border-right:none !important;}}
       
@@ -2308,32 +2312,32 @@ body.tour-open, body.tour-active { overflow: auto !important; }
 </style>
       <div class="mut-row"><span class="mut-num">01</span><span class="mut-name">Green Series <small>(Light/Dark/Olive)</small></span><span class="mut-code base">BASE</span></div>
       <div class="mut-row"><span class="mut-num">02</span><span class="mut-name">Blue Series <small>(Sky/Cobalt/Mauve)</small></span><span class="mut-code base">BASE</span></div>
-      <div class="mut-row"><span class="mut-num">03</span><span class="mut-name">Opaline</span><span class="mut-code sl">SL</span></div>
-      <div class="mut-row"><span class="mut-num">04</span><span class="mut-name">Cinnamon</span><span class="mut-code sl">SL</span></div>
-      <div class="mut-row"><span class="mut-num">05</span><span class="mut-name">Ino / Lutino / Albino</span><span class="mut-code sl">SL</span></div>
-      <div class="mut-row"><span class="mut-num">06</span><span class="mut-name">Lacewing</span><span class="mut-code sl">SL</span></div>
-      <div class="mut-row"><span class="mut-num">07</span><span class="mut-name">Slate</span><span class="mut-code sl">SL</span></div>
-      <div class="mut-row"><span class="mut-num">08</span><span class="mut-name">Texas Clearbody</span><span class="mut-code sl">SL</span></div>
-      <div class="mut-row"><span class="mut-num">09</span><span class="mut-name">Recessive Pied</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">10</span><span class="mut-name">German Fallow</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">11</span><span class="mut-name">English Fallow</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">12</span><span class="mut-name">Scottish Fallow</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">13</span><span class="mut-name">Black Face</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">14</span><span class="mut-name">Blackwing</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">15</span><span class="mut-name">Saddleback</span><span class="mut-code ar">AR</span></div>
-      <div class="mut-row"><span class="mut-num">16</span><span class="mut-name">Clearwing</span><span class="mut-code dil">DIL</span></div>
-      <div class="mut-row"><span class="mut-num">17</span><span class="mut-name">Greywing</span><span class="mut-code dil">DIL</span></div>
-      <div class="mut-row"><span class="mut-num">18</span><span class="mut-name">Dilute</span><span class="mut-code dil">DIL</span></div>
-      <div class="mut-row"><span class="mut-num">19</span><span class="mut-name">Dark Factor <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">20</span><span class="mut-name">Grey Factor <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">21</span><span class="mut-name">Violet <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">22</span><span class="mut-name">Yellow Face <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">23</span><span class="mut-name">Goldenface</span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">24</span><span class="mut-name">Spangle <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">25</span><span class="mut-name">Dominant Pied</span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">26</span><span class="mut-name">Clearflight Pied</span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">27</span><span class="mut-name">Anthracite <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
-      <div class="mut-row"><span class="mut-num">28</span><span class="mut-name">Easley Clearbody</span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">03</span><span class="mut-name"><a href="/blog/opaline-budgerigar-mutation" class="mut-link">Opaline</a></span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">04</span><span class="mut-name"><a href="/blog/cinnamon-budgerigar-mutation" class="mut-link">Cinnamon</a></span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">05</span><span class="mut-name"><a href="/blog/ino-lutino-albino-budgerigar-mutation" class="mut-link">Ino / Lutino / Albino</a></span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">06</span><span class="mut-name"><a href="/blog/lacewing-budgerigar-mutation" class="mut-link">Lacewing</a></span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">07</span><span class="mut-name"><a href="/blog/slate-budgerigar-mutation" class="mut-link">Slate</a></span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">08</span><span class="mut-name"><a href="/blog/texas-clearbody-budgerigar-mutation" class="mut-link">Texas Clearbody</a></span><span class="mut-code sl">SL</span></div>
+      <div class="mut-row"><span class="mut-num">09</span><span class="mut-name"><a href="/blog/recessive-pied-budgerigar-mutation" class="mut-link">Recessive Pied</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">10</span><span class="mut-name"><a href="/blog/german-fallow-budgerigar-mutation" class="mut-link">German Fallow</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">11</span><span class="mut-name"><a href="/blog/english-fallow-budgerigar-mutation" class="mut-link">English Fallow</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">12</span><span class="mut-name"><a href="/blog/scottish-fallow-budgerigar-mutation" class="mut-link">Scottish Fallow</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">13</span><span class="mut-name"><a href="/blog/blackface-budgerigar-mutation" class="mut-link">Black Face</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">14</span><span class="mut-name"><a href="/blog/blackwing-budgerigar-mutation" class="mut-link">Blackwing</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">15</span><span class="mut-name"><a href="/blog/saddleback-budgerigar-mutation" class="mut-link">Saddleback</a></span><span class="mut-code ar">AR</span></div>
+      <div class="mut-row"><span class="mut-num">16</span><span class="mut-name"><a href="/blog/clearwing-budgerigar-mutation" class="mut-link">Clearwing</a></span><span class="mut-code dil">DIL</span></div>
+      <div class="mut-row"><span class="mut-num">17</span><span class="mut-name"><a href="/blog/greywing-budgerigar-mutation" class="mut-link">Greywing</a></span><span class="mut-code dil">DIL</span></div>
+      <div class="mut-row"><span class="mut-num">18</span><span class="mut-name"><a href="/blog/dilute-budgerigar-mutation" class="mut-link">Dilute</a></span><span class="mut-code dil">DIL</span></div>
+      <div class="mut-row"><span class="mut-num">19</span><span class="mut-name"><a href="/blog/dark-factor-budgerigar-mutation" class="mut-link">Dark Factor</a> <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">20</span><span class="mut-name"><a href="/blog/grey-factor-budgerigar-mutation" class="mut-link">Grey Factor</a> <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">21</span><span class="mut-name"><a href="/blog/violet-budgerigar-mutation" class="mut-link">Violet</a> <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">22</span><span class="mut-name"><a href="/blog/yellow-face-budgerigar-mutation" class="mut-link">Yellow Face</a> <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">23</span><span class="mut-name"><a href="/blog/goldenface-budgerigar-mutation" class="mut-link">Goldenface</a></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">24</span><span class="mut-name"><a href="/blog/spangle-budgerigar-mutation" class="mut-link">Spangle</a> <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">25</span><span class="mut-name"><a href="/blog/dominant-pied-budgerigar-mutation" class="mut-link">Dominant Pied</a></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">26</span><span class="mut-name"><a href="/blog/clearflight-pied-budgerigar-mutation" class="mut-link">Clearflight Pied</a></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">27</span><span class="mut-name"><a href="/blog/anthracite-budgerigar-mutation" class="mut-link">Anthracite</a> <small>(SF/DF)</small></span><span class="mut-code aid">AID</span></div>
+      <div class="mut-row"><span class="mut-num">28</span><span class="mut-name"><a href="/blog/easley-clearbody-budgerigar-mutation" class="mut-link">Easley Clearbody</a></span><span class="mut-code aid">AID</span></div>
     </div>
     <p style="font-size:12px;color:#888;margin-top:14px;font-family:'DM Mono',monospace;letter-spacing:0.03em;">BASE = Base color series · AR = Autosomal Recessive · SL = Sex-Linked Recessive · AID = Autosomal Incomp. Dominant · DIL = Dil-locus allelic series (Cw/Gw/Dil co-dominance)</p>
 
@@ -2529,8 +2533,8 @@ body.tour-open, body.tour-active { overflow: auto !important; }
         <p style="color:#a8a8a8;line-height:1.65;">No. Hens cannot be split (silent carrier) for sex-linked recessive mutations including Opaline, Cinnamon, Lutino/Ino, Lacewing, Slate, and Texas Clearbody. Because hens have the ZW sex chromosome configuration (with only one Z chromosome), if they carry the mutation gene at all, it must be expressed visually. Only cocks (ZZ) can be split for sex-linked traits. This is a fundamental rule of budgerigar genetics that our calculator applies automatically when displaying offspring predictions.</p>
       </div>
       <div style="margin-bottom:0;">
-        <h3 style="font-size:19px;color:#e6e6e6;margin-bottom:10px;">বাজির ক্রোমোজোম কয়টি? (How many chromosomes does a budgie have?)</h3>
-        <p style="color:#a8a8a8;line-height:1.65;">বাজিরিগারের মোট ৩২টি ক্রোমোজোম আছে (১৬ জোড়া)। Z যৌন ক্রোমোজোম sex-linked mutations নির্ধারণ করে। পুরুষ বাজি ZZ, স্ত্রী বাজি ZW। এই কারণে Opaline, Cinnamon, Lutino, Lacewing, Slate, এবং Texas Clearbody এর মতো sex-linked mutations পুরুষ ও স্ত্রী বাজিতে ভিন্নভাবে প্রকাশ পায়। স্ত্রী বাজি এই mutations গুলোর জন্য "split" (carrier) হতে পারে না, কারণ তার মাত্র একটি Z chromosome আছে।</p>
+        <h3 style="font-size:19px;color:#e6e6e6;margin-bottom:10px;">How many chromosomes does a budgerigar have?</h3>
+        <p style="color:#a8a8a8;line-height:1.65;">A budgerigar has 32 chromosomes total (16 pairs). The Z chromosome determines sex-linked inheritance. Cocks (males) are ZZ, hens (females) are ZW. This is why sex-linked mutations such as Opaline, Cinnamon, Lutino / Ino, Lacewing, Slate, and Texas Clearbody express differently in cocks versus hens. Hens cannot be split (silent carriers) for sex-linked mutations because they only carry one Z chromosome, so if they have the mutation gene at all it must express visually.</p>
       </div>
     </div>
 
@@ -3468,7 +3472,7 @@ const BAR_ICO=`<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect
 
 function baseOpts(v){
 const o=(val,lbl)=>`<option value="${val}" ${v===val?'selected':''}>${lbl}</option>`;
-return `<option value="">- Choose Bird Series -</option><optgroup label="Green Series">${o('Light Green','Light Green')}${o('Dark Green','Dark Green')}${o('Olive Green','Olive Green')}</optgroup><optgroup label="Blue Series">${o('Sky Blue','Sky Blue')}${o('Cobalt','Cobalt')}${o('Mauve','Mauve')}</optgroup><optgroup label="Green Series / Split for Blue">${o('Light Green / Blue','Light Green / Blue')}${o('Dark Green / Blue','Dark Green / Blue')}${o('Olive Green / Blue','Olive Green / Blue')}</optgroup>`;
+return `<option value="">Choose Bird Series</option><optgroup label="Green Series">${o('Light Green','Light Green')}${o('Dark Green','Dark Green')}${o('Olive Green','Olive Green')}</optgroup><optgroup label="Blue Series">${o('Sky Blue','Sky Blue')}${o('Cobalt','Cobalt')}${o('Mauve','Mauve')}</optgroup><optgroup label="Green Series / Split for Blue">${o('Light Green / Blue','Light Green / Blue')}${o('Dark Green / Blue','Dark Green / Blue')}${o('Olive Green / Blue','Olive Green / Blue')}</optgroup>`;
 }
 function buildOpalineMaleSel(val){
 const isSet=val!=="normal";
@@ -3493,7 +3497,7 @@ const avAD=_0xC9.filter(m=>m.type==="AD"&&m.id!=="Grey"&&m.id!=="Violet"&&(m.id=
 const avCAF=[_0xC9.find(m=>m.id==="Violet"),_0xC9.find(m=>m.id==="Grey")].filter(m=>m&&(m.id===tid||!used.includes(m.id)));
 const isBs=_0xC8(tid),mut=!isBs?_0xC9.find(m=>m.id===tid):null,sOpts=mut?getSO(mut.type,sex):[];
 const avBS=isGr?(isBs?_0xC6.filter(b=>b.id===tid):usedBS.length===0?_0xC6:[]):[];
-let tOpts=`<option value="None">- Select Mutation -</option>`;
+let tOpts=`<option value="None">Select mutation</option>`;
 if(avBS.length)tOpts+=`<optgroup label="Blue Splits">${avBS.map(b=>`<option value="${b.id}"${tid===b.id?' selected':''}>${b.label}</option>`).join('')}</optgroup>`;
 if(avCAF.length)tOpts+=`<optgroup label="Color Adding factor">${avCAF.map(m=>`<option value="${m.id}"${tid===m.id?' selected':''}>${m.id}</option>`).join('')}</optgroup>`;
 if(avAR.length)tOpts+=`<optgroup label="Autosomal Recessive">${avAR.map(m=>`<option value="${m.id}"${tid===m.id?' selected':''}>${m.label}</option>`).join('')}</optgroup>`;
@@ -3504,7 +3508,7 @@ if(isBs)ssSel=`<select aria-label="Status" class="ss js-cbs cbs-xs-flavor" data-
 else if(mut&&sOpts.length)ssSel=`<select aria-label="Status" class="ss js-cbs cbs-xs-flavor" data-pid="${pid}" data-idx="${i}">${sOpts.map(o=>`<option value="${o.v}"${t.status===o.v?' selected':''}>${o.l}</option>`).join('')}</select>`;
 else{const defOpts=[{v:'visual',l:'Visual'},{v:'split',l:'/ Split'}];ssSel=`<select aria-label="Status" class="ss js-cbs cbs-xs-flavor" data-pid="${pid}" data-idx="${i}">${defOpts.map(o=>`<option value="${o.v}"${(t.status===o.v||(!t.status&&o.v==='visual'))?'selected':''}>  ${o.l}</option>`).join('')}</select>`;}
 const mutHint=(tid!=='None'&&!isBs&&MUT_INFO[tid])?`<p class="mut-hint">${MUT_INFO[tid]}</p>`:'';
-return `<div class="tr"><select aria-label="Mutation ${i+1}" class="js-cbs cbs-sm-flavor ${tid!=='None'?'filled':''}" data-pid="${pid}" data-idx="${i}" data-role="trait" data-cbs-placeholder="- Select Mutation -">${tOpts}</select>${ssSel}<button class="rm" data-pid="${pid}" data-idx="${i}" aria-label="Remove mutation" title="Remove">×</button></div>${mutHint}`;
+return `<div class="tr"><select aria-label="Mutation ${i+1}" class="js-cbs cbs-sm-flavor ${tid!=='None'?'filled':''}" data-pid="${pid}" data-idx="${i}" data-role="trait" data-cbs-placeholder="Select mutation">${tOpts}</select>${ssSel}<button class="rm" data-pid="${pid}" data-idx="${i}" aria-label="Remove mutation" title="Remove">×</button></div>${mutHint}`;
 }
 // Approximate visual color for a budgerigar phenotype name → returns hex
 function getPhenotypeColor(nm){
@@ -3617,7 +3621,7 @@ return `<div class="pcard">
   <span class="field-label">Bird Series</span>
   <div class="color-row">
     <div class="base-color-wrapper">
-      <select id="${pid}-base" aria-label="${isMale?'Male':'Female'} bird series" class="js-cbs ${primary?'filled':''}" data-cbs-placeholder="- Choose Bird Series -">${baseOpts(primary)}</select>
+      <select id="${pid}-base" aria-label="${isMale?'Male':'Female'} bird series" class="js-cbs ${primary?'filled':''}" data-cbs-placeholder="Choose Bird Series">${baseOpts(primary)}</select>
     </div>
     ${oplineSel}
   </div>
@@ -4348,5 +4352,134 @@ document.addEventListener('click',function(e){
 });
 
 </script>
+
+<script id="mutation-picker-fixes">
+/* ==== FIX: Empty state click actually adds mutation ==== */
+document.addEventListener('click',function(e){
+  var nt=e.target.closest&&e.target.closest('.no-traits');
+  if(!nt)return;
+  e.preventDefault();
+  // Find the parent block (.pb) that owns this empty state
+  var pb=nt.closest('.pb, .parent-block, [class*="parent"]');
+  if(!pb){pb=nt.parentElement;while(pb&&!pb.querySelector('.add-btn'))pb=pb.parentElement;}
+  if(!pb)return;
+  var addBtn=pb.querySelector('.add-btn');
+  if(addBtn)addBtn.click();
+},true);
+
+/* ==== FIX: Search dropdown should show ALL mutations, even already-selected ones ==== */
+/* Master list of all 23 budgie mutations (matches CBSF_ALIASES keys) */
+var CBSF_ALL_MUT_LABELS={
+  'Opaline':'Opaline','Cinnamon':'Cinnamon','Ino':'Ino / Lutino / Albino','Slate':'Slate',
+  'TexasClearbody':'Texas Clearbody','Lacewing':'Lacewing','RecessivePied':'Recessive Pied',
+  'GermanFallow':'German Fallow','EnglishFallow':'English Fallow','ScottishFallow':'Scottish Fallow',
+  'BlackFace':'Black Face','Blackwing':'Blackwing','Saddleback':'Saddleback',
+  'Clearwing':'Clearwing','Greywing':'Greywing','Dilute':'Dilute',
+  'Grey':'Grey Factor','Violet':'Violet','YellowFace':'Yellow Face','Goldenface':'Goldenface',
+  'Spangle':'Spangle','DominantPied':'Dominant Pied','ClearflightPied':'Clearflight Pied',
+  'Anthracite':'Anthracite','DominantClearbody':'Easley Clearbody'
+};
+/* Group mapping */
+var CBSF_MUT_GROUP={
+  'Opaline':'Sex-linked recessive','Cinnamon':'Sex-linked recessive','Ino':'Sex-linked recessive',
+  'Slate':'Sex-linked recessive','TexasClearbody':'Sex-linked recessive','Lacewing':'Sex-linked recessive',
+  'RecessivePied':'Autosomal recessive','GermanFallow':'Autosomal recessive','EnglishFallow':'Autosomal recessive',
+  'ScottishFallow':'Autosomal recessive','BlackFace':'Autosomal recessive','Blackwing':'Autosomal recessive',
+  'Saddleback':'Autosomal recessive','Clearwing':'Autosomal recessive','Greywing':'Autosomal recessive','Dilute':'Autosomal recessive',
+  'Grey':'Autosomal incompletely dominant','Violet':'Autosomal incompletely dominant','YellowFace':'Autosomal incompletely dominant',
+  'Goldenface':'Autosomal incompletely dominant','Spangle':'Autosomal incompletely dominant','DominantPied':'Autosomal incompletely dominant',
+  'ClearflightPied':'Autosomal incompletely dominant','Anthracite':'Autosomal incompletely dominant','DominantClearbody':'Autosomal incompletely dominant'
+};
+/* When any mutation dropdown opens, ensure every mutation exists as an option (in original inheritance groups) */
+function CBSF_ENSURE_ALL_MUTATIONS(menu){
+  if(!menu||menu.getAttribute('data-cbsq-mode')!=='mut')return;
+  var det=menu.closest('details.cbs');
+  var sel=det&&det.querySelector('select.cbs-native');
+  if(!sel||sel.getAttribute('data-role')!=='trait')return;
+  // Build set of currently-present option values in this dropdown
+  var presentVals={};
+  menu.querySelectorAll('.cbs-opt[data-cbs-val]').forEach(function(o){presentVals[o.getAttribute('data-cbs-val')]=1;});
+  // For each mutation not present, add it under its group
+  var groups={};
+  menu.querySelectorAll('.cbs-grp-lbl').forEach(function(l){groups[(l.textContent||'').trim()]=l;});
+  Object.keys(CBSF_ALL_MUT_LABELS).forEach(function(id){
+    if(presentVals[id])return;
+    var groupName=CBSF_MUT_GROUP[id];
+    var groupLbl=groups[groupName];
+    var opt=document.createElement('div');
+    opt.className='cbs-opt';
+    opt.setAttribute('data-cbs-val',id);
+    opt.setAttribute('role','option');
+    opt.textContent=CBSF_ALL_MUT_LABELS[id];
+    if(groupLbl){
+      // Insert after last existing opt in that group
+      var next=groupLbl.nextElementSibling;
+      while(next&&next.classList.contains('cbs-opt')){next=next.nextElementSibling;}
+      if(next)groupLbl.parentNode.insertBefore(opt,next);
+      else groupLbl.parentNode.appendChild(opt);
+    }else{
+      // No matching group label found — create one
+      var newGrp=document.createElement('div');
+      newGrp.className='cbs-grp-lbl';
+      newGrp.textContent=groupName;
+      var list=menu.querySelector('.cbs-list')||menu;
+      list.appendChild(newGrp);
+      list.appendChild(opt);
+    }
+  });
+}
+/* Hook this into the toggle event so it runs when the dropdown opens */
+document.addEventListener('toggle',function(e){
+  var det=e.target;
+  if(!det||det.tagName!=='DETAILS'||!det.classList.contains('cbs'))return;
+  if(!det.open)return;
+  var menu=det.querySelector('.cbs-menu');
+  if(menu)CBSF_ENSURE_ALL_MUTATIONS(menu);
+},true);
+
+/* ==== FIX: Keyboard nav in search dropdown (arrow up/down, Enter, Escape) ==== */
+document.addEventListener('keydown',function(e){
+  var input=e.target;
+  if(!input||!input.classList||!input.classList.contains('cbs-q'))return;
+  var menu=input.closest('.cbs-menu');
+  if(!menu)return;
+  var visibleOpts=Array.from(menu.querySelectorAll('.cbs-opt:not(.cbs-hidden)'));
+  if(!visibleOpts.length)return;
+  var currentIdx=visibleOpts.findIndex(o=>o.classList.contains('cbs-kb-active'));
+
+  function highlight(idx){
+    visibleOpts.forEach(o=>o.classList.remove('cbs-kb-active'));
+    if(idx>=0&&idx<visibleOpts.length){
+      var o=visibleOpts[idx];
+      o.classList.add('cbs-kb-active');
+      // Scroll into view
+      var menuRect=menu.getBoundingClientRect();
+      var oRect=o.getBoundingClientRect();
+      if(oRect.bottom>menuRect.bottom||oRect.top<menuRect.top){
+        o.scrollIntoView({block:'nearest'});
+      }
+    }
+  }
+
+  if(e.key==='ArrowDown'){
+    e.preventDefault();
+    highlight(currentIdx+1>=visibleOpts.length?0:currentIdx+1);
+  }else if(e.key==='ArrowUp'){
+    e.preventDefault();
+    highlight(currentIdx<=0?visibleOpts.length-1:currentIdx-1);
+  }else if(e.key==='Enter'){
+    e.preventDefault();
+    var target=currentIdx>=0?visibleOpts[currentIdx]:visibleOpts[0];
+    if(target)target.click();
+  }else if(e.key==='Escape'){
+    e.preventDefault();
+    var det=menu.closest('details.cbs');
+    if(det)det.open=false;
+  }
+});
+</script>
+<style id="mutation-picker-fix-css">
+.cbs-opt.cbs-kb-active{background:var(--accent-dim,rgba(76,161,84,0.15))!important;color:var(--accent,#4ca154)!important;}
+</style>
 </body>
 </html>
