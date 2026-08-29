@@ -153,38 +153,157 @@
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What does split mean in budgerigar genetics?","acceptedAnswer":{"@type":"Answer","text":"A split bird visually appears normal but carries one copy of a recessive mutation gene. When paired with another split or a visual mutation bird, they can produce mutation offspring. The calculator shows all splits in the predicted offspring with their exact probability."}},
-    {"@type":"Question","name":"Can I calculate multiple mutations at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each parent can carry up to 6 mutation traits simultaneously. The engine correctly handles combined mutations including doubles and triples."}},
-    {"@type":"Question","name":"What is the difference between Light Green, Dark Green, and Olive Green budgies?","acceptedAnswer":{"@type":"Answer","text":"All three are green-series budgies with different numbers of dark factor genes. Light Green has zero dark factors (dd). Dark Green has one dark factor (Dd), the medium-shade green. Olive Green has two dark factors (DD), the darkest, deepest green. The dark factor is incompletely dominant, meaning each copy visibly darkens the body color."}},
-    {"@type":"Question","name":"How do sex-linked mutations work in budgerigars?","acceptedAnswer":{"@type":"Answer","text":"Sex-linked recessive mutations like Ino, Opaline, Cinnamon, and Slate behave differently by sex. Hens (females) cannot be splits, they either show the mutation visually or don't carry it. Cocks (males) can carry the gene without showing it. This calculator handles sex-linked inheritance automatically."}},
-    {"@type":"Question","name":"Why is Ino sex-linked in budgerigars but autosomal in some other parrots?","acceptedAnswer":{"@type":"Answer","text":"In budgerigars the Ino gene sits on the Z sex chromosome, making it sex-linked recessive. In some other parrot species (like peach-faced lovebirds) the Ino gene sits on an autosome, so it follows autosomal recessive inheritance. This is one of the fundamental differences between budgie and lovebird genetics. Lutino (green-series Ino) and Albino (blue-series Ino) are the two Ino visual phenotypes in budgies."}},
-    {"@type":"Question","name":"Is this budgerigar genetics calculator available for breeders in Pakistan, Bangladesh, and other countries?","acceptedAnswer":{"@type":"Answer","text":"Yes, it works everywhere with an internet connection. The calculator is actively used by budgerigar breeders in Bangladesh, Pakistan, India, the UAE, Germany, Belgium, the UK, the USA, and Australia. No country restrictions, no downloads, no account required. It runs on any Android phone, iPhone, or computer anywhere in the world."}},
-    {"@type":"Question","name":"How does the dark factor combine with grey and violet in budgies?","acceptedAnswer":{"@type":"Answer","text":"Dark factor stacks with both grey and violet. Violet on Cobalt produces the famously deep violet show variety (historically called Visual Violet, now uniformly labelled Violet Cobalt). Adding the grey factor over blue series gives Grey (sky+grey), Dark Grey (cobalt+grey), and Mauve Grey (mauve+grey). Grey + Green base produces Grey Green. These factors are all autosomal incompletely dominant, meaning single and double factor birds look subtly different."}},
-    {"@type":"Question","name":"How does Yellow Face combine with blue-series budgies?","acceptedAnswer":{"@type":"Answer","text":"Yellow Face is an autosomal incompletely dominant modifier that adds yellow pigment to the face and parts of the wing on blue-series birds. There are three main types: Yellow Face Type 1 (mild yellow wash), Yellow Face Type 2 (stronger yellow that bleeds into the body), and Golden Face (deep yellow saturation). Yellow Face has no visible effect on green-series birds because the yellow is already present from the base green coloration."}},
-    {"@type":"Question","name":"What is Spangle and how does single factor vs double factor look in budgies?","acceptedAnswer":{"@type":"Answer","text":"Spangle is an autosomal incompletely dominant mutation. Single Factor (SF) Spangle birds show reverse wing markings, clear feathers with dark edges instead of dark feathers with light edges. Double Factor (DF) Spangle birds are nearly all yellow (on green base) or nearly all white (on blue base), often confused with Lutino or Albino but with normal dark eyes. Two SF Spangle parents can produce 25% DF Spangle offspring."}},
-    {"@type":"Question","name":"What is Lacewing and how is it inherited in budgerigars?","acceptedAnswer":{"@type":"Answer","text":"Lacewing is sex-linked recessive. It is the result of a crossover between the Cinnamon and Ino genes on the Z chromosome, first identified in a UK lutino strain in 1948 by R.J. Watts. The phenotype is a pale yellow body (Yellow Lacewing on green base) or white body (White Lacewing on blue base) with brown wing markings and red eyes. Inte Onsman of MUTAVI Research confirmed in published findings that Lacewing is the recombination product of Cinnamon and Ino on the same Z chromosome, not a separate allele. Cocks can be split for Lacewing; hens cannot, they are either visual or normal."}},
-    {"@type":"Question","name":"What is Clearflight Pied and how does it relate to Dark-Eyed Clear?","acceptedAnswer":{"@type":"Answer","text":"Clearflight Pied (Continental Clearflight Pied) is an autosomal incompletely dominant mutation at the Pi locus. It is a different gene from Australian Dominant (Banded) Pied. When a bird carries both a Clearflight Pied factor (SF or DF) and a visible Recessive Pied, the emergent Dark-Eyed Clear (DEC) phenotype appears, a pure yellow or white body with normal dark eyes. The calculator automatically detects this combination and labels offspring as Dark-Eyed Clear (SF) or Dark-Eyed Clear (DF) per the international judge specification."}},
-    {"@type":"Question","name":"What is Easley Clearbody and how is it different from Texas Clearbody?","acceptedAnswer":{"@type":"Answer","text":"Easley Clearbody is autosomal incompletely dominant and originated in California in 1992 with American breeder Steve Easley. The body lightens to a clear yellow (green base) or near-white (blue base) while the head and wing markings retain dark melanin pattern. The distinction from Texas Clearbody is the inheritance mode: Texas Clearbody is sex-linked recessive (different gene, on the Z chromosome), while Easley Clearbody is autosomal incompletely dominant (different gene, autosomal, with visible SF and DF forms). Both reduce body melanin while preserving wing pattern, but the pairing predictions are entirely different and breeders should never confuse them."}},
-    {"@type":"Question","name":"How does the calculator model the Clearwing Greywing Dilute dil-locus?","acceptedAnswer":{"@type":"Answer","text":"Clearwing, Greywing, and Dilute are alleles of the same gene (the dil locus), not three independent genes. The calculator uses proper allelic series modelling with dominance ordering: Clearwing is dominant over Dilute, Greywing is dominant over Dilute, and Clearwing co-dominates with Greywing to produce the hetero-allelic Fullbody Greywing phenotype. Pairing visual Clearwing with visual Dilute gives 100% visual Clearwing offspring split for Dilute. Pairing two visual Dilutes always gives 100% visual Dilute because Dilute cannot hide Clearwing on the same locus. This matches Wikipedia and Terry Martin 2002 inheritance models."}}
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does split mean in budgerigar genetics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A split bird visually appears normal but carries one copy of a recessive mutation gene. When paired with another split or a visual mutation bird, they can produce mutation offspring. The calculator shows all splits in the predicted offspring with their exact probability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate multiple mutations at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each parent can carry up to 6 mutation traits simultaneously. The engine correctly handles combined mutations including doubles and triples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Light Green, Dark Green, and Olive Green budgies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All three are green-series budgies with different numbers of dark factor genes. Light Green has zero dark factors (dd). Dark Green has one dark factor (Dd), the medium-shade green. Olive Green has two dark factors (DD), the darkest, deepest green. The dark factor is incompletely dominant, meaning each copy visibly darkens the body color."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do sex-linked mutations work in budgerigars?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sex-linked recessive mutations like Ino, Opaline, Cinnamon, and Slate behave differently by sex. Hens (females) cannot be splits, they either show the mutation visually or don't carry it. Cocks (males) can carry the gene without showing it. This calculator handles sex-linked inheritance automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Ino sex-linked in budgerigars but autosomal in some other parrots?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In budgerigars the Ino gene sits on the Z sex chromosome, making it sex-linked recessive. In some other parrot species (like peach-faced lovebirds) the Ino gene sits on an autosome, so it follows autosomal recessive inheritance. This is one of the fundamental differences between budgie and lovebird genetics. Lutino (green-series Ino) and Albino (blue-series Ino) are the two Ino visual phenotypes in budgies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this budgerigar genetics calculator available for breeders in Pakistan, Bangladesh, and other countries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it works everywhere with an internet connection. The calculator is actively used by budgerigar breeders in Bangladesh, Pakistan, India, the UAE, Germany, Belgium, the UK, the USA, and Australia. No country restrictions, no downloads, no account required. It runs on any Android phone, iPhone, or computer anywhere in the world."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the dark factor combine with grey and violet in budgies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dark factor stacks with both grey and violet. Violet on Cobalt produces the famously deep violet show variety (historically called Visual Violet, now uniformly labelled Violet Cobalt). Adding the grey factor over blue series gives Grey (sky+grey), Dark Grey (cobalt+grey), and Mauve Grey (mauve+grey). Grey + Green base produces Grey Green. These factors are all autosomal incompletely dominant, meaning single and double factor birds look subtly different."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Yellow Face combine with blue-series budgies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yellow Face is an autosomal incompletely dominant modifier that adds yellow pigment to the face and parts of the wing on blue-series birds. There are three main types: Yellow Face Type 1 (mild yellow wash), Yellow Face Type 2 (stronger yellow that bleeds into the body), and Golden Face (deep yellow saturation). Yellow Face has no visible effect on green-series birds because the yellow is already present from the base green coloration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Spangle and how does single factor vs double factor look in budgies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spangle is an autosomal incompletely dominant mutation. Single Factor (SF) Spangle birds show reverse wing markings, clear feathers with dark edges instead of dark feathers with light edges. Double Factor (DF) Spangle birds are nearly all yellow (on green base) or nearly all white (on blue base), often confused with Lutino or Albino but with normal dark eyes. Two SF Spangle parents can produce 25% DF Spangle offspring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Lacewing and how is it inherited in budgerigars?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lacewing is sex-linked recessive. It is the result of a crossover between the Cinnamon and Ino genes on the Z chromosome, first identified in a UK lutino strain in 1948 by R.J. Watts. The phenotype is a pale yellow body (Yellow Lacewing on green base) or white body (White Lacewing on blue base) with brown wing markings and red eyes. Inte Onsman of MUTAVI Research confirmed in published findings that Lacewing is the recombination product of Cinnamon and Ino on the same Z chromosome, not a separate allele. Cocks can be split for Lacewing; hens cannot, they are either visual or normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Clearflight Pied and how does it relate to Dark-Eyed Clear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clearflight Pied (Continental Clearflight Pied) is an autosomal incompletely dominant mutation at the Pi locus. It is a different gene from Australian Dominant (Banded) Pied. When a bird carries both a Clearflight Pied factor (SF or DF) and a visible Recessive Pied, the emergent Dark-Eyed Clear (DEC) phenotype appears, a pure yellow or white body with normal dark eyes. The calculator automatically detects this combination and labels offspring as Dark-Eyed Clear (SF) or Dark-Eyed Clear (DF) per the international judge specification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Easley Clearbody and how is it different from Texas Clearbody?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Easley Clearbody is autosomal incompletely dominant and originated in California in 1992 with American breeder Steve Easley. The body lightens to a clear yellow (green base) or near-white (blue base) while the head and wing markings retain dark melanin pattern. The distinction from Texas Clearbody is the inheritance mode: Texas Clearbody is sex-linked recessive (different gene, on the Z chromosome), while Easley Clearbody is autosomal incompletely dominant (different gene, autosomal, with visible SF and DF forms). Both reduce body melanin while preserving wing pattern, but the pairing predictions are entirely different and breeders should never confuse them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the calculator model the Clearwing Greywing Dilute dil-locus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clearwing, Greywing, and Dilute are alleles of the same gene (the dil locus), not three independent genes. The calculator uses proper allelic series modelling with dominance ordering: Clearwing is dominant over Dilute, Greywing is dominant over Dilute, and Clearwing co-dominates with Greywing to produce the hetero-allelic Fullbody Greywing phenotype. Pairing visual Clearwing with visual Dilute gives 100% visual Clearwing offspring split for Dilute. Pairing two visual Dilutes always gives 100% visual Dilute because Dilute cannot hide Clearwing on the same locus. This matches Wikipedia and Terry Martin 2002 inheritance models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many chromosomes does a budgerigar have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Budgerigars have 32 chromosomes total (16 pairs). The Z sex chromosome determines sex-linked mutations. Cocks are ZZ, hens are ZW. Sex-linked mutations like Opaline, Cinnamon, Lutino, Lacewing, Slate, and Texas Clearbody behave differently in cocks versus hens. Hens cannot be split for these traits because they only have one Z chromosome."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which color budgie is best for breeding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Breeders commonly work with Light Green (wild-type base, widest mutation range), Cobalt (single Dark Factor blue base, produces rare Cobalt Opaline and Cinnamon offspring), and Yellow Face or Goldenface (adds yellow to blue series). The ideal choice depends on your breeding goal: exhibition line development, rare mutation production, or general aviary variety."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is the rarest color of budgies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The rarest documented budgerigar mutations in 2026 are Manto Negro (Brazilian Black Mantle, developed 2021, autosomal dominant), Blackface (Netherlands 1992, autosomal recessive), and Blackwing (Venezuela 2002, autosomal recessive). Combining Blackface with Blackwing produces Double Black, currently the darkest budgerigar phenotype possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What determines a budgerigar's color?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A budgerigar's color is determined by two primary pigments (eumelanin for black markings, psittacofulvin for yellow) filtered through structural feather coloration. The base color (Green or Blue series) is controlled by a single autosomal recessive gene. Additional mutations layer on top: Dark Factor, Grey, Violet, Yellow Face, and 20+ other documented mutations, each with specific inheritance rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can hens be split for sex-linked mutations like Opaline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Hens cannot be split (silent carrier) for sex-linked recessive mutations including Opaline, Cinnamon, Lutino, Lacewing, Slate, and Texas Clearbody. Hens have the ZW sex chromosome configuration with only one Z chromosome, so if they carry the mutation gene, it must be expressed visually. Only cocks (ZZ) can be split for sex-linked traits."
+      }
+    }
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How many chromosomes does a budgerigar have?","acceptedAnswer":{"@type":"Answer","text":"Budgerigars have 32 chromosomes total (16 pairs). The Z sex chromosome determines sex-linked mutations. Cocks are ZZ, hens are ZW. Sex-linked mutations like Opaline, Cinnamon, Lutino, Lacewing, Slate, and Texas Clearbody behave differently in cocks versus hens. Hens cannot be split for these traits because they only have one Z chromosome."}},
-    {"@type":"Question","name":"Which color budgie is best for breeding?","acceptedAnswer":{"@type":"Answer","text":"Breeders commonly work with Light Green (wild-type base, widest mutation range), Cobalt (single Dark Factor blue base, produces rare Cobalt Opaline and Cinnamon offspring), and Yellow Face or Goldenface (adds yellow to blue series). The ideal choice depends on your breeding goal: exhibition line development, rare mutation production, or general aviary variety."}},
-    {"@type":"Question","name":"Which is the rarest color of budgies?","acceptedAnswer":{"@type":"Answer","text":"The rarest documented budgerigar mutations in 2026 are Manto Negro (Brazilian Black Mantle, developed 2021, autosomal dominant), Blackface (Netherlands 1992, autosomal recessive), and Blackwing (Venezuela 2002, autosomal recessive). Combining Blackface with Blackwing produces Double Black, currently the darkest budgerigar phenotype possible."}},
-    {"@type":"Question","name":"What determines a budgerigar's color?","acceptedAnswer":{"@type":"Answer","text":"A budgerigar's color is determined by two primary pigments (eumelanin for black markings, psittacofulvin for yellow) filtered through structural feather coloration. The base color (Green or Blue series) is controlled by a single autosomal recessive gene. Additional mutations layer on top: Dark Factor, Grey, Violet, Yellow Face, and 20+ other documented mutations, each with specific inheritance rules."}},
-    {"@type":"Question","name":"Can hens be split for sex-linked mutations like Opaline?","acceptedAnswer":{"@type":"Answer","text":"No. Hens cannot be split (silent carrier) for sex-linked recessive mutations including Opaline, Cinnamon, Lutino, Lacewing, Slate, and Texas Clearbody. Hens have the ZW sex chromosome configuration with only one Z chromosome, so if they carry the mutation gene, it must be expressed visually. Only cocks (ZZ) can be split for sex-linked traits."}}
-  ]
-}
-</script>
+<!-- deduped FAQPage schema (merged into single block above) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -1802,7 +1921,7 @@ body.tour-open, body.tour-active { overflow: auto !important; }
     </div>
   </a>
   <h1 class="hero-title">Budgerigar <span class="ht-green">Genetics Calculator</span></h1>
-  <p class="hero-desc">The most complete Budgie Genetics Calculator. Opaline, Cinnamon, Ino, Spangle, Pied, Dark Factor, Grey, Violet, Yellow Face, Anthracite, Blackface, Blackwing, Clearflight Pied, Easley Clearbody, and more.</p>
+  <p class="hero-desc">The most complete Budgie Genetics Calculator. Opaline, Cinnamon, Ino, Spangle, Pied, Dark Factor, Grey, Violet, Yellow Face, Anthracite, Blackface, Blackwing, Clearflight Pied, Easley Clearbody, and more. Additional research references: Dirk Van den Abeele (<a href="https://www.ogvzw.org/" target="_blank" rel="noopener noreferrer">Ornitho-Genetics VZW / OGVZW</a>, Belgium) authored the definitive <em>Lovebirds Compendium</em> (2016) and companion budgerigar mutation research; the OGVZW research group continues to publish peer-reviewed avian genetics work that this calculator cross-references for cross-species allelic behaviour.</p>
   <div class="hero-chips" aria-label="Trust signals">
     <span class="hero-chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
@@ -1820,6 +1939,82 @@ body.tour-open, body.tour-active { overflow: auto !important; }
 </main>
 
 <!-- TRUST STATS SECTION -->
+
+<!-- ── HOW THE CALCULATOR WORKS (with HowTo schema) ──────────────────────── -->
+<section class="how-it-works" aria-label="How the budgerigar genetics calculator works">
+  <div class="how-inner">
+    <span class="how-eyebrow">HOW IT WORKS</span>
+    <h2 class="how-title">How the Budgerigar Genetics Calculator Works</h2>
+    <p class="how-lead">Predicting your budgie clutch is 4 steps. No signup, no math, no guesswork. Every prediction uses judge-validated inheritance rules from Terry Martin (2002) and MUTAVI Research.</p>
+
+    <ol class="how-steps">
+      <li class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-body">
+          <h3 class="how-step-title">Pick the parents bird series</h3>
+          <p>Choose the base colour for the cock (male) and hen (female): Light Green, Dark Green, Olive Green, Sky Blue, Cobalt, or Mauve. The dark factor is built into each base name. Green-series birds can also be marked split for Blue.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-body">
+          <h3 class="how-step-title">Add any mutations each parent carries</h3>
+          <p>Click Add Mutation and pick from 23 documented budgerigar mutations. Set the status for each: Visual (shows the mutation), Split (carries one hidden copy), or Possible Split (unconfirmed). Sex-linked mutations follow the ZZ / ZW inheritance rule automatically.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-body">
+          <h3 class="how-step-title">Read the predicted offspring</h3>
+          <p>The results panel shows every possible chick with exact percentages, sex-separated into cocks and hens where relevant. Splits are shown with the single slash convention ( / Mutation ), possible splits with double slash ( // Mutation ). Percentages follow standard Mendelian ratios.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <div class="how-step-num">4</div>
+        <div class="how-step-body">
+          <h3 class="how-step-title">Save, share, or compare pairings</h3>
+          <p>Every pairing generates a shareable URL you can copy. Use Compare mode to test two different pairings side-by-side. No account needed. No data leaves your browser.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Use the Budgerigar Genetics Calculator",
+  "description": "4-step guide to predicting budgerigar offspring colour and mutations using free online calculator",
+  "totalTime": "PT2M",
+  "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Pick the parents bird series", "text": "Choose the base colour (Light Green, Dark Green, Olive Green, Sky Blue, Cobalt, or Mauve) for cock and hen. Dark factor is built into each base name."},
+    {"@type": "HowToStep", "position": 2, "name": "Add mutations", "text": "Add any of 23 documented mutations for each parent. Set status: Visual, Split, or Possible Split. Sex-linked ZZ/ZW rules apply automatically."},
+    {"@type": "HowToStep", "position": 3, "name": "Read predicted offspring", "text": "Results show every possible chick with exact percentages sex-separated. Single slash = confirmed split, double slash = possible split. Standard Mendelian ratios."},
+    {"@type": "HowToStep", "position": 4, "name": "Save, share, compare", "text": "Every pairing has a shareable URL. Use Compare mode to test two pairings side-by-side. No account needed."}
+  ]
+}
+</script>
+
+
+<!-- ── ABOUT KINBIRD AVIARY ───────────────────────────────────────────────── -->
+<section class="about-kinbird" aria-label="About KinBird Aviary">
+  <div class="about-inner">
+    <span class="about-eyebrow">ABOUT KINBIRD AVIARY</span>
+    <h2 class="about-title">The team and the aviary behind this calculator</h2>
+    <div class="about-content">
+      <div class="about-col">
+        <p>KinBird Aviary is a working lovebird and budgerigar breeding facility in Dhaka, Bangladesh. Founded by Ayaan Ahmed Shohan, KinBird runs a season-long production programme with Fischer lovebirds, budgerigars, and rare colour mutations across both species.</p>
+        <p>The Budgerigar Genetics Calculator was built out of real breeding notes, over two years of pairing outcomes tracked in the aviary and cross-checked against Dr. Terry Martin (2002), Dirk Van den Abeele (MUTAVI Research), Cyril H. Rogers (World of Budgerigars), and Inte Onsman.</p>
+      </div>
+      <div class="about-col">
+        <p>Every prediction rule in the engine has been validated by 3 World Budgerigar Organisation (WBO) Certified Judges: Abdelrahman Khedr (Egypt), Md Mojammel Hossain (Bangladesh), and Dewan MD Salim (Bangladesh).</p>
+        <p>The calculator is free, has no ads, no signup, no affiliate links, and never sells or shares user data. It exists as a resource for the global budgerigar breeding community. Feedback is welcome: contact <a href="mailto:info.ayaan911@gmail.com">info.ayaan911@gmail.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="trust-stats" aria-label="By the numbers">
   <div class="trust-stats-inner">
     <span class="trust-stats-eyebrow">By the numbers</span>
@@ -3684,7 +3879,7 @@ else{sumRows=`<div style="display:flex;align-items:center;gap:6px;margin-bottom:
 if(res.adMut)sumRows+=res.adMut.offspring.map(o=>`<p class="sum-row"><span class="sum-dash">-</span>${fmt(o.pct)}% ${o.label}</p>`).join('');
 const shareAvail=typeof navigator!=='undefined'&&!!navigator.share;
 body+=`<div class="sum-box"><div class="sum-hr"></div><div class="sum-inner"><div class="sum-top"><p class="sum-lbl">Summary</p><div class="sum-top-btns"><button class="link-btn ${linkedCopied?'lkd':''}" id="lbtn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> ${linkedCopied?'Link Copied!':'Share Result Link'}</button><button class="copy-btn ${copied?'cpd':''}" id="cbtn"><span style="font-size:12px;display:inline-flex;align-items:center;">${copied?`<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`:`<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`}</span>${copied?"Copied!":"Copy"}</button></div></div><div class="pair-txt" style="margin-bottom:16px;justify-content:flex-start;flex-wrap:wrap;gap:4px;font-size:12px;"><span><span class="gtag" style="font-weight:700">1.0 </span>${p1L}</span><span style="color:rgba(255,255,255,0.5);font-size:14px;font-weight:700;padding:0 2px">×</span><span><span class="rtag" style="font-weight:700">0.1 </span>${p2L}</span></div>${sumRows}</div></div>`;
-const legend=`<div class="inh-legend"><strong>SL</strong> Sex-linked recessive · <strong>AR</strong> Autosomal recessive · <strong>AD</strong> Autosomal incomplete dominant<br><strong>SF</strong> Single factor · <strong>DF</strong> Double factor · <strong>/</strong> Split (carrier) · <strong>//</strong> Possible split</div>`;
+const legend=`<div class="inh-legend"><strong>SL</strong> Sex-linked recessive · <strong>AR</strong> Autosomal recessive · <strong>AD</strong> Autosomal incomplete dominant<br>SF Single factor · DF Double factor · <strong>/</strong> Split (carrier) · <strong>//</strong> Possible split</div>`;
 // Snapshot / compare bar
 const hasA=!!S.snapA,hasB=!!S.snapB,canCompare=hasA&&hasB;
 const canSave=!!S.p1p&&!!S.p2p;
@@ -4419,6 +4614,143 @@ document.addEventListener('keydown',function(e){
 </script>
 <style id="mutation-picker-fix-css">
 .cbs-opt.cbs-kb-active{background:var(--accent-dim,rgba(76,161,84,0.15))!important;color:var(--accent,#4ca154)!important;}
+
+/* ── HOW IT WORKS SECTION ────────────────────────────────────────────────── */
+.how-it-works{
+  background:transparent;
+  padding:60px 0 40px;
+  margin:0;
+  width:100%;
+}
+.how-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 clamp(16px,4vw,48px);
+  width:100%;
+  box-sizing:border-box;
+}
+.how-eyebrow{
+  display:block;
+  font-family:var(--mono,ui-monospace,SFMono-Regular,monospace);
+  font-size:11px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--accent,#4ca154);
+  font-weight:700;
+  margin-bottom:14px;
+}
+.how-title{
+  font-size:clamp(24px,3vw,32px);
+  font-weight:700;
+  letter-spacing:-0.02em;
+  margin:0 0 16px;
+  line-height:1.15;
+  color:var(--text-1,#f0f0ee);
+}
+.how-lead{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--text-2,#a0a09a);
+  max-width:820px;
+  margin:0 0 40px;
+}
+.how-steps{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:24px;
+}
+.how-step{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  padding:22px 24px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;
+}
+[data-theme="light"] .how-step{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.08);}
+.how-step-num{
+  flex-shrink:0;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(76,161,84,0.12);
+  border:1px solid rgba(76,161,84,0.25);
+  color:var(--accent,#4ca154);
+  font-family:var(--mono,ui-monospace,SFMono-Regular,monospace);
+  font-size:15px;
+  font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.how-step-body{flex:1;min-width:0;}
+.how-step-title{
+  font-size:16px;
+  font-weight:600;
+  margin:0 0 6px;
+  color:var(--text-1,#f0f0ee);
+  line-height:1.35;
+}
+.how-step-body p{
+  font-size:14px;
+  line-height:1.7;
+  color:var(--text-2,#a0a09a);
+  margin:0;
+}
+@media(max-width:768px){
+  .how-step{padding:18px 16px;gap:14px;}
+  .how-step-num{width:32px;height:32px;font-size:13px;}
+}
+
+/* ── ABOUT KINBIRD AVIARY SECTION ────────────────────────────────────────── */
+.about-kinbird{
+  background:transparent;
+  padding:50px 0 60px;
+  margin:0;
+  width:100%;
+}
+.about-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 clamp(16px,4vw,48px);
+  width:100%;
+  box-sizing:border-box;
+}
+.about-eyebrow{
+  display:block;
+  font-family:var(--mono,ui-monospace,SFMono-Regular,monospace);
+  font-size:11px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--accent,#4ca154);
+  font-weight:700;
+  margin-bottom:14px;
+}
+.about-title{
+  font-size:clamp(24px,3vw,32px);
+  font-weight:700;
+  letter-spacing:-0.02em;
+  margin:0 0 30px;
+  line-height:1.15;
+  color:var(--text-1,#f0f0ee);
+}
+.about-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px 48px;
+}
+.about-col p{
+  font-size:14.5px;
+  line-height:1.75;
+  color:var(--text-2,#a0a09a);
+  margin:0 0 16px;
+}
+.about-col p a{color:var(--accent,#4ca154);text-decoration:underline;text-underline-offset:2px;}
+.about-col p a:hover{color:#7fd88a;}
+@media(max-width:768px){
+  .about-content{grid-template-columns:1fr;gap:24px;}
+}
 </style>
 </body>
 </html>
