@@ -1255,6 +1255,70 @@ select.filled{background-color:var(--bg-input-filled);border-color:var(--border-
   .cmp-result-row{font-size:11.5px;}
   .cmp-pair-text{font-size:11.5px;}
 }
+
+/* ── MUTATION SEARCH (ported from sister site lovebirdgenetics.com) ────── */
+.cbs-searchable{padding-top:0;}
+.cbs-search{
+  position:sticky;
+  top:0;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin:0 -6px 4px;
+  padding:6px 10px 7px;
+  background:var(--bg-card);
+  border-bottom:1px solid var(--border);
+}
+.cbs-sico{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-3);
+  flex-shrink:0;
+  padding-left:4px;
+}
+.cbs-sico svg{width:14px;height:14px;}
+.cbs-q{
+  flex:1;
+  min-width:0;
+  border:none;
+  background:transparent;
+  outline:none;
+  font-family:var(--font);
+  font-size:14px;
+  color:var(--text-1);
+  padding:6px 4px;
+  -webkit-appearance:none;
+  appearance:none;
+}
+.cbs-q::placeholder{color:var(--text-3);opacity:1;}
+.cbs-qclr{
+  border:none;
+  background:transparent;
+  color:var(--text-3);
+  font-size:18px;
+  line-height:1;
+  padding:0 6px;
+  cursor:pointer;
+  opacity:0;
+  transition:opacity 0.15s ease;
+  flex-shrink:0;
+}
+.cbs-searchable.cbs-has-q .cbs-qclr{opacity:1;}
+.cbs-qclr:hover{color:var(--text-1);}
+.cbs-opt.cbs-hidden{display:none;}
+.cbs-grp-lbl.cbs-hidden{display:none;}
+.cbs-empty-msg{
+  padding:20px 12px;
+  text-align:center;
+  font-size:13px;
+  color:var(--text-3);
+  font-style:italic;
+}
+/* Clickable empty state — matches sister's hover behaviour */
+.no-traits{cursor:pointer;transition:background 0.15s,border-color 0.15s,color 0.15s;}
+.no-traits:hover{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
 </style>
 <!-- FIX: prevent dark mode flash before first paint -->
 <script>
@@ -3915,6 +3979,171 @@ btn.addEventListener('click',function(){const isDark=html.getAttribute('data-the
 })();
 /* Twemoji, replace emoji with cross-platform SVG images */
 if(typeof twemoji!=='undefined'){twemoji.parse(document.body,{folder:'svg',ext:'.svg'});}
+</script>
+<script>
+
+/* ── BUDGIE MUTATION ALIAS MAP + SEARCH LAYER (ported from sister site) ── */
+window.CBSF_ICO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
+window.CBSF_ALIASES={
+  'Opaline':['opaline','op','oplaine','opalin','wing-pattern'],
+  'Cinnamon':['cinnamon','cinamon','cinnamom','brown','cin'],
+  'Ino':['ino','lutino','albino','red eye','red eyed','white'],
+  'Slate':['slate','slaty','sl'],
+  'TexasClearbody':['texas clearbody','texas','tcb','clearbody sl','sl clearbody'],
+  'Lacewing':['lacewing','lace wing','lacewing yellow','lacewing white','lw'],
+  'RecessivePied':['recessive pied','rec pied','recpied','danish pied','harlequin','rp','pied recessive'],
+  'GermanFallow':['german fallow','german','fallow german','pfd','pf-d'],
+  'EnglishFallow':['english fallow','pale fallow','dun fallow','pf','pale','dun','pfe','pf-e'],
+  'ScottishFallow':['scottish fallow','scottish','pfs','pf-s'],
+  'BlackFace':['black face','blackface','bf','melanistic face','dark face'],
+  'Blackwing':['blackwing','black wing','bw','melanistic wing','dark wing'],
+  'Saddleback':['saddleback','saddle','sb'],
+  'Clearwing':['clearwing','clear wing','cw','yellow wing','white wing'],
+  'Greywing':['greywing','grey wing','gray wing','gw'],
+  'Dilute':['dilute','dil','pastel','washed'],
+  'Grey':['grey','gray','grey factor','g','grey green','grey blue'],
+  'Violet':['violet','violet factor','v','visual violet'],
+  'YellowFace':['yellow face','yellowface','yf','yellow mask','orange face','of','factor orange','type 1','type 2','yf1','yf2'],
+  'Goldenface':['goldenface','golden face','gf','deep golden','gold'],
+  'Spangle':['spangle','sp','reverse wing','df spangle','sf spangle'],
+  'DominantPied':['dominant pied','dom pied','dompied','banded pied','australian pied','dp'],
+  'ClearflightPied':['clearflight pied','clearflight','cfp','continental','pi'],
+  'Anthracite':['anthracite','ant','an','charcoal','near black'],
+  'DominantClearbody':['dominant clearbody','easley clearbody','easley','ecb','cb','dclearbody']
+};
+window.CBSF_MATCH=function(mutationId, query){
+  if(!query)return true;
+  var q=query.toLowerCase().trim();
+  if(!q)return true;
+  var aliases=window.CBSF_ALIASES[mutationId]||[];
+  // Also add the mutationId itself as a fuzzy source
+  var idLower=mutationId.toLowerCase();
+  if(idLower.indexOf(q)>=0)return true;
+  for(var i=0;i<aliases.length;i++){
+    if(aliases[i].indexOf(q)>=0)return true;
+  }
+  return false;
+};
+window.CBSF_FILTER_MENU=function(menu){
+  if(!menu)return;
+  var q=(menu.querySelector('.cbs-q')||{}).value||'';
+  var qLower=q.toLowerCase().trim();
+  var container=menu.closest('details.cbs')||menu;
+  container.classList.toggle('cbs-has-q',!!qLower);
+  var opts=menu.querySelectorAll('.cbs-opt');
+  var visibleCount=0;
+  opts.forEach(function(opt){
+    var val=opt.getAttribute('data-cbs-val')||'';
+    var label=(opt.textContent||'').trim().toLowerCase();
+    var match=false;
+    if(!qLower){match=true;}
+    else if(label.indexOf(qLower)>=0){match=true;}
+    else if(window.CBSF_MATCH(val,qLower)){match=true;}
+    opt.classList.toggle('cbs-hidden',!match);
+    if(match)visibleCount++;
+  });
+  // Hide group labels whose all children are hidden
+  var lastGrpLbl=null;var lastGrpHasVisible=false;
+  menu.querySelectorAll('.cbs-grp-lbl,.cbs-opt').forEach(function(node){
+    if(node.classList.contains('cbs-grp-lbl')){
+      if(lastGrpLbl)lastGrpLbl.classList.toggle('cbs-hidden',!lastGrpHasVisible);
+      lastGrpLbl=node;lastGrpHasVisible=false;
+    }else if(node.classList.contains('cbs-opt')&&!node.classList.contains('cbs-hidden')){
+      lastGrpHasVisible=true;
+    }
+  });
+  if(lastGrpLbl)lastGrpLbl.classList.toggle('cbs-hidden',!lastGrpHasVisible);
+  // Empty-state message
+  var em=menu.querySelector('.cbs-empty-msg');
+  if(visibleCount===0&&qLower){
+    if(!em){em=document.createElement('div');em.className='cbs-empty-msg';em.textContent='No mutations match your search';menu.appendChild(em);}
+  }else if(em){em.remove();}
+};
+window.CBSF_ENHANCE_MENU=function(menu,mode){
+  if(!menu||menu.getAttribute('data-cbsq')==='1')return;
+  // Only enhance mutation and base dropdowns
+  if(mode!=='mut'&&mode!=='base')return;
+  menu.setAttribute('data-cbsq','1');
+  menu.classList.add('cbs-searchable');
+  var placeholder=mode==='mut'?'Select mutation, or type to search':'Choose Bird Series, or type to search';
+  var header=document.createElement('div');
+  header.className='cbs-search';
+  header.innerHTML='<span class="cbs-sico">'+window.CBSF_ICO+'</span>'
+    +'<input class="cbs-q" type="text" inputmode="search" enterkeyhint="done" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="'+placeholder+'" aria-label="'+(mode==='mut'?'Search mutations':'Search bird series')+'">'
+    +'<button type="button" class="cbs-qclr" tabindex="-1" aria-label="Clear search" title="Clear">&times;</button>';
+  menu.insertBefore(header,menu.firstChild);
+};
+// Global input listener — filters as user types
+document.addEventListener('input',function(e){
+  if(e.target&&e.target.classList&&e.target.classList.contains('cbs-q')){
+    var menu=e.target.closest('.cbs-menu');
+    if(menu)window.CBSF_FILTER_MENU(menu);
+  }
+});
+// Global click listener — handles clear button
+document.addEventListener('click',function(e){
+  if(e.target&&e.target.classList&&e.target.classList.contains('cbs-qclr')){
+    e.preventDefault();e.stopPropagation();
+    var menu=e.target.closest('.cbs-menu');
+    var input=menu&&menu.querySelector('.cbs-q');
+    if(input){input.value='';input.focus();window.CBSF_FILTER_MENU(menu);}
+  }
+});
+// Auto-focus search input when a searchable dropdown opens (desktop only)
+document.addEventListener('toggle',function(e){
+  var det=e.target;
+  if(!det||det.tagName!=='DETAILS'||!det.classList.contains('cbs'))return;
+  if(!det.open)return;
+  var menu=det.querySelector('.cbs-menu.cbs-searchable');
+  if(!menu)return;
+  var input=menu.querySelector('.cbs-q');
+  if(input&&window.innerWidth>=768)setTimeout(function(){input.focus();},50);
+},true);
+// Enhance every .cbs details after render — hook via MutationObserver
+(function(){
+  function enhance(det){
+    if(!det||det.getAttribute('data-cbsq-init')==='1')return;
+    det.setAttribute('data-cbsq-init','1');
+    var sel=det.querySelector('select.cbs-native');
+    if(!sel)return;
+    var mode=null;
+    if(sel.getAttribute('data-role')==='trait')mode='mut';
+    else if(/-base$/.test(sel.id||''))mode='base';
+    if(!mode)return;
+    var menu=det.querySelector('.cbs-menu');
+    if(menu)window.CBSF_ENHANCE_MENU(menu,mode);
+  }
+  function scanAll(){
+    document.querySelectorAll('details.cbs').forEach(enhance);
+  }
+  // Initial scan
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',scanAll);
+  else scanAll();
+  // Observe for new details added dynamically
+  var obs=new MutationObserver(function(muts){
+    muts.forEach(function(m){
+      m.addedNodes.forEach(function(n){
+        if(n.nodeType===1){
+          if(n.matches&&n.matches('details.cbs'))enhance(n);
+          if(n.querySelectorAll)n.querySelectorAll('details.cbs').forEach(enhance);
+        }
+      });
+    });
+  });
+  obs.observe(document.documentElement,{childList:true,subtree:true});
+})();
+
+/* ── CLICKABLE EMPTY STATE ── */
+document.addEventListener('click',function(e){
+  var nt=e.target.closest&&e.target.closest('.no-traits');
+  if(!nt)return;
+  // Find the sibling + Add Mutation button and trigger it
+  var section=nt.closest('.parents-col, .pb, [class*="parent"], div');
+  if(!section)return;
+  var addBtn=section.querySelector('.add-btn');
+  if(addBtn){e.preventDefault();addBtn.click();}
+});
+
 </script>
 </body>
 </html>
