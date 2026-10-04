@@ -35,6 +35,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://budgerigargenetics.com/img/thumbs/sex-linked.jpg?v=2"/>
 <meta name="twitter:image:alt" content="Sex-Linked Budgerigar Mutations"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Blog","name":"Budgerigar Genetics Blog","description":"In-depth articles and guides on budgerigar genetics and rare mutations.","url":"https://budgerigargenetics.com/blog/","publisher":{"@type":"Organization","name":"KinBird Aviary","url":"https://budgerigargenetics.com/"},"inLanguage":"en"}
@@ -386,6 +388,96 @@ section[style*="border-left:3px solid #4ca154"] p a:hover {
 }
 </style>
 <style>.card .art-thumb{display:block;width:calc(100% + 44px);max-width:none;margin:-22px -22px 16px;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:14px 14px 0 0;border-bottom:1px solid var(--border,#2a2f2c);background:#0f130f;}</style>
+<style id="bg2-article">
+/* ── Article layout v2 (parity with lovebirdgenetics.com), Oct 2026 ── */
+.bg2-page .brand-inner{max-width:1180px;}
+.bg2-wrap{max-width:1180px;}
+.bg2-main{min-width:0;}
+@media(min-width:1100px){
+  .bg2-wrap{display:grid;grid-template-columns:minmax(0,760px) 300px;column-gap:56px;justify-content:center;align-items:start;}
+  .bg2-rail{position:sticky;top:84px;}
+}
+@media(max-width:1099px){.bg2-wrap{max-width:760px;}.bg2-rail{margin-top:40px;}}
+.bg2-lab{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin:0 0 10px;}
+/* Rail cards */
+.bg2-rail{display:flex;flex-direction:column;gap:16px;}
+.bg2-card{border:1px solid var(--border);border-radius:16px;padding:20px;background:var(--bg-card);}
+.bg2-card p{font-size:13.5px;color:var(--text-2);line-height:1.58;margin:0 0 14px;}
+.bg2-card .bg2-h4{font-size:17px;font-weight:700;letter-spacing:-.02em;margin:0 0 8px;line-height:1.28;color:var(--text);}
+.bg2-card .bg2-lab{margin-bottom:10px;}
+.bg2-pri{background:#1e4a24;border-color:#1e4a24;}
+.bg2-pri .bg2-lab{color:rgba(255,255,255,.55);}
+.bg2-pri .bg2-h4{color:#fff;}
+.bg2-pri p{color:rgba(255,255,255,.8);}
+.bg2-stats{display:flex;gap:10px;margin:0 0 16px;}
+.bg2-stats div{flex:1;background:rgba(255,255,255,.08);border-radius:10px;padding:10px 12px;}
+.bg2-stats b{display:block;font-size:20px;color:#fff;font-weight:800;letter-spacing:-.02em;line-height:1.1;}
+.bg2-stats span{font-size:11px;color:rgba(255,255,255,.65);}
+.bg2-btn,a.bg2-btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid var(--accent)!important;background:rgba(76,161,84,.12);color:var(--accent);transition:background .2s,transform .1s;}
+.bg2-btn:hover{background:rgba(76,161,84,.22);transform:translateY(-1px);}
+a.bg2-btn-wh{background:#fff;color:#1e4a24;border-color:#fff!important;}
+a.bg2-btn-wh:hover{background:#f0f7f0;}
+.bg2-chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px;}
+.bg2-chips span{font-size:11px;font-weight:600;color:var(--text-2);border:1px solid var(--border);border-radius:999px;padding:3px 10px;}
+.bg2-glist{display:flex;flex-direction:column;}
+.bg2-glist a{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border)!important;text-decoration:none;color:var(--text);font-size:13.5px;line-height:1.4;}
+.bg2-glist a:hover span{color:var(--accent);}
+.bg2-glist a i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--accent);padding-top:2px;flex-shrink:0;}
+.bg2-glist a.bg2-glist-all{border-bottom:0!important;color:var(--accent);font-weight:600;padding-top:12px;}
+/* Facts table */
+.bg2-facts{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px 8px;margin:0 0 32px;}
+.bg2-facts .bg2-lab{color:var(--accent);}
+table.bg2-fact-table{margin:0 0 10px;font-size:14px;border-collapse:collapse;width:100%;}
+.bg2-fact-table th,.bg2-fact-table td{border:0;border-top:1px solid var(--border);padding:10px 4px;vertical-align:top;background:none;}
+.bg2-fact-table tr:first-child th,.bg2-fact-table tr:first-child td{border-top:0;}
+.bg2-fact-table th{width:38%;font-family:var(--font);font-size:13px;font-weight:600;text-transform:none;letter-spacing:0;color:var(--text-2);}
+.bg2-fact-table td{color:var(--text);}
+/* Pairing table */
+.bg2-pairs{margin:44px 0 8px;}
+.bg2-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:14px;margin:18px 0 12px;}
+table.bg2-pair-table{margin:0;border-collapse:collapse;width:100%;font-size:14px;}
+.bg2-pair-table th,.bg2-pair-table td{border:0;border-bottom:1px solid var(--border);padding:11px 13px;text-align:left;white-space:nowrap;}
+.bg2-pair-table tbody tr:last-child td{border-bottom:0;}
+.bg2-pair-table th{background:rgba(76,161,84,.08);font-size:11px;letter-spacing:.06em;}
+.bg2-pair-table td:nth-child(3),.bg2-pair-table td:nth-child(4){white-space:normal;min-width:150px;}
+a.bg2-try{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;border:1px solid var(--accent)!important;color:var(--accent);font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;background:rgba(76,161,84,.08);}
+a.bg2-try:hover{background:rgba(76,161,84,.2);}
+.bg2-note{font-size:13.5px;color:var(--text-2);}
+/* Warning box */
+.bg2-warn{border:1px solid rgba(229,115,115,.35);background:rgba(229,115,115,.07);border-radius:14px;padding:16px 20px;margin:20px 0 36px;}
+.bg2-warn .bg2-lab{color:#e57373;}
+.bg2-warn p:last-child{margin:0;font-size:14.5px;}
+/* Related grid */
+.bg2-related{margin:28px 0 8px;}
+.bg2-rel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+a.bg2-rel-card{display:flex;flex-direction:column;gap:10px;text-decoration:none;border:1px solid var(--border)!important;border-radius:14px;overflow:hidden;background:var(--bg-card);color:var(--text);font-size:14px;font-weight:600;line-height:1.35;transition:transform .15s,border-color .15s;}
+a.bg2-rel-card:hover{transform:translateY(-2px);border-color:var(--accent)!important;}
+.bg2-rel-card img{width:100%;height:auto;aspect-ratio:600/315;object-fit:cover;display:block;}
+.bg2-rel-card span{padding:0 14px 14px;}
+@media(max-width:640px){.bg2-rel-grid{grid-template-columns:1fr;gap:10px;}a.bg2-rel-card{flex-direction:row;align-items:center;gap:12px;}.bg2-rel-card img{width:128px;flex-shrink:0;}.bg2-rel-card span{padding:10px 12px 10px 0;font-size:13.5px;}}
+/* Link underline animation in article body */
+.bg2-main p a,.bg2-main li a,.bg2-main td a:not(.bg2-try){border-bottom:0;background-image:linear-gradient(currentColor,currentColor);background-size:0% 1.5px;background-repeat:no-repeat;background-position:left bottom;padding-bottom:1px;transition:background-size .25s ease;}
+.bg2-main p a:hover,.bg2-main li a:hover,.bg2-main td a:not(.bg2-try):hover{background-size:100% 1.5px;}
+.bg2-main p a.cta,.bg2-main p a.bg2-btn{background-image:none;}
+@media(prefers-reduced-motion:reduce){.bg2-main p a,.bg2-main li a{transition:none;}a.bg2-rel-card,.bg2-btn{transition:none;}}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+/* Site footer */
+.bg2-footer{background:#0a0a0a;padding:48px 0 0;margin-top:0;font-family:var(--font);}
+.bg2-footer-inner{max-width:1180px;margin:0 auto;padding:0 20px;}
+.bg2-footer-cols{display:grid;grid-template-columns:1.2fr repeat(5,1fr);gap:24px;}
+.bg2-footer-lbl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#4ca154;font-weight:700;margin:0 0 12px;}
+.bg2-footer-col>a{display:block;font-size:12.5px;padding:4px 0;color:rgba(255,255,255,.62);text-decoration:none;border:0!important;}
+.bg2-footer-col>a:hover{color:#4ca154;}
+.bg2-footer-brand{font-size:14px;font-weight:700;color:#f0f0ee;margin:0 0 6px;}
+.bg2-footer-sub{font-size:12px;color:#777;line-height:1.75;margin:0;}
+.bg2-footer-col>a.bg2-footer-fb{display:inline-block;margin-top:10px;color:#4ca154;font-weight:600;}
+.bg2-footer-legal{margin:28px 0 0;padding:16px 0;border-top:1px solid rgba(255,255,255,.06);font-size:11px;color:#666;line-height:1.7;}
+.bg2-footer-legal em{color:#777;}
+@media(max-width:1000px){.bg2-footer-cols{grid-template-columns:1fr 1fr 1fr;}}
+@media(max-width:640px){.bg2-footer-cols{grid-template-columns:1fr 1fr;}.bg2-footer-col:first-child{grid-column:1/-1;}}
+@media print{.bg2-rail,.bg2-footer,.bg2-related{display:none!important;}}
+
+</style>
 </head>
 <body>
 
@@ -952,6 +1044,20 @@ Blog
 
 <p class="foot">© 2026 KinBird Aviary · <a href="https://www.facebook.com/kinbird.aviary/">Facebook</a> · <a href="https://lovebirdgenetics.com/" target="_blank" rel="noopener noreferrer">Sister site: Lovebird Genetics</a> · Built in 🇧🇩 Bangladesh by working bird breeders</p>
 </main>
+<footer class="bg2-footer">
+<div class="bg2-footer-inner">
+<div class="bg2-footer-cols">
+<div class="bg2-footer-col"><p class="bg2-footer-brand">Budgerigar Genetics Calculator</p><p class="bg2-footer-sub">by KinBird Aviary<br>Bangladesh</p><a class="bg2-footer-fb" href="https://www.facebook.com/kinbird.aviary/" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+<div class="bg2-footer-col"><p class="bg2-footer-lbl">Sex-linked</p><a href="/blog/opaline-budgerigar-mutation">Opaline</a><a href="/blog/cinnamon-budgerigar-mutation">Cinnamon</a><a href="/blog/ino-lutino-albino-budgerigar-mutation">Ino, Lutino &amp; Albino</a><a href="/blog/lacewing-budgerigar-mutation">Lacewing</a><a href="/blog/slate-budgerigar-mutation">Slate</a><a href="/blog/texas-clearbody-budgerigar-mutation">Texas Clearbody</a><a href="/blog/budgie-sex-linked-auto-sex-pairing-guide">Auto-sex pairings</a></div>
+<div class="bg2-footer-col"><p class="bg2-footer-lbl">Recessive</p><a href="/blog/recessive-pied-budgerigar-mutation">Recessive Pied</a><a href="/blog/german-fallow-budgerigar-mutation">German Fallow</a><a href="/blog/english-fallow-budgerigar-mutation">English &amp; Dun Fallow</a><a href="/blog/scottish-fallow-budgerigar-mutation">Scottish Fallow</a><a href="/blog/clearwing-budgerigar-mutation">Clearwing</a><a href="/blog/greywing-budgerigar-mutation">Greywing</a><a href="/blog/dilute-budgerigar-mutation">Dilute</a><a href="/blog/blackface-budgerigar-mutation">Black Face</a><a href="/blog/blackwing-budgerigar-mutation">Blackwing</a><a href="/blog/saddleback-budgerigar-mutation">Saddleback</a></div>
+<div class="bg2-footer-col"><p class="bg2-footer-lbl">Dominant &amp; colour</p><a href="/blog/spangle-budgerigar-mutation">Spangle</a><a href="/blog/dominant-pied-budgerigar-mutation">Dominant Pied</a><a href="/blog/clearflight-pied-budgerigar-mutation">Clearflight Pied</a><a href="/blog/anthracite-budgerigar-mutation">Anthracite</a><a href="/blog/manto-negro-budgerigar-mutation">Manto Negro</a><a href="/blog/easley-clearbody-budgerigar-mutation">Easley Clearbody</a><a href="/blog/grey-factor-budgerigar-mutation">Grey Factor</a><a href="/blog/violet-budgerigar-mutation">Violet</a><a href="/blog/yellow-face-goldenface-budgerigar-mutation">Yellow Face &amp; Goldenface</a><a href="/blog/dark-factor-budgerigar-mutation">Dark Factor</a></div>
+<div class="bg2-footer-col"><p class="bg2-footer-lbl">Learn &amp; tools</p><a href="/blog/how-to-use-budgerigar-genetics-calculator">How to use the calculator</a><a href="/blog/complete-budgerigar-genetics-guide">Complete genetics guide</a><a href="/blog/budgie-color-breeding-chart">Colour breeding chart</a><a href="/blog/budgerigar-genotype-vs-phenotype">Genotype vs phenotype</a><a href="/blog/how-to-predict-budgie-offspring">Predict budgie offspring</a><a href="/blog/budgerigar-mutation-comparison-guide">Mutation comparison guide</a><a href="/blog/double-black-budgerigar-breeding-guide">Double Black breeding</a></div>
+<div class="bg2-footer-col"><p class="bg2-footer-lbl">Site</p><a href="/">Budgerigar Genetics Calculator</a><a href="/blog/">Blog &amp; mutation guides</a><a href="/blog/sex-linked">Sex-linked hub</a><a href="/blog/autosomal-recessive">Autosomal recessive hub</a><a href="/blog/autosomal-incomp-dominant">Dominant hub</a><a href="/blog/guides">Guides &amp; tools</a><a href="/privacy">Privacy policy</a><a href="https://lovebirdgenetics.com/" target="_blank" rel="noopener">Lovebird Genetics</a></div>
+</div>
+<p class="bg2-footer-legal">© 2026 KinBird Aviary &amp; Ayaan Shohan. Engine rules referenced to Terry Martin, <em>A Guide to Colour Mutations and Genetics in Parrots</em> (2002), and reviewed by WBO Certified Judges.</p>
+</div>
+</footer>
+
 <script>
 (function(){
 var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
@@ -970,5 +1076,11 @@ btn.addEventListener('click',function(){var cur=html.getAttribute('data-theme')|
 
 <!-- Category filter via real URLs, no JS needed -->
 
+<script id="bg2-events">
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+if(h==='/'||h.indexOf('/?')===0||h==='https://budgerigargenetics.com/'){var pl=a.closest('.bg2-rail')?'rail':a.closest('.bg2-pairs')?'pairing_table':a.closest('.bg2-footer')?'footer':a.closest('.brand-bar')?'header':'content';
+try{if(typeof gtag==='function')gtag('event','article_to_calculator',{article:location.pathname,placement:pl,preloaded:h.indexOf('?')>-1?'yes':'no'});}catch(_){}
+try{if(typeof clarity==='function')clarity('event','article_to_calculator');}catch(_){}}});
+</script>
 </body>
 </html>

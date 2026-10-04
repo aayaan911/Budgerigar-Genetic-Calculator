@@ -196,7 +196,7 @@ Each green-series base can be paired with `/Blue` for green birds split for blue
 - **Normal prefix:** Any offspring row showing only a base colour with no visible mutations is prefixed with "Normal", for example "Normal Light Green", so zero-mutation offspring are unambiguous in mixed-result outputs.
 - **Sex-separated columns:** Cocks (males) and hens (females) shown in separate columns when sex-linked mutations are involved.
 - **Single Factor / Double Factor:** Labeled explicitly for incompletely dominant mutations.
-- **Split notation:** `/ Mutation` for splits (birds carrying one hidden copy). Split and normal chicks from the same pairing are listed as separate rows.
+- **Split notation:** `/ Mutation` for splits (birds carrying one hidden copy). `// Mutation` marks a possible split: sex-linked sons of a split cock and a Normal hen, who look the same as their Normal brothers. Autosomal recessive pairings list visual, split and normal chicks as separate rows.
 - **Allele symbols:** Parenthetical, per Terry Martin (2002) international standard.
 
 ## Pre-built calculator URLs for every mutation
