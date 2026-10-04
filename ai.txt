@@ -130,7 +130,7 @@ https://budgerigargenetics.com/?m=<MALE_BASE>&mt=<MALE_TRAITS>&f=<FEMALE_BASE>&f
 
 Each green-series base can be paired with `/Blue` for green birds split for blue, e.g. `Light%20Green%20%2F%20Blue`.
 
-### 23 mutation IDs (exact strings, case-sensitive)
+### 27 mutation IDs (exact strings, case-sensitive)
 
 #### Sex-linked recessive (6 mutations)
 
@@ -143,7 +143,7 @@ Each green-series base can be paired with `/Blue` for green birds split for blue
 | Slate | `Slate` | Sex-linked recessive. Adds slate-grey body wash on blue series. Rare |
 | Texas Clearbody | `TexasClearbody` | Sex-linked recessive. Ino-locus allele, dominant over Ino. Body lightens but wing/face markings stay dark. Discovered Texas USA, 1950s |
 
-#### Autosomal recessive (8 mutations)
+#### Autosomal recessive (11 mutations)
 
 | Mutation | URL ID | Notes |
 |---|---|---|
@@ -159,7 +159,7 @@ Each green-series base can be paired with `/Blue` for green birds split for blue
 | Greywing | `Greywing` | Autosomal recessive. Dil-locus allele, between Clearwing and Dilute. Co-dominant with Clearwing → Fullbody Greywing |
 | Dilute | `Dilute` | Autosomal recessive. Dil-locus, recessive to both Clearwing and Greywing. Body and wings paler |
 
-#### Autosomal incompletely dominant (9 mutations + Dark Factor built into base color)
+#### Autosomal incompletely dominant and dominant (10 mutations + Dark Factor built into base color)
 
 | Mutation | URL ID | Notes |
 |---|---|---|
@@ -196,7 +196,7 @@ Each green-series base can be paired with `/Blue` for green birds split for blue
 - **Normal prefix:** Any offspring row showing only a base colour with no visible mutations is prefixed with "Normal", for example "Normal Light Green", so zero-mutation offspring are unambiguous in mixed-result outputs.
 - **Sex-separated columns:** Cocks (males) and hens (females) shown in separate columns when sex-linked mutations are involved.
 - **Single Factor / Double Factor:** Labeled explicitly for incompletely dominant mutations.
-- **Split notation:** `/ Mutation` for confirmed splits, `// Mutation` for possible splits.
+- **Split notation:** `/ Mutation` for splits (birds carrying one hidden copy). Split and normal chicks from the same pairing are listed as separate rows.
 - **Allele symbols:** Parenthetical, per Terry Martin (2002) international standard.
 
 ## Pre-built calculator URLs for every mutation
