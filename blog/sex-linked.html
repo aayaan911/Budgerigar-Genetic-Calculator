@@ -461,6 +461,8 @@ a.bg2-rel-card:hover{transform:translateY(-2px);border-color:var(--accent)!impor
 .bg2-main p a.cta,.bg2-main p a.bg2-btn{background-image:none;}
 @media(prefers-reduced-motion:reduce){.bg2-main p a,.bg2-main li a{transition:none;}a.bg2-rel-card,.bg2-btn{transition:none;}}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.bg2-main p,.bg2-main li{overflow-wrap:break-word;}
+.bg2-main p a,.bg2-main li a,.refs a{overflow-wrap:anywhere;}
 /* Site footer */
 .bg2-footer{background:#0a0a0a;padding:48px 0 0;margin-top:0;font-family:var(--font);}
 .bg2-footer-inner{max-width:1180px;margin:0 auto;padding:0 20px;}
@@ -634,7 +636,7 @@ Blog
 </a>
 
 <a class="card" href="/blog/slate-budgerigar-mutation" data-cat="sl">
-<img class="art-thumb" src="/img/thumbs/slate-budgerigar-mutation-600.webp?v=2" width="600" height="315" alt="Slate, Rare Sex-Linked Z-Chromosome Mutation" decoding="async">
+<img class="art-thumb" src="/img/thumbs/slate-budgerigar-mutation-600.webp?v=2" srcset="/img/thumbs/slate-budgerigar-mutation-600.webp?v=2 600w, /img/thumbs/slate-budgerigar-mutation-1200.webp?v=2 1200w" sizes="(max-width:640px) 92vw, 280px" width="600" height="315" alt="Slate, Rare Sex-Linked Z-Chromosome Mutation" decoding="async">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> UK 1950s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -791,7 +793,7 @@ Blog
 </a>
 
 <a class="card" href="/blog/texas-clearbody-budgerigar-mutation" data-cat="sl">
-<img class="art-thumb" src="/img/thumbs/texas-clearbody-budgerigar-mutation-600.webp?v=2" width="600" height="315" alt="Texas Clearbody (TCB) Mutation" decoding="async">
+<img class="art-thumb" src="/img/thumbs/texas-clearbody-budgerigar-mutation-600.webp?v=2" srcset="/img/thumbs/texas-clearbody-budgerigar-mutation-600.webp?v=2 600w, /img/thumbs/texas-clearbody-budgerigar-mutation-1200.webp?v=2 1200w" sizes="(max-width:640px) 92vw, 280px" width="600" height="315" alt="Texas Clearbody (TCB) Mutation" decoding="async">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Texas USA 1950s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -831,7 +833,7 @@ Blog
 </a>
 
 <a class="card" href="/blog/cinnamon-budgerigar-mutation" data-cat="sl">
-<img class="art-thumb" src="/img/thumbs/cinnamon-budgerigar-mutation-600.webp?v=2" width="600" height="315" alt="Cinnamon Budgerigar Mutation" decoding="async">
+<img class="art-thumb" src="/img/thumbs/cinnamon-budgerigar-mutation-600.webp?v=2" srcset="/img/thumbs/cinnamon-budgerigar-mutation-600.webp?v=2 600w, /img/thumbs/cinnamon-budgerigar-mutation-1200.webp?v=2 1200w" sizes="(max-width:640px) 92vw, 280px" width="600" height="315" alt="Cinnamon Budgerigar Mutation" decoding="async">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -858,7 +860,7 @@ Blog
 </a>
 
 <a class="card" href="/blog/lacewing-budgerigar-mutation" data-cat="sl">
-<img class="art-thumb" src="/img/thumbs/lacewing-budgerigar-mutation-600.webp?v=2" width="600" height="315" alt="Lacewing Mutation, Cinnamon × Ino Crossover" loading="lazy" decoding="async">
+<img class="art-thumb" src="/img/thumbs/lacewing-budgerigar-mutation-600.webp?v=2" srcset="/img/thumbs/lacewing-budgerigar-mutation-600.webp?v=2 600w, /img/thumbs/lacewing-budgerigar-mutation-1200.webp?v=2 1200w" sizes="(max-width:640px) 92vw, 280px" width="600" height="315" alt="Lacewing Mutation, Cinnamon × Ino Crossover" loading="lazy" decoding="async">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> UK 1948</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -976,7 +978,7 @@ Blog
 </a>
 
 <a class="card" href="/blog/opaline-budgerigar-mutation" data-cat="sl">
-<img class="art-thumb" src="/img/thumbs/opaline-budgerigar-mutation-600.webp?v=2" width="600" height="315" alt="Opaline Genetics" loading="lazy" decoding="async">
+<img class="art-thumb" src="/img/thumbs/opaline-budgerigar-mutation-600.webp?v=2" srcset="/img/thumbs/opaline-budgerigar-mutation-600.webp?v=2 600w, /img/thumbs/opaline-budgerigar-mutation-1200.webp?v=2 1200w" sizes="(max-width:640px) 92vw, 280px" width="600" height="315" alt="Opaline Genetics" loading="lazy" decoding="async">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Australia 1933</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
@@ -990,7 +992,7 @@ Blog
 </a>
 
 <a class="card" href="/blog/ino-lutino-albino-budgerigar-mutation" data-cat="sl">
-<img class="art-thumb" src="/img/thumbs/ino-lutino-albino-budgerigar-mutation-600.webp?v=2" width="600" height="315" alt="Ino, Lutino &amp; Albino" loading="lazy" decoding="async">
+<img class="art-thumb" src="/img/thumbs/ino-lutino-albino-budgerigar-mutation-600.webp?v=2" srcset="/img/thumbs/ino-lutino-albino-budgerigar-mutation-600.webp?v=2 600w, /img/thumbs/ino-lutino-albino-budgerigar-mutation-1200.webp?v=2 1200w" sizes="(max-width:640px) 92vw, 280px" width="600" height="315" alt="Ino, Lutino &amp; Albino" loading="lazy" decoding="async">
 <div class="card-chips">
 <span class="chip origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4l8-2v14l-8 2M12 2l8 2v14l-8-2"/></svg> Global 1930s</span>
 <span class="chip type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2c8 8 0 12 8 20M20 2c-8 8 0 12-8 20M6 6h12M6 18h12M8 10h8M8 14h8"/></svg> Sex-Linked Recessive</span>
