@@ -175,6 +175,13 @@ Each green-series base can be paired with `/Blue` for green birds split for blue
 | Manto Negro | `MantoNegro` | Autosomal dominant. Origin: Brazil c. 2021 (Ley H. Silva Filho). Extra black on head, nape and mantle; SF and DF forms, no splits |
 | Easley Clearbody | `DominantClearbody` | Origin: California 1992 (Steve Easley). Body lightens, head and wing markings dark. Distinct from sex-linked Texas Clearbody |
 
+## How to use the calculator (4 steps)
+
+1. **Pick each parent's Bird Series.** Light Green, Dark Green, Olive Green, Sky Blue, Cobalt or Mauve (dark factor is built into the name). Green birds can be marked split for Blue.
+2. **Add each parent's mutations.** Choose from 27 mutations. Recessive and sex-linked mutations are set as Visual or Split; dominant ones as SF or DF. Hens cannot be split for sex-linked mutations.
+3. **Read the predicted offspring.** Every possible chick is listed with an exact percentage, separated into cocks and hens when sex-linked mutations are involved. A split × split recessive pairing gives 25% visual, 50% split, 25% normal.
+4. **Share the pairing.** Every pairing has its own URL (format above), so a result can be sent to anyone. No account, and no data leaves the browser.
+
 ## Engine rules and naming conventions
 
 ### Six judge-validated rules unique to this calculator
