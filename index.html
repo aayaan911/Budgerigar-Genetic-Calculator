@@ -141,7 +141,6 @@
     "Four non-allelic Fallow types (Dun, German 1929, English 1937, Scottish 1947), each modelled as a separate gene",
     "Handles sex-linked recessive, autosomal recessive, and autosomal incompletely dominant inheritance",
     "Shows split carriers with exact percentages",
-    "Compare two pairings side-by-side",
     "Pre-loaded URL sharing for every pairing",
     "AI assistant integration via llms.txt and ai.txt (ChatGPT, Claude, Perplexity, Bing Copilot)",
     "Validated by 3 WBO Certified Judges (Abdelrahman Khedr Egypt, Md Mojammel Hossain Bangladesh, Dewan MD Salim Bangladesh)",
@@ -2008,8 +2007,8 @@ body.tour-open, body.tour-active { overflow: auto !important; }
       <li class="how-step">
         <div class="how-step-num">4</div>
         <div class="how-step-body">
-          <h3 class="how-step-title">Save, share, or compare pairings</h3>
-          <p>Every pairing generates a shareable URL you can copy. Use Compare mode to test two different pairings side-by-side. No account needed. No data leaves your browser.</p>
+          <h3 class="how-step-title">Save and share pairings</h3>
+          <p>Every pairing generates a shareable URL you can copy and send to anyone. No account needed. No data leaves your browser.</p>
         </div>
       </li>
     </ol>
@@ -2027,7 +2026,7 @@ body.tour-open, body.tour-active { overflow: auto !important; }
     {"@type": "HowToStep", "position": 1, "name": "Pick the parents bird series", "text": "Choose the base colour (Light Green, Dark Green, Olive Green, Sky Blue, Cobalt, or Mauve) for cock and hen. Dark factor is built into each base name."},
     {"@type": "HowToStep", "position": 2, "name": "Add mutations", "text": "Add any of 26 documented mutations for each parent. Set status: Visual or Split. Sex-linked ZZ/ZW rules apply automatically."},
     {"@type": "HowToStep", "position": 3, "name": "Read predicted offspring", "text": "Results show every possible chick with exact percentages sex-separated. Single slash = split (carrier). Standard Mendelian ratios: split x split returns 25% visual, 50% split, 25% normal."},
-    {"@type": "HowToStep", "position": 4, "name": "Save, share, compare", "text": "Every pairing has a shareable URL. Use Compare mode to test two pairings side-by-side. No account needed."}
+    {"@type": "HowToStep", "position": 4, "name": "Save and share", "text": "Every pairing has a shareable URL you can copy and send. No account needed."}
   ]
 }
 </script>
@@ -3931,7 +3930,7 @@ const legend=`<div class="inh-legend"><strong>SL</strong> Sex-linked recessive Â
 // Snapshot / compare bar
 const hasA=!!S.snapA,hasB=!!S.snapB,canCompare=hasA&&hasB;
 const canSave=!!S.p1p&&!!S.p2p;
-const snapBar=canSave?`<div class="snap-bar">
+const snapBar=false?`<div class="snap-bar">
   <span class="snap-lbl">Compare</span>
   <div class="snap-row">
     <div class="snap-cell">
